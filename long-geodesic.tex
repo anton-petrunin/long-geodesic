@@ -184,16 +184,34 @@ has 4 singular points with curvature $\pi$.
 Then it bounds an isosceles tetrahedron.
 \end{thm}
 
+{
+
 \begin{wrapfigure}{o}{21 mm}
 \begin{lpic}[t(-4 mm),b(-3 mm),r(0 mm),l(0 mm)]{pics/akopyan(1)}
 \end{lpic}
 \end{wrapfigure}
 
-It remains to show that any surface with this property 
-is isometric to the surface of a tetrahedron with equal opposite edges.
-To do this cut $\Sigma$ along three geodesics which connect one singular point to the remaining three,
-develop the obtained flat surface on the plane and think;
-also look at the diagram.\qeds
+\parit{Proof.}
+Denote the singular points by $p$, $x$, $y$ and $z$.
+
+Let us cut $\Sigma$ along three geodesics $[px]$, $[py]$ and $[pz]$.
+Develop the obtained flat surface on the plane.
+Note that as the result we obtain a triangle $\triangle$; 
+the points $x$, $y$ and $z$ correspond to the midpoints of the sides of $\triangle$
+and the point $p$ correspond to the vertices of $\triangle$.
+
+}
+
+It follows that $\Sigma$ is isometric to the surface of isosceles tetrahedron.
+The statement now follows from the uniqueness theorem \cite{???},
+which states that if two closed convex surfaces have isometric intrinsic metrics then they bound congruent bodies.
+Alternatively one could apply the following exercise and the uniqueness theorem for the surfaces polyhedra, which has much simple proof, see \cite{alexandrov1950}.
+\qeds
+
+\begin{thm}{Exercise}
+Assume that a convex body $K$ ids bounded by a closed flat surface with finite number of singular points.
+Show that $K$ is a polyhedron.
+\end{thm}
 
 \begin{thebibliography}{52}
 \bibitem{alexandrov1941} 
@@ -203,6 +221,11 @@ Acad. Sci. URSS (N.S.)
 32, 
 (1941). 
 467--470
+
+\bibitem{alexandrov1950} 
+Alexandrov, A. D.
+\emph{Convex polyhedra.}
+Springer Monographs in Mathematics. Springer-Verlag, Berlin, 2005.
 
 \bibitem{protasov} Protasov, V. Yu. 
 On the number of closed geodesics on a polyhedron.  Russian Math. Surveys 63 (2008), no. 5, 978--980
