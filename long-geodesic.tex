@@ -1,8 +1,7 @@
 \documentclass[oneside,a4paper]{article}
 \usepackage{long-geodesic}
 
-\usepackage{lineno}
-\linenumbers
+%\usepackage{lineno}\linenumbers
 
 \begin{document}
 
@@ -18,10 +17,8 @@ if the surface of convex body $K$ contains arbitrary long closed simple geodesic
 
 \section{Introduction}
 
-The goal of this note is to introduce the reader to the theory of intrinsic geometry of convex surfaces.
-
-After reviewing the theory of convex surfaces and prove the following theorem which generalize the main theorem proved by Vladimir Protasov in \cite{protasov}.
-This theorem is used as an illustration.
+The goal of this note is to introduce the reader to the theory of intrinsic geometry of convex surfaces and prove the following theorem.
+This theorem is given as an illustration to the theory, not the other way around.
 
 \begin{wrapfigure}{r}{21 mm}
 \begin{lpic}[t(-4 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/long-geodesic(1)}
@@ -34,47 +31,117 @@ and we say that it is simple if it has no self intersections.
 A tetrahedron with equal opposite edges is called \emph{isosceles}.
 
 \begin{thm}{Theorem}\label{Long geodesic}
-Assume that the surface $\Sigma$ of a convex body $B$ in $\RR^3$
+Assume that the surface $\Sigma$ of a convex body $B$ in the Euclidean space $\EE^3$
 admits an arbitrary long simple closed geodesic.
 Then $B$ is an isosceles tetrahedron.
 \end{thm}
+
+A weaker statement was proved by Vladimir Protasov in \cite{protasov}.
  
 
 \section{The theory}
 
+The intrinsic metric on convex surfaces is not arbitrary;
+it has certain comparison property, which we about to discuss.
 A very short but comprehensive introduction to the subject was written by Alexander Alexandrov in \cite{alexandrov1941}.
 
-TODO: Tangent cone, direction of curve.
-Liberman's Lemma, direction of geodesic.
-Angle between geodesics.
-Model triangle/model angle.
-First variation formula.
+By \emph{surface} we will understand a compact two-dimensional surface, possibly with boundary, which is equipped with geodesic metric.
+that is, any two points in the surface can be joined by a minimizing geodesic.
+A minimizing geodesic connecting two points $p$ and $q$ will be denoted as $[pq]$.
 
+For a triple of points $x,y,z$ in a surface $\Sigma$, a choice of a triple of geodesics $([x y], [y z], [z x])$ will be called a \index{triangle}\emph{triangle} 
+and denoted as 
+$[x y z]$.
+Given a triple $x,y,z\in \Sigma$ there may be many different triangles with these vertices may exist, any of which can be denoted by $[x y z]$.
 
-On a convex surface (not necessary smooth) one could define 
-so
-called \index{curvature measure}\emph{curvature measure} which we denote further by $\kappa$.
-It is the (necessary unique) non-negative measure such that for any triangle $\triangle$, we have
-\[\kappa(\triangle)=\alpha+\beta+\gamma-\pi,\] 
-where $\alpha$, $\beta$ and $\gamma$ are the angles of $\triangle$, measured in the intrinsic metric of the surface.
+A triangle $[\~x\~y\~z]$ in the plane $\EE^2$
+with the same side lengths as $[x y z]$ 
+is called \emph{model triangle} of $[x y z]$;
+it can be written as $[\~x\~y\~z]=\~\triangle(x y z)$.
+The angle $\mangle\hinge{\~x}{\~y}{\~z}$ of the model triangle $[\~x\~y\~z]$ is called \emph{model angles} $[x y z]$ at $x$ and denoted as $\angk x y z$.
+
+%???+PIC
+
+Two geodesics $[xy]$ and $[xz]$ with common end $x$ is called \emph{hinge} and denoted as $\hinge{x}{y}{z}$.
+The angle $\mangle\hinge{x}{y}{z}$ of the hinge is defined as the limit of model angles for small triangle sling along the sides of hinge to its vertex. Namely,
+\[\mangle\hinge{x}{y}{z}=\lim_{\bar y,\bar z\to x}\set{\angk{x}{\bar y}{\bar z}}{ \bar y\in \left]xy\right], \bar z\in \left]xz\right]},\]
+where $\left]xy\right]=[xy]\backslash\{x\}$.
+
+\begin{thm}{Comparison property}
+We say that hinge $\hinge x y z$ 
+satisfies \emph{comparison} if the angle
+$\mangle\hinge{x}{y}{z}$ is defined and 
+\[\mangle \hinge{x}{y}{z} \ge \angk{x}{x}{y}{}{}.\]
+If the comparison holds for all hinges in the surface $\Sigma$,
+we say that $\Sigma$
+has \emph{nonnegative curvature in the sence of Alexandrov}.
+\end{thm}
+
+The following two theorems play central role in the theory.
+They admit generalizations to higher dimensions, but we need it only for surfaces.
+
+\begin{thm}{Globalization theorem}
+Assume comparison holds for all sufficiently small hinges in a surface $\Sigma$.
+Then $\Sigma$ has non-negative curvature in the sense of Alexandrov.
+\end{thm}
+
+\begin{thm}{Comparison theorem}
+Any surface of convex body in $\EE^3$,
+if equipped with the induced intrinsic metric, 
+is a surface with non-negative curvature in the sense of Alexandrov.
+\end{thm}
+
+In fact, the converse of this theorem also holds
+if one extends the definition of \emph{surface} 
+to the convex bodies which degenerate to 2-dimensional sets.
+The surface of flat convex figure has to be defined as its doubling;
+that is, two copies 
+of the figure glued along the boundary --- you can imagine that you can walk on both sides of the figure but can not pass through it.
+
+\begin{thm}{Theorem}
+Any surface $\Sigma$ with non-negative curvature in the sense of Alexandrov which is homeomorphic to the sphere
+is isometric to the surface of convex body $K$ in $\EE^3$,
+which possibly degenerate to a flat figure.
+\end{thm}
+
+It turns out that $\Sigma$ defines $K$ up to congruence.
+This a hard theorem was proved by Pogorelov.
+We will use the following weaker statement, 
+which is deep and elementaly at the same time,
+it was proved earlier by Alexandrov.
+
+\begin{thm}{Theorem}
+Polyhedrons in $\EE^3$ with isometric surfaces are congruent. 
+\end{thm}
+
+Let $\Sigma$ be a surface with non-negative curvature in the sense of Alexandrov.
+Assume a triangle $[xyz]$ bounds in $\Sigma$ an open set $\Delta$ homeomorphic to a disc which is convex.
+That is any minimizing geodesic with ends in $\Delta$
+lie completely in $\Delta$.
+In this case we define the \emph{curvature} of $\Delta$ as the angle excess of $[xyz]$;
+that is,
+\[\kappa(\Delta)=\angk x y z+\angk  y z x+\angk z x y-\pi.\]
+It extends to non-negative measure, so called \index{curvature measure}\emph{curvature measure} in the unique way, defined on all Borel subsets in the interior of $\Sigma$.
+The curvature of an interior point in $\Sigma$ can be thought as $\pi$ minus total angle around it;
+a formal definition of \emph{total angle around point} is left to the reader.
 
 For curvature measure, an analog of Gauss--Bonnet formula holds;
-in particular
+in particular if $\Sigma$ is homeomorphic to the sphere then 
 \[\kappa(\Sigma)=4\cdot\pi\]
 for any closed convex surface $\Sigma$ in $\RR^3$
 
 %???+PIC
 
-Further, given a triangle $\triangle$ in a metric space,
-its model triangle $\tilde \triangle$ is defined as a triangle in the plane with the same side lengths.
-The angles $\tilde\alpha$, $\tilde\beta$ and $\tilde\gamma$ of the model triangle are called \index{model angle}\emph{model angle}
-of triangle.
-The comparison theorem states that for any triangle in a surface with non-negative curvature measure its model angles do not exceed the actual angles; that is,
-\[\tilde\alpha\le \alpha,\quad
-\tilde\beta\le\beta,\quad
-\tilde\gamma\le\gamma.\]
-The same holds for the area; that is,
-\[\area\tilde\triangle\le \area\triangle.\]
+We also will use the following comparison,
+it follows easely from ???.
+
+\begin{thm}{Theorem}
+Assume $\Sigma$ is a surface with non-negative curvature in the sense of Alexandrov
+and a triangle $[xyz]$ in $\Sigma$ bounds a open set $\Delta$  homeomorphic to a disc.
+Then 
+\[\area\Delta\ge \area\~\triangle(xyz).\]
+
+\end{thm}
 
 \section{Four singular points}
 
@@ -212,7 +279,7 @@ Alternatively one could apply the following exercise and the uniqueness theorem 
 \qeds
 
 \begin{thm}{Exercise}
-Assume that a convex body $K$ ids bounded by a closed flat surface with finite number of singular points.
+Assume that a convex body $K$ is bounded by a closed flat surface with finite number of singular points.
 Show that $K$ is a polyhedron.
 \end{thm}
 
