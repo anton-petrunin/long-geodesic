@@ -1,4 +1,7 @@
-\documentclass[oneside,a4paper]{article}
+\documentclass[oneside,a4paper, 12pt]{article}
+\usepackage{anysize}
+%\marginsize{left}{right}{top}{bottom}
+\marginsize{2cm}{2cm}{2cm}{2cm}
 \usepackage{long-geodesic}
 
 %\usepackage{lineno}\linenumbers
@@ -30,7 +33,8 @@ and we say that it is simple if it has no self intersections.
 
 A tetrahedron with equal opposite edges is called \emph{isosceles}.
 
-\begin{thm}{Theorem}\label{Long geodesic}
+\begin{thm}{Theorem}
+	\label{Long geodesic}
 Assume that the surface $\Sigma$ of a convex body $B$ in the Euclidean space $\EE^3$
 admits an arbitrary long simple closed geodesic.
 Then $B$ is an isosceles tetrahedron.
@@ -141,7 +145,7 @@ it follows easily from the comparison.
 
 \begin{thm}{Theorem}
 Assume $\Sigma$ is a surface with non-negative curvature in the sense of Alexandrov
-and a triangle $[xyz]$ in $\Sigma$ bounds a open set $\Delta$  homeomorphic to a disc.
+and a triangle $[xyz]$ in $\Sigma$ bounds a open set $\Delta$ homeomorphic to a disc.
 Then 
 \[\area\Delta\ge \area\~\triangle(xyz).\]
 
@@ -149,19 +153,21 @@ Then
 
 \section{Four singular points}
 
-The following lemma is the key to the proof.
+The following lemma is the key to the proof of Theorem~\ref{Long geodesic}.
 
 \begin{thm}{Lemma} 
-Assume that the surface $\Sigma$ of a convex body $B$ in $\RR^3$
+Assume that the surface $\Sigma$ of a convex body $B$ in $\mathbb{R}^3$
 admits an arbitrary long simple closed geodesic.
-Then the surface of $B$ contains 4 singular points with curvature $\pi$ and the rest of it is flat.
+Then the surface of $B$ contains $4$ singular points with curvature $\pi$ and the rest of it is flat.
 \end{thm}
 
+For the proof we will show that for any $\varepsilon$ is is possible to fount four non-intersecting open sets of diameter $\varepsilon$, such that each of them having curvature at least $\pi - \varepsilon$.
+Going to the limit we will get the statement of the Lemma.
 
 By cutting the surface $\Sigma$ along a sufficiently long closed simple geodesic,
 we get two discs.
-The key step is to show that each of these discs 
-is long and thin.
+The key step is to show that each of these discs is long and thin.
+Then we show that their ``corners'' form four required sets with big curvature.
 
 \medskip
 
@@ -176,7 +182,11 @@ Clearly,
 \[|x-p|_D,|x-q|_D\le |p-q|_D\] 
 for any other point $x\in\partial D$.
 By comparison, 
-\[\measuredangle[x\,^p_q]\ge \tfrac\pi3.\leqno({*})\]
+\begin{equation}
+	\label{eq:pxq>pi/3}
+	\measuredangle[x\,^p_q]\ge \tfrac\pi3.\tag{$*$}
+\end{equation}
+
 
 
 
@@ -192,10 +202,14 @@ By comparison,
 The points $p$ and $q$ divide $\partial D$ into two arcs,
 say $\gamma_1$ and $\gamma_2$;
 let us parametrize them by arclength from $p$ to $q$. 
-Then by $({*})$
-\[\tfrac{d}{dt}\left(|x-\gamma_i(t)|_D-|x-\gamma_i(t)|_D\right)
-\ge
-\tfrac12.\]
+Then by \eqref{eq:pxq>pi/3}
+\begin{equation}
+	\tfrac{d}{dt}\left(|p-\gamma_i(t)|_D-|q-\gamma_i(t)|_D\right)
+	\ge
+	\tfrac12.
+	\tag{$**$}
+\end{equation}
+
 In particular
 \[|p-q|_D\ge \tfrac18{\cdot}\length[\partial D].\]
 That is, if the geodesic was long 
@@ -205,13 +219,14 @@ Choose two points $x\in \gamma_1$ and $y\in\gamma_2$ sufficiently close to $p$ s
 By comparison 
 \[\area \tilde \triangle qxy\le \area \triangle qxy\le \area \Sigma.\]
 It follows that 
-\[\begin{aligned}|x-y|_D&\le2\cdot\frac{ \area[\tilde\triangle(xyq)]}{|q-x|_D}
+\begin{equation}
+	\label{eq:|x-y|}
+\begin{aligned}|x-y|_D&\le2\cdot\frac{ \area[\tilde\triangle(xyq)]}{|q-x|_D}
 \le 
-\\
-&\le 
 100\cdot\frac{ \area\Sigma}{\length[\partial D]}.
 \end{aligned}
-\leqno({*}{*})\]
+\tag{$***$}
+\end{equation}
 
 Cut from $D$ along a minimizing geodesic $[xy]$
 and consider part (a loon) $L_p$ with the point $p$ in it.
@@ -223,7 +238,7 @@ In particular, if $|x-y|_D$ much less then $|p-x|_D+|p-y|_D$ then the curvature 
 
 Fix $\eps>0$.
 If $\length[\partial D]$ is long enough,
-by $({*})$, 
+by \eqref{eq:pxq>pi/3}, 
 we can find a loon $L_p$ with diameter at most $\eps$,
 such that curvature $L_p$ is at least $\pi-\eps$.
 
