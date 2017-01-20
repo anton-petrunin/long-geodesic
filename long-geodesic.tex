@@ -1,7 +1,7 @@
 \documentclass[oneside,a4paper, 12pt]{article}
 \usepackage{anysize}
 %\marginsize{left}{right}{top}{bottom}
-\marginsize{2cm}{2cm}{2cm}{2cm}
+%\marginsize{2cm}{2cm}{2cm}{2cm}
 \usepackage{long-geodesic}
 
 %\usepackage{lineno}\linenumbers
@@ -169,8 +169,9 @@ we get two discs.
 The key step is to show that each of these discs is long and thin.
 Then we show that their ``corners'' form four required sets with big curvature.
 
-\medskip
-
+\parit{Proof.}
+Cut the surface $\Sigma$ along a sufficiently long closed simple geodesic,
+we get two discs.
 Choose one of the discs, say $D$;
 equip it with the intrinsic metric further denoted by $|{*}-{*}|_D$.
 
@@ -184,13 +185,13 @@ for any other point $x\in\partial D$.
 By comparison, 
 \begin{equation}
 	\label{eq:pxq>pi/3}
-	\measuredangle[x\,^p_q]\ge \tfrac\pi3.\tag{$*$}
+	\measuredangle[x\,^p_q]\ge \tfrac\pi3.\tag{${*}$}
 \end{equation}
 
 
 
 
-\begin{wrapfigure}{r}{28 mm}
+\begin{wrapfigure}{l}{28 mm}
 \begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/long-geodesic-diam(1)}
 \lbl[r]{0,8;$p$}
 \lbl[l]{28,8;$q$}
@@ -204,10 +205,10 @@ say $\gamma_1$ and $\gamma_2$;
 let us parametrize them by arclength from $p$ to $q$. 
 Then by \eqref{eq:pxq>pi/3}
 \begin{equation}
-	\tfrac{d}{dt}\left(|p-\gamma_i(t)|_D-|q-\gamma_i(t)|_D\right)
-	\ge
-	\tfrac12.
-	\tag{$**$}
+\tfrac{d}{dt}\left(|p-\gamma_i(t)|_D-|q-\gamma_i(t)|_D\right)
+\ge
+\tfrac12.
+\tag{${*}{*}$}
 \end{equation}
 
 In particular
@@ -215,51 +216,55 @@ In particular
 That is, if the geodesic was long 
 then $D$ has large diameter.
 
-Сhoose $\delta$ so small that $\delta/\varepsilon<\sin \varepsilon$, that means that any euclidean triangle with one side equal $\varepsilon$ and one side equals $\delta$ has an angle opposite to the side $\delta$ less than $\varepsilon$.
+Fix small $\delta$ with respect to $\varepsilon$. 
+(The value $\delta=\varepsilon\cdot\sin \varepsilon$ will do.
+It means that any euclidean triangle with one side equal $\varepsilon$ and one side equals $\delta$ has an angle opposite to the side $\delta$ less than $\varepsilon$).
 
-Let $x$ and $y$ be the first point along the curves $\gamma_1$ and $\gamma_2$ at distance $\varepsilon$ from $p$.
-If $|q-x|_D>|q-y|_D$ move the point $y$ along $\gamma_2$ to the direction of point $p$ until $|q-x|_D=|q-y|_D$, since $|p-q|_D$ is the diameter this distance will be achieved. In case $|q-x|_D<|q-y|_D$ do the same with the point $x$. 
+Let $x$ and $y$ be the first points along $\gamma_1$ and $\gamma_2$ at distance $\varepsilon$ from $p$.
+If $|q-x|_D>|q-y|_D$, move the point $y$ along $\gamma_2$ toward $p$ until $|q-x|_D=|q-y|_D$; 
+since $|p-q|_D$ is maximal, this distance will be achieved. 
+In case $|q-x|_D<|q-y|_D$ do the same with the point $x$. 
 Note that now $|q-x|_D=|q-y|_D\ge|p-q|_D-\varepsilon$.
 
 By comparison 
 \[\area \tilde \triangle qxy\le \area \triangle qxy\le \area \Sigma.\]
 It follows that 
 \begin{equation}
-	\label{eq:|x-y|}
-\begin{aligned}|x-y|_D&\le2\cdot\frac{ \area[\tilde\triangle(xyq)]}{|q-x|_D}
+\label{eq:|x-y|}
+\begin{aligned}
+|x-y|_D&\le2\cdot\frac{ \area[\tilde\triangle(xyq)]}{|q-x|_D}
 \le 
 100\cdot\frac{ \area\Sigma}{\length[\partial D]}.
 \end{aligned}
-\tag{$***$}
+\tag{${*}{*}{*}$}
 \end{equation}
 So we can choose $D$ having a large enough perimeter that $|x-y|_D <\delta$.
 
 Cut from $D$ along a minimizing geodesic $[xy]$
-and consider part (a loon) $L_p$ with the point $p$ in it.
+and consider part (a lune) $L_p$ with the point $p$ in it.
 Note that the curvature of $L_p$ is $\alpha+\beta$, where $\alpha$ and $\beta$ the angles as on the diagram.
 By comparison $\alpha\ge \tilde\measuredangle(x\,^p_y)$ 
 and $\beta\ge \tilde\measuredangle(y\,^p_x)$.
 Therefore curvature of $L_p$ is at least $\pi-\tilde\measuredangle(p\,^x_y)>\pi-\varepsilon$.
 % In particular, if $|x-y|_D$ much less then $|p-x|_D+|p-y|_D$ then the curvature of $L_p$ is almost $\pi$.
 
-\textbf{Anton, vot dalshe poka problemi}
+
 Fix $\varepsilon>0$.
-% If $\length[\partial D]$ is long enough,
-% by \eqref{eq:pxq>pi/3},
-We can find a loon $L_p$ with diameter \textbf{of its perimeter} at most $\eps+\delta$,
+Assuming $\length[\partial D]$ is long enough, by \eqref{eq:pxq>pi/3},
+We can find a lune $L_p$ with perimeter at most $2\cdot\eps$,
 such that curvature $L_p$ is at least $\pi-\eps$.
 
 Using the same construction for $p$ and $q$ in the disc $D$,
 and for the other disc,
-we get four loons in $\Sigma$ each of diameter at most $\eps$ and each with curvature at least $\pi-\eps$.
+we get four lunes in $\Sigma$ each of diameter at most $\eps$ and each with curvature at least $\pi-\eps$.
 
 \begin{center}
-\begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/long-geodesic-D(1)}
+\begin{lpic}[t(3 mm),b(3 mm),r(0 mm),l(0 mm)]{pics/long-geodesic-D(1)}
 \lbl{46,6;$D$}
-\lbl{6,6;$L_p$}
+\lbl{6.5,5.7;{\small $L_p$}}
 \lbl[r]{0,6;$p$}
 \lbl[l]{92.5,6;$q$}
-\lbl[b]{19,11.5;$x$}
+\lbl[b]{19,11.8;$x$}
 \lbl[t]{12.5,.5;$y$}
 \lbl[b]{46,12;$\gamma_1$}
 \lbl[t]{46,-.5;$\gamma_2$}
@@ -299,8 +304,9 @@ and the point $p$ correspond to the vertices of $\triangle$.
 }
 
 It follows that $\Sigma$ is isometric to the surface of isosceles tetrahedron.
-The statement now follows from the uniqueness theorem \cite{???},
+The statement now follows from the Pogorelov's uniqueness theorem \cite{pogorelov},
 which states that if two closed convex surfaces have isometric intrinsic metrics then they bound congruent bodies.
+
 Alternatively one could apply the following exercise and the uniqueness theorem for the surfaces polyhedra, which has much simple proof, see \cite{alexandrov1950}.
 \qeds
 
@@ -319,12 +325,21 @@ Acad. Sci. URSS (N.S.)
 467--470
 
 \bibitem{alexandrov1950} 
-Alexandrov, A. D.
+Alexandrov, A. D.,
 \emph{Convex polyhedra.}
 Springer Monographs in Mathematics. Springer-Verlag, Berlin, 2005.
 
-\bibitem{protasov} Protasov, V. Yu. 
-On the number of closed geodesics on a polyhedron.  Russian Math. Surveys 63 (2008), no. 5, 978--980
+\bibitem{pogorelov} 
+\begin{otherlanguage}{russian}
+Погорелов, А. В.,
+\emph{Однозначаная определённость общих выпукых поверхностей}
+Киев, 1952.
+\end{otherlanguage}
+
+
+
+\bibitem{protasov} Protasov, V. Yu.,
+\emph{On the number of closed geodesics on a polyhedron.}  Russian Math. Surveys 63 (2008), no. 5, 978--980
 \end{thebibliography}
 
 

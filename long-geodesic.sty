@@ -97,6 +97,13 @@ urlcolor=black%,
 \def\mangle{\measuredangle}
 \def\tangle{\text{\rlap{$\~{\text{\phantom{n}}}$}{$\mangle$}}}
 
+\newcommand{\asterism}{\smash{%
+\raisebox{-.5ex}{%
+\setlength{\tabcolsep}{.5pt}%
+\begin{tabular}{@{}cc@{}}%
+\multicolumn2c*\\[-1.7ex]*&*%
+\end{tabular}}}}
+
 \def\CAT{\mathrm{CAT}}
 \def\GHto{\buildrel \mathrm{GH} \over \longrightarrow}
 \def\df{\buildrel \mathrm{def} \over{=\!\!=}}
