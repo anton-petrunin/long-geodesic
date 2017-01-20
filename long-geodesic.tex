@@ -215,7 +215,12 @@ In particular
 That is, if the geodesic was long 
 then $D$ has large diameter.
 
-Choose two points $x\in \gamma_1$ and $y\in\gamma_2$ sufficiently close to $p$ such that $|x-q|_D=|y-q|_D$.
+Сhoose $\delta$ so small that $\delta/\varepsilon<\sin \varepsilon$, that means that any euclidean triangle with one side equal $\varepsilon$ and one side equals $\delta$ has an angle opposite to the side $\delta$ less than $\varepsilon$.
+
+Let $x$ and $y$ be the first point along the curves $\gamma_1$ and $\gamma_2$ at distance $\varepsilon$ from $p$.
+If $|q-x|_D>|q-y|_D$ move the point $y$ along $\gamma_2$ to the direction of point $p$ until $|q-x|_D=|q-y|_D$, since $|p-q|_D$ is the diameter this distance will be achieved. In case $|q-x|_D<|q-y|_D$ do the same with the point $x$. 
+Note that now $|q-x|_D=|q-y|_D\ge|p-q|_D-\varepsilon$.
+
 By comparison 
 \[\area \tilde \triangle qxy\le \area \triangle qxy\le \area \Sigma.\]
 It follows that 
@@ -227,16 +232,18 @@ It follows that
 \end{aligned}
 \tag{$***$}
 \end{equation}
+So we can choose $D$ with so large perimeter that $|x-y|_D <\delta$.
 
 Cut from $D$ along a minimizing geodesic $[xy]$
 and consider part (a loon) $L_p$ with the point $p$ in it.
 Note that the curvature of $L_p$ is $\alpha+\beta$, where $\alpha$ and $\beta$ the angles as on the diagram.
 By comparison $\alpha\ge \tilde\measuredangle(x\,^p_y)$ 
 and $\beta\ge \tilde\measuredangle(y\,^p_x)$.
-Therefore curvature of $L_p$ is at least $\pi-\tilde\measuredangle(p\,^x_y)$.
-In particular, if $|x-y|_D$ much less then $|p-x|_D+|p-y|_D$ then the curvature of $L_p$ is almost $\pi$.
+Therefore curvature of $L_p$ is at least $\pi-\tilde\measuredangle(p\,^x_y)>\pi-\varepsilon$.
+% In particular, if $|x-y|_D$ much less then $|p-x|_D+|p-y|_D$ then the curvature of $L_p$ is almost $\pi$.
 
-Fix $\eps>0$.
+\textbf{Anton, vot dalshe poka problemi}
+Fix $\varepsilon>0$.
 If $\length[\partial D]$ is long enough,
 by \eqref{eq:pxq>pi/3}, 
 we can find a loon $L_p$ with diameter at most $\eps$,
