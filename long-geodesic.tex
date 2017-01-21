@@ -236,9 +236,15 @@ It follows that
 \le 
 100\cdot\frac{ \area\Sigma}{\length[\partial D]}.
 \end{aligned}
-\tag{${*}{*}{*}$}
+\tag{$***$}
 \end{equation}
 So we can choose $D$ having a large enough perimeter that $|x-y|_D <\delta$.
+
+Analogously, we can prove that for any point $z$ in $D$ there is a point on $z'$ on $\gamma(t)$, that $|z-z'|_D$ less than $\delta$.
+Indeed, one of the distance from $z$ to $p$ or $q$ is at least $|p-q|_D/2$, suppose it the point $q$.
+Choose a point $z'$ on $\gamma(t)$ such that $|q-z'|_D=|q-z|_D$.
+Considering the triangle $\tilde \triangle qzz'$ and inequality similar to \eqref{eq:|x-y|} we obtain $|z-z'|_D<\delta$.
+
 
 Cut from $D$ along a minimizing geodesic $[xy]$
 and consider part (a lune) $L_p$ with the point $p$ in it.
@@ -250,8 +256,7 @@ Therefore curvature of $L_p$ is at least $\pi-\tilde\measuredangle(p\,^x_y)>\pi-
 
 
 Fix $\varepsilon>0$.
-Assuming $\length[\partial D]$ is long enough, by \eqref{eq:pxq>pi/3},
-We can find a lune $L_p$ with perimeter at most $2\cdot\eps$,
+Assuming $\length[\partial D]$ is long enough, we can find a lune $L_p$ with perimeter at most $2\cdot\eps + \delta$,
 such that curvature $L_p$ is at least $\pi-\eps$.
 
 Using the same construction for $p$ and $q$ in the disc $D$,
