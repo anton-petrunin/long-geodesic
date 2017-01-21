@@ -203,9 +203,17 @@ By comparison,
 The points $p$ and $q$ divide $\partial D$ into two arcs,
 say $\gamma_1$ and $\gamma_2$;
 let us parametrize them by arclength from $p$ to $q$. 
-Then by \eqref{eq:pxq>pi/3}
+Note that 
+\[\tfrac{d}{dt}|p-\gamma_i(t)|_D=-\cos \phi,\] 
+where $\phi$ is the angle between the direction of $\gamma_i$ at $x=\gamma_i(t)$ and the geodesic $[xp]$;
+the same way 
+\[\tfrac{d}{dt}|q-\gamma_i(t)|_D=-\cos \psi,\] 
+where $\psi$ is the angle between the direction of $\gamma_i$ at $x=\gamma_i(t)$ and the geodesic $[xq]$.
+By \eqref{eq:pxq>pi/3}, $\phi-\psi\ge \tfrac\pi3$.
+Therefore 
 \begin{equation}
 \tfrac{d}{dt}\left(|p-\gamma_i(t)|_D-|q-\gamma_i(t)|_D\right)
+= \cos \psi-\cos\phi
 \ge
 \tfrac12.
 \tag{${*}{*}$}
