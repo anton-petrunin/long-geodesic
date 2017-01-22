@@ -40,7 +40,7 @@ admits an arbitrary long simple closed geodesic.
 Then $B$ is an isosceles tetrahedron.
 \end{thm}
 
-A weaker statement was proved by Vladimir Protasov in \cite{protasov}.
+For the surfaces of convex polyhedrons, the statement was proved by Vladimir Protasov in \cite{protasov}.
  
 
 \section{An overview of the theory}
@@ -74,7 +74,7 @@ where $\left]xy\right]=[xy]\backslash\{x\}$.
 
 Note that if $p\in \left]xy\right[=[xy]\backslash\{x,y\}$ then $\mangle\hinge{p}{x}{y}=\pi$.
 
-\begin{thm}{Comparison property}
+\begin{thm}{Comparison property}\label{Comparison property}
 We say that hinge $\hinge x y z$ 
 satisfies \emph{comparison} if the angle
 $\mangle\hinge{x}{y}{z}$ is defined and 
@@ -88,20 +88,21 @@ Then for any triple of points $x,y,z\in \Sigma$ and $p\in \left]xy\right[$ we ha
 here we assume that the two hinges $\hinge{p}{x}{z}$ and $\hinge{p}{y}{z}$ have a common side $[pz]$
 \end{thm}
 
-If the comparison and supplementary angles property always hold in the surface $\Sigma$,
-we say that $\Sigma$
+If in the surface $\Sigma$, the angles of all hinges are defined and satisfy 
+the comparison and supplementary angles property, then we say that $\Sigma$
 has \emph{nonnegative curvature in the sence of Alexandrov}.
 
 
 The following two theorems play central role in the theory.
 They admit generalizations to higher dimensions, but we need it only for surfaces.
 
-\begin{thm}{Globalization theorem}
-Assume comparison and supplementary angles property hold in all sufficiently small open sets of the surface $\Sigma$.
+\begin{thm}{Globalization theorem}\label{Globalization theorem}
+Assume in all sufficiently small open sets of the surface $\Sigma$, the angles of all hinges are defined and satisfy 
+the comparison and supplementary angles property.
 Then $\Sigma$ has non-negative curvature in the sense of Alexandrov.
 \end{thm}
 
-\begin{thm}{Comparison theorem}
+\begin{thm}{Comparison theorem}\label{Comparison theorem}
 Any surface of convex body in $\EE^3$,
 if equipped with the induced intrinsic metric, 
 is a surface with non-negative curvature in the sense of Alexandrov.
@@ -121,7 +122,7 @@ which possibly degenerate to a flat figure.
 \end{thm}
 
 It turns out that $\Sigma$ defines $K$ up to congruence.
-This a hard theorem was proved by Pogorelov.
+This a hard theorem was proved by Pogorelov, see \cite{pogorelov}.
 We will use the following weaker statement
 it was proved earlier by Alexandrov essentailly the same way as the Cauchy's rigidity theorem.
 
@@ -155,7 +156,7 @@ in particular, if $\Sigma$ is a surface with non-negative curvature in the sence
 We also will use the following comparison,
 it follows easily from the comparison.
 
-\begin{thm}{Theorem}
+\begin{thm}{Area comparison}\label{Area comparison}
 Assume $\Sigma$ is a surface with non-negative curvature in the sense of Alexandrov
 and a triangle $[xyz]$ in $\Sigma$ bounds a open set $\Delta$ homeomorphic to a disc.
 Then 
@@ -188,13 +189,15 @@ Choose one of the discs, say $D$;
 equip it with the intrinsic metric further denoted by $|{*}-{*}|_D$.
 
 
-Since $\Sigma$ has non-negative curvature in the sense of Alexandrov,
-so is $D$.
+According to the comparison theorem (\ref{Comparison theorem}) the surface $\Sigma$ has non-negative curvature in the sense of Alexandrov.
+By globalization theorem (\ref{Globalization theorem})
+the same holds for $D$.
+
 Choose a pair of points $p,q\in\partial D$ which maximize the distance $|p-q|_D$.
 Clearly,
 \[|x-p|_D,|x-q|_D\le |p-q|_D\] 
 for any other point $x\in\partial D$.
-By comparison, 
+By comparison property (\ref{Comparison property}) 
 \begin{equation}
 	\label{eq:pxq>pi/3}
 	\measuredangle[x\,^p_q]\ge \tfrac\pi3.\tag{${*}$}
@@ -246,7 +249,7 @@ since $|p-q|_D$ is maximal, this distance will be achieved.
 In case $|q-x|_D<|q-y|_D$ do the same with the point $x$. 
 Note that now $|q-x|_D=|q-y|_D\ge|p-q|_D-\varepsilon$.
 
-By comparison 
+By the area comparison (\ref{Area comparison})
 \[\area \tilde \triangle qxy\le \area \triangle qxy\le \area \Sigma.\]
 It follows that 
 \begin{equation}
@@ -258,13 +261,22 @@ It follows that
 \end{aligned}
 \tag{${*}{*}{*}$}
 \end{equation}
-So we can choose $D$ having a large enough perimeter that $|x-y|_D <\delta$.
+Therefore, if $D$ has sufficiently large perimeter then $|x-y|_D <\delta$.
 
-Analogously, we can prove that for any point $z$ in $D$ there is a point on $z'$ on $\gamma(t)$, that $|z-z'|_D$ less than $\delta$.
-Indeed, one of the distance from $z$ to $p$ or $q$ is at least $|p-q|_D/2$, suppose it the point $q$.
-Choose a point $z'$ on $\gamma(t)$ such that $|q-z'|_D=|q-z|_D$.
-Considering the triangle $\tilde \triangle qzz'$ and inequality similar to \eqref{eq:|x-y|} we obtain $|z-z'|_D<\delta$.
-
+\begin{center}
+\begin{lpic}[t(3 mm),b(3 mm),r(0 mm),l(0 mm)]{pics/long-geodesic-D(1)}
+\lbl{46,6;$D$}
+\lbl{6.5,5.7;{\small $L_p$}}
+\lbl[r]{0,6;$p$}
+\lbl[l]{92.5,6;$q$}
+\lbl[b]{19,11.8;$x$}
+\lbl[t]{12.5,.5;$y$}
+\lbl[b]{46,12;$\gamma_1$}
+\lbl[t]{46,-.5;$\gamma_2$}
+\lbl[tr]{16.5,9;{\small $\alpha$}}
+\lbl[br]{12.5,4.5;{\small $\beta$}}
+\end{lpic}
+\end{center}
 
 Cut from $D$ along a minimizing geodesic $[xy]$
 and consider part (a lune) $L_p$ with the point $p$ in it.
@@ -282,21 +294,6 @@ such that curvature $L_p$ is at least $\pi-\eps$.
 Using the same construction for $p$ and $q$ in the disc $D$,
 and for the other disc,
 we get four lunes in $\Sigma$ each of diameter at most $\eps$ and each with curvature at least $\pi-\eps$.
-
-\begin{center}
-\begin{lpic}[t(3 mm),b(3 mm),r(0 mm),l(0 mm)]{pics/long-geodesic-D(1)}
-\lbl{46,6;$D$}
-\lbl{6.5,5.7;{\small $L_p$}}
-\lbl[r]{0,6;$p$}
-\lbl[l]{92.5,6;$q$}
-\lbl[b]{19,11.8;$x$}
-\lbl[t]{12.5,.5;$y$}
-\lbl[b]{46,12;$\gamma_1$}
-\lbl[t]{46,-.5;$\gamma_2$}
-\lbl[tr]{16.5,9;{\small $\alpha$}}
-\lbl[br]{12.5,4.5;{\small $\beta$}}
-\end{lpic}
-\end{center}
 
 By Gauss--Bonnet formula, the total curvature of $\Sigma$ is $4\cdot\pi$.
 Since $\eps>0$ is arbitrary, we get that there are four singular points in $\Sigma$, each with curvature $\pi$
@@ -329,8 +326,8 @@ and the point $p$ correspond to the vertices of $\triangle$.
 }
 
 It follows that $\Sigma$ is isometric to the surface of isosceles tetrahedron.
-The statement now follows from the Pogorelov's uniqueness theorem \cite{pogorelov},
-which states that if two closed convex surfaces have isometric intrinsic metrics then they bound congruent bodies.
+The statement now follows from the Pogorelov's uniqueness theorem,
+mentioned in the theory overview.
 
 Alternatively one could apply the following exercise and the uniqueness theorem for the surfaces polyhedra, which has much simple proof, see \cite{alexandrov1950}.
 \qeds
