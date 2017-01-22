@@ -43,17 +43,18 @@ Then $B$ is an isosceles tetrahedron.
 A weaker statement was proved by Vladimir Protasov in \cite{protasov}.
  
 
-\section{The theory}
+\section{An overview of the theory}
 
-The intrinsic metric on convex surfaces is not arbitrary;
-it has certain comparison property, which we about to discuss.
+The intrinsic metric on convex surfaces has certain comparison property, which we about to discuss.
 A very short but comprehensive introduction to the subject was written by Alexander Alexandrov in \cite{alexandrov1941}.
 
 By \emph{surface} we will understand a compact two-dimensional surface, possibly with boundary, which is equipped with geodesic metric.
-that is, any two points in the surface can be joined by a minimizing geodesic.
-A minimizing geodesic connecting two points $p$ and $q$ will be denoted as $[pq]$.
+That is, a metric space $\Sigma$ is a surface if it is homeomorphic to a two-dimesinoanl manifold 
+and any two points $p,q\in \Sigma$ can be joined by a curve with length $|p-q|_\Sigma$;
+we denote by $|p-q|_\Sigma$ the distance from $p$ to $q$ in $\Sigma$.
+This curve will be denoted as $[pq]$ and called \emph{minimizing geodesic} from $p$ to $q$.
 
-For a triple of points $x,y,z$ in a surface $\Sigma$, a choice of a triple of geodesics $([x y], [y z], [z x])$ will be called a \index{triangle}\emph{triangle} 
+For a triple of points $x,y,z\in\Sigma$, a choice of a triple of geodesics $([x y], [y z], [z x])$ will be called a \index{triangle}\emph{triangle} 
 and denoted as 
 $[x y z]$.
 Given a triple $x,y,z\in \Sigma$ there may be many different triangles with these vertices may exist, any of which can be denoted by $[x y z]$.
@@ -61,7 +62,7 @@ Given a triple $x,y,z\in \Sigma$ there may be many different triangles with thes
 A triangle $[\~x\~y\~z]$ in the plane $\EE^2$
 with the same side lengths as $[x y z]$ 
 is called \emph{model triangle} of $[x y z]$;
-it can be written as $[\~x\~y\~z]=\~\triangle(x y z)$.
+this relation will be written as $[\~x\~y\~z]=\~\triangle(x y z)$.
 The angle $\mangle\hinge{\~x}{\~y}{\~z}$ of the model triangle $[\~x\~y\~z]$ is called \emph{model angles} $[x y z]$ at $x$ and denoted as $\angk x y z$.
 
 %???+PIC
@@ -70,6 +71,8 @@ Two geodesics $[xy]$ and $[xz]$ with common end $x$ is called \emph{hinge} and d
 The angle $\mangle\hinge{x}{y}{z}$ of the hinge is defined as the limit of model angles for small triangle sling along the sides of hinge to its vertex. Namely,
 \[\mangle\hinge{x}{y}{z}=\lim_{\bar y,\bar z\to x}\set{\angk{x}{\bar y}{\bar z}}{ \bar y\in \left]xy\right], \bar z\in \left]xz\right]},\]
 where $\left]xy\right]=[xy]\backslash\{x\}$.
+
+Note that if $p\in \left]xy\right[=[xy]\backslash\{x,y\}$ then $\mangle\hinge{p}{x}{y}=\pi$.
 
 \begin{thm}{Comparison property}
 We say that hinge $\hinge x y z$ 
@@ -80,6 +83,16 @@ If the comparison holds for all hinges in the surface $\Sigma$,
 we say that $\Sigma$
 has \emph{nonnegative curvature in the sence of Alexandrov}.
 \end{thm}
+
+The following is a simple, but nontrivial corollary from the comparison property.
+
+\begin{thm}{Supplementary angles property}\label{Supplementary angles property}
+Assume $\Sigma$ is a surface where comparison property holds for any hinge.
+Then for any triple of points $x,y,z\in \Sigma$ and $p\in \left]xy\right[$ we have
+\[\mangle\hinge{p}{x}{z}+\mangle\hinge{p}{y}{z}=\pi,\]
+here we assume that the two hinges $\hinge{p}{x}{z}$ and $\hinge{p}{y}{z}$ have a common side $[pz]$
+\end{thm}
+
 
 The following two theorems play central role in the theory.
 They admit generalizations to higher dimensions, but we need it only for surfaces.
@@ -209,7 +222,7 @@ where $\phi$ is the angle between the direction of $\gamma_i$ at $x=\gamma_i(t)$
 the same way 
 \[\tfrac{d}{dt}|q-\gamma_i(t)|_D=-\cos \psi,\] 
 where $\psi$ is the angle between the direction of $\gamma_i$ at $x=\gamma_i(t)$ and the geodesic $[xq]$.
-By \eqref{eq:pxq>pi/3}, $\phi-\psi\ge \tfrac\pi3$.
+By \eqref{eq:pxq>pi/3} and the supplementary angles property (\ref{Supplementary angles property}) we have $\phi-\psi\ge \tfrac\pi3$.
 Therefore 
 \begin{equation}
 \tfrac{d}{dt}\left(|p-\gamma_i(t)|_D-|q-\gamma_i(t)|_D\right)
