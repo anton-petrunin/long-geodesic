@@ -177,26 +177,36 @@ Then the surface of $B$ contains $4$ singular points with curvature $\pi$ and th
 For the proof we will show that for any $\varepsilon$ is is possible to found four non-intersecting open sets of diameter $\varepsilon$, such that each of them having curvature at least $\pi - \varepsilon$.
 Going to the limit we will get the statement of the Lemma.
 
-To be more precise the founded four convex sets will have bounded perimeter, but this conditions are equivalent because of the following simple lemma.
-
-\begin{thm}{Lemma} 
-For any surface $\Sigma$ of a convex body $B$ in $\mathbb{R}^3$ and for any $\varepsilon>0$ there is a $\delta>0$, that any simple curve $\gamma \subset \Sigma$ of length $\delta$ bound a region of diameter at most $\varepsilon$.
-\end{thm}
-\begin{proof}
-	Suppose opposite, choose a sequence of curves $\gamma_i$ withs $\length[\gamma_i]<1/i$, each of them bounding regions $A_i$ and $B_i$ of diameter at least $\varepsilon$. 
-	By compactness of $\Sigma$ there is a subequence of $\{\gamma_i\}$ tending to a point $p$, so we can suppose that $\{\gamma_i\}$ tends to $p$. We can assume that all of them pass though $p$, by adding a short arcs to each $\gamma_i$.
-	Let us show that a point $p$ divides $\Sigma$ to at least two non-connecting parts, that leads to contradiction.
-Indeed, if length of $\gamma_i$ less than $\varepsilon/3$, each region contains a disk with centers $a_i$ and $b_i$ and radius $\varepsilon/3$ (if not, than any two points in the region can be connected by a path of length $\varepsilon$ consisting from paths from them to $\gamma_i$ and a arc of $\gamma_i$).
-Choose subsequence $\gamma_{j_i}$ that $a_{j_i}$ tend to a some point $a$, and $b_{j_i}$ tend to a some point $b$.
-Note that for all sufficiently big $i$ the domains $A_{j_i}$ and $B_{j_i}$ should contain the disks of radius $\varepsilon/3$ with centers at $a$ and $b$ correspondingly.
-Since $a$ and $b$ are differ from $p$, there is a path $\gamma_{ab}$ from $a$ to $b$ avoiding $p$, on the other hand this path should intersects all $\gamma_{j_i}$ for sufficiently big $i$, because $a$ and $b$ lie in different regions formed by $\gamma_{j_i}$.
-But it is not possible when length of the curves $\gamma_{j_i}$ became less than distance from $p$ to the path $\gamma_{ab}$.	
-\end{proof}
-
 By cutting the surface $\Sigma$ along a sufficiently long closed simple geodesic,
 we get two discs.
 The key step is to show that each of these discs is long and thin.
 Then we show that their ``corners'' form four required sets with big curvature.
+
+To be more precise the founded four sets will have small perimeter.
+Since the surface  of a convex body in $\mathbb{R}^3$ is homeomorphic to sphere,
+the following lemma implies that these conditions are equivalent.
+
+\begin{thm}{Lemma}\label{Lemma:diameter-perimeter}
+Let $d$ be any metric on the sphere $\mathbb{S}^2$.
+Then any $\varepsilon>0$ there is a $\delta>0$, that any simple curve in $(\mathbb{S}^2,d)$ of length smaller than $\delta$ bounds a region of diameter at most $\varepsilon$.
+\end{thm}
+
+\parit{Proof.}
+Suppose opposite, fix a sequence of curves $\gamma_n$ withs $\length\gamma_n\to 0$ as $n\to\infty$ such that 
+each $\gamma_n$ cuts sphere into regions $A_n$ and $B_n$ of diameter at least $\varepsilon$. 
+By compactness of $\mathbb{S}^2$
+we can pass to a subequence of $\gamma_n$  which converges to a point, say $p$. 
+
+For all large $n$, we can choose points $a_n\in  A_n$ and $b_n\in B_n$
+on the distance at least $\tfrac\eps{10}$ from $p$.
+Pass to a subsequence of $\gamma_n$ so that $a_n$ and $b_n$ converge,
+denote by $a$ and $b$ their limits.
+
+Note that any curve from $a$ to $b$ must intesect all $\gamma_n$ for all large $n$.
+Since $\gamma_n$ converges to $p$, it follows that any curve from $a$ to $b$ passes thru $p$.
+That is, $a$ and $b$ lie in the different connected components of $\mathbb{S}^2\backslash\{p\}$, a contradiction.
+\qeds
+
 
 \parit{Proof.}
 Cut the surface $\Sigma$ along a sufficiently long closed simple geodesic,
@@ -306,6 +316,7 @@ Therefore curvature of $L_p$ is at least $\pi-\tilde\measuredangle(p\,^x_y)>\pi-
 Fix $\varepsilon>0$.
 Assuming $\length[\partial D]$ is long enough, we can find a lune $L_p$ with perimeter at most $2\cdot\eps + \delta$,
 such that curvature $L_p$ is at least $\pi-\eps$.
+If $\eps$ is small, by Lemma \ref{Lemma:diameter-perimeter}, $L_p$ has small diameter.
 
 Using the same construction for $p$ and $q$ in the disc $D$,
 and for the other disc,
