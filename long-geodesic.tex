@@ -174,8 +174,24 @@ admits an arbitrary long simple closed geodesic.
 Then the surface of $B$ contains $4$ singular points with curvature $\pi$ and the rest of it is flat.
 \end{thm}
 
-For the proof we will show that for any $\varepsilon$ is is possible to fount four non-intersecting open sets of diameter $\varepsilon$, such that each of them having curvature at least $\pi - \varepsilon$.
+For the proof we will show that for any $\varepsilon$ is is possible to found four non-intersecting open sets of diameter $\varepsilon$, such that each of them having curvature at least $\pi - \varepsilon$.
 Going to the limit we will get the statement of the Lemma.
+
+To be more precise the founded four convex sets will have bounded perimeter, but this conditions are equivalent because of the following simple lemma.
+
+\begin{thm}{Lemma} 
+For any surface $\Sigma$ of a convex body $B$ in $\mathbb{R}^3$ and for any $\varepsilon>0$ there is a $\delta>0$, that any simple curve $\gamma \subset \Sigma$ of length $\delta$ bound a region of diameter at most $\varepsilon$.
+\end{thm}
+\begin{proof}
+	Suppose opposite, choose a sequence of curves $\gamma_i$ withs $\length[\gamma_i]<1/i$, each of them bounding regions $A_i$ and $B_i$ of diameter at least $\varepsilon$. 
+	By compactness of $\Sigma$ there is a subequence of $\{\gamma_i\}$ tending to a point $p$, so we can suppose that $\{\gamma_i\}$ tends to $p$. We can assume that all of them pass though $p$, by adding a short arcs to each $\gamma_i$.
+	Let us show that a point $p$ divides $\Sigma$ to at least two non-connecting parts, that leads to contradiction.
+Indeed, if length of $\gamma_i$ less than $\varepsilon/3$, each region contains a disk with centers $a_i$ and $b_i$ and radius $\varepsilon/3$ (if not, than any two points in the region can be connected by a path of length $\varepsilon$ consisting from paths from them to $\gamma_i$ and a arc of $\gamma_i$).
+Choose subsequence $\gamma_{j_i}$ that $a_{j_i}$ tend to a some point $a$, and $b_{j_i}$ tend to a some point $b$.
+Note that for all sufficiently big $i$ the domains $A_{j_i}$ and $B_{j_i}$ should contain the disks of radius $\varepsilon/3$ with centers at $a$ and $b$ correspondingly.
+Since $a$ and $b$ are differ from $p$, there is a path $\gamma_{ab}$ from $a$ to $b$ avoiding $p$, on the other hand this path should intersects all $\gamma_{j_i}$ for sufficiently big $i$, because $a$ and $b$ lie in different regions formed by $\gamma_{j_i}$.
+But it is not possible when length of the curves $\gamma_{j_i}$ became less than distance from $p$ to the path $\gamma_{ab}$.	
+\end{proof}
 
 By cutting the surface $\Sigma$ along a sufficiently long closed simple geodesic,
 we get two discs.
