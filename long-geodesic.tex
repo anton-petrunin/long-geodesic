@@ -9,7 +9,7 @@
 \begin{document}
 
 \title{Long geodesics on convex surfaces}
-\author{A. Akopyan and A. Petrunin}
+\author{Arseniy Akopyan and Anton Petrunin}
 \date{}
 \maketitle
 
@@ -97,7 +97,7 @@ The following two theorems play central role in the theory.
 They admit generalizations to higher dimensions, but we need it only for surfaces.
 
 \begin{thm}{Globalization theorem}\label{Globalization theorem}
-Assume in all sufficiently small open sets of the surface $\Sigma$, the angles of all hinges are defined and satisfy 
+Assume that any point the surface $\Sigma$ admits a neighborhood $U$ such that the angles of all hinges in $U$ are defined and satisfy 
 the comparison and supplementary angles property.
 Then $\Sigma$ has non-negative curvature in the sense of Alexandrov.
 \end{thm}
@@ -124,10 +124,11 @@ which possibly degenerate to a flat figure.
 It turns out that $\Sigma$ defines $K$ up to congruence.
 This a hard theorem was proved by Pogorelov, see \cite{pogorelov}.
 We will use the following weaker statement
-it was proved earlier by Alexandrov essentailly the same way as the Cauchy's rigidity theorem.
+it was proved earlier by Alexandrov in \cite{alexandrov1950}.
+The proof goes essentially the same way as the Cauchy's rigidity theorem.
 
-\begin{thm}{Rigidity theorem}
-Polyhedrons in $\EE^3$ with isometric surfaces are congruent. 
+\begin{thm}{Rigidity theorem}\label{Rigidity theorem}
+Convex polyhedrons in $\EE^3$ with isometric surfaces are congruent. 
 \end{thm}
 
 Let $\Sigma$ be a surface with non-negative curvature in the sense of Alexandrov.
@@ -138,8 +139,19 @@ In this case we define the \emph{curvature} of $\Delta$ as the angle excess of $
 that is,
 \[\kappa(\Delta)=\angk x y z+\angk  y z x+\angk z x y-\pi.\]
 It extends to non-negative measure, so called \index{curvature measure}\emph{curvature measure} in the unique way, defined on all Borel subsets in the interior of $\Sigma$.
-The curvature of an interior point in $\Sigma$ can be thought as $\pi$ minus total angle around it;
-a formal definition of \emph{total angle around point} is left to the reader.
+
+\begin{wrapfigure}{l}{20 mm}
+\begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/mercedes(1)}
+%\lbl[r]{0,8;$p$}
+\end{lpic}
+\end{wrapfigure}
+
+It turns out that in $\Sigma$, any geodesic without its end-points has vanishing curvature;
+this can be proved by covering interior of geodesic by triangles with small excess.
+
+Further the curvature of an interior point in $\Sigma$ can be thought as $\pi$ minus total angle around it.
+The later can be seen from the picture ---
+to find the curvature of the central vertex one has to subtract curvature of three small triangles from the curvature of big one.
 
 For curvature measure, an analog of Gauss--Bonnet formula holds;
 in particular, if $\Sigma$ is a surface with non-negative curvature in the sence of Alexandrov then
@@ -193,17 +205,18 @@ Then any $\varepsilon>0$ there is a $\delta>0$, that any simple curve in $(\math
 
 \parit{Proof.}
 Suppose opposite, fix a sequence of curves $\gamma_n$ withs $\length\gamma_n\to 0$ as $n\to\infty$ such that 
-each $\gamma_n$ cuts sphere into regions $A_n$ and $B_n$ of diameter at least $\varepsilon$. 
+each $\gamma_n$ cuts sphere into open regions $A_n$ and $B_n$ of diameter at least $\varepsilon$. 
 By compactness of $\mathbb{S}^2$
 we can pass to a subequence of $\gamma_n$  which converges to a point, say $p$. 
 
-For all large $n$, we can choose points $a_n\in  A_n$ and $b_n\in B_n$
-on the distance at least $\tfrac\eps{10}$ from $p$.
+Since the diameters of $A_n$ and $B_n$ are at least $\eps$, we can choose the points $a_n\in A_n$ and $b_n\in B_n$ on the distance at least $\tfrac\eps{10}$ from $p$.
 Pass to a subsequence of $\gamma_n$ so that $a_n$ and $b_n$ converge,
 denote by $a$ and $b$ their limits.
 
-Note that any curve from $a$ to $b$ must intesect all $\gamma_n$ for all large $n$.
-Since $\gamma_n$ converges to $p$, it follows that any curve from $a$ to $b$ passes thru $p$.
+Note that for all large $n$ the point $a$ can be connected to $a_n$ in $A_n$ 
+and analogously the point $b$ can be connected to $b_n$ in $B_n$.
+It follows that any curve from $a$ to $b$ must intesect all $\gamma_n$ for all large $n$.
+Since $\gamma_n$ converges to $p$, any curve from $a$ to $b$ passes thru $p$.
 That is, $a$ and $b$ lie in the different connected components of $\mathbb{S}^2\backslash\{p\}$, a contradiction.
 \qeds
 
@@ -356,7 +369,7 @@ It follows that $\Sigma$ is isometric to the surface of isosceles tetrahedron.
 The statement now follows from the Pogorelov's uniqueness theorem,
 mentioned in the theory overview.
 
-Alternatively one could apply the following exercise and the uniqueness theorem for the surfaces polyhedra, which has much simple proof, see \cite{alexandrov1950}.
+Alternatively one could apply the following exercise and the rigidity theorem (\ref{Rigidity theorem}) which has much simple proof.
 \qeds
 
 \begin{thm}{Exercise}
