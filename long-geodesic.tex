@@ -3,6 +3,8 @@
 %\marginsize{left}{right}{top}{bottom}
 %\marginsize{2cm}{2cm}{2cm}{2cm}
 \usepackage{long-geodesic}
+\hypersetup{pdftitle={Long geodesics on convex surfaces},
+pdfauthor={Arseniy Akopyan and Anton Petrunin}}
 
 %\usepackage{lineno}\linenumbers
 
@@ -20,7 +22,7 @@ if the surface of convex body $K$ contains arbitrary long closed simple geodesic
 
 \section{Introduction}
 
-The goal of this note is to introduce the reader to the theory of intrinsic geometry of convex surfaces and prove the following theorem.
+The goal of this note is to introduce the reader to the theory of intrinsic geometry of convex surfaces and prove a theorem.
 This theorem is given as an illustration to the theory, not the other way around.
 
 \begin{wrapfigure}{r}{21 mm}
@@ -28,8 +30,8 @@ This theorem is given as an illustration to the theory, not the other way around
 \end{lpic}
 \end{wrapfigure}
 
-Recall that a curve in a convex surface is called geodesic if every sufficiently short arc of the curve is length minimizing
-and we say that it is simple if it has no self intersections.
+Recall that a curve in a convex surface is called \emph{geodesic} if every sufficiently short arc of the curve is length minimizing;
+if it has no self intersections, we call it is \emph{simple geodesic}.
 
 A tetrahedron with equal opposite edges is called \emph{isosceles}.
 
@@ -40,7 +42,7 @@ admits an arbitrary long simple closed geodesic.
 Then $B$ is an isosceles tetrahedron.
 \end{thm}
 
-For the surfaces of convex polyhedrons, the statement was proved by Vladimir Protasov in \cite{protasov}.
+In \cite{protasov}, Vladimir Protasov proved this result for the surfaces of convex polyhedrons.
  
 
 \section{An overview of the theory}
@@ -98,8 +100,18 @@ In other words, if $\Sigma$ has nonnegative curvature in the sense of Alexandrov
 
 Further, assume $\gamma$ is a geodesic in $\Sigma$, 
 and $p$ is arbitrary point on $\Sigma$.
-Then the function $f(t)=|p-\gamma(t)|_\Sigma$ is  Lipschitz. 
+Note that the function $f(t)=|p-\gamma(t)|_\Sigma$ is  1-Lipschitz. 
 In particular $f$ is differentiable almost everywhere.
+
+\begin{wrapfigure}{r}{25 mm}
+\begin{lpic}[t(-3 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/first-variation(1)}
+\lbl[t]{5,0;$p$}
+\lbl[bl]{15,13;$\gamma(t)$}
+\lbl[rt]{10,12;$\phi_{+}$}
+\lbl[lt]{15,8;$\phi_{-}$}
+\end{lpic}
+\end{wrapfigure}
+
 Assume $\phi_\pm(t)$ are the angles between the positive and negative directions of $\gamma$ and a geodesic $[\gamma(t)p]$.
 Then from the definition of angle it follows that 
 $$\pm f'(t)\le -\cos[\phi_\pm(t)]$$ at any $t$ where the the derivative is defined.
