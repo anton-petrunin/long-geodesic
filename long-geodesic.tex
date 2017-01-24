@@ -90,7 +90,24 @@ here we assume that the two hinges $\hinge{p}{x}{z}$ and $\hinge{p}{y}{z}$ have 
 
 If in the surface $\Sigma$, the angles of all hinges are defined and satisfy 
 the comparison and supplementary angles property, then we say that $\Sigma$
-has \emph{nonnegative curvature in the sence of Alexandrov}.
+has \emph{nonnegative curvature in the sense of Alexandrov}.
+
+The geometry of such surfaces is very particular. 
+For example, according to the comparison property, if a hinge has vanishing angle then one of its sides lies in the other.
+In other words, if $\Sigma$ has nonnegative curvature in the sense of Alexandrov, then geodesics in $\Sigma$ can not bifurcate.
+
+Further, assume $\gamma$ is a geodesic in $\Sigma$, 
+and $p$ is arbitrary point on $\Sigma$.
+Then the function $f(t)=|p-\gamma(t)|_\Sigma$ is  Lipschitz. 
+In particular $f$ is differentiable almost everywhere.
+Assume $\phi_\pm(t)$ are the angles between the positive and negative directions of $\gamma$ and a geodesic $[\gamma(t)p]$.
+Then from the definition of angle it follows that 
+$$\pm f'(t)\le -\cos[\phi_\pm(t)]$$ at any $t$ where the the derivative is defined.
+If $\Sigma$ has nonnegative curvature in the sense of Alexandrov, then applying the supplementary angles property we get that $\phi_-+\phi_+=\pi$, hence $\cos\phi_+ +\cos\phi_-=0$.
+Therefore two inequalities imply two identities
+\[\mp f'(t)=-\cos[\phi_\mp(t)]\]
+at any point where the derivative $f'(t)$ is defined.
+This statement is regarded as \emph{first variation formula}.
 
 
 The following two theorems play central role in the theory.
@@ -148,10 +165,12 @@ It extends to non-negative measure, so called \index{curvature measure}\emph{cur
 
 It turns out that in $\Sigma$, any geodesic without its end-points has vanishing curvature;
 this can be proved by covering interior of geodesic by triangles with small excess.
+(This requires some work.)
 
 Further the curvature of an interior point in $\Sigma$ can be thought as $\pi$ minus total angle around it.
 The later can be seen from the picture ---
 to find the curvature of the central vertex one has to subtract curvature of three small triangles from the curvature of big one.
+(The existence of such configuration also requires some work.)
 
 For curvature measure, an analog of Gauss--Bonnet formula holds;
 in particular, if $\Sigma$ is a surface with non-negative curvature in the sence of Alexandrov then
@@ -203,9 +222,9 @@ For any $\varepsilon>0$ there is a $\delta>0$, that any simple curve in $\Sigma$
 \end{thm}
 
 \parit{Proof.}
-Arguing by contradiction, suppose there is a sequence of curves $\gamma_n$ withs $\length\gamma_n\to 0$ as $n\to\infty$ such that each $\gamma_n$ cuts sphere into open regions $A_n$ and $B_n$ of diameter at least $\varepsilon$. 
+Arguing by contradiction, suppose there is a sequence of curves $\gamma_n$ which cuts $\Sigma$ into open regions $A_n$ and $B_n$ of diameter at least $\varepsilon$ each and such that $\length\gamma_n\to 0$ as $n\to\infty$. 
 By compactness of $\Sigma$,
-we can pass to a subsequence of $\gamma_n$ which converges to a point, say $p$. 
+we can pass to a subsequence of $\gamma_n$ which converges to a point, say to $p$. 
 
 Note that for large $n$, each region contains a disk with centers $a_n$ and $b_n$ and radius $\tfrac\varepsilon3$ from $p$. 
 Indeed, if $n$ is large, then $\gamma_n$ lies in $\tfrac\eps3$ neighborhood of $p$.
@@ -255,10 +274,10 @@ By comparison property (\ref{Comparison property})
 The points $p$ and $q$ divide $\partial D$ into two arcs,
 say $\gamma_1$ and $\gamma_2$;
 let us parametrize them by arclength from $p$ to $q$. 
-Note that 
+By the first variation formula, for almost all $t$ we have
 \[\tfrac{d}{dt}|p-\gamma_i(t)|_D=-\cos \phi,\] 
-where $\phi$ is the angle between the direction of $\gamma_i$ at $x=\gamma_i(t)$ and the geodesic $[xp]$;
-the same way 
+where $\phi$ is the angle between the direction of $\gamma_i$ at $x=\gamma_i(t)$ and the geodesic $[xp]$.
+The same way 
 \[\tfrac{d}{dt}|q-\gamma_i(t)|_D=-\cos \psi,\] 
 where $\psi$ is the angle between the direction of $\gamma_i$ at $x=\gamma_i(t)$ and the geodesic $[xq]$.
 By \eqref{eq:pxq>pi/3} and the supplementary angles property (\ref{Supplementary angles property}) we have $\phi-\psi\ge \tfrac\pi3$.
