@@ -199,25 +199,21 @@ Since the surface  of a convex body in $\mathbb{R}^3$ is homeomorphic to sphere,
 the following lemma implies that these conditions are equivalent.
 
 \begin{thm}{Lemma}\label{Lemma:diameter-perimeter}
-Let $d$ be any metric on the sphere $\mathbb{S}^2$.
-Then any $\varepsilon>0$ there is a $\delta>0$, that any simple curve in $(\mathbb{S}^2,d)$ of length smaller than $\delta$ bounds a region of diameter at most $\varepsilon$.
+For any $\varepsilon>0$ there is a $\delta>0$, that any simple curve in $\Sigma$ of length smaller than $\delta$ bounds a region of diameter at most $\varepsilon$.
 \end{thm}
 
 \parit{Proof.}
 Suppose opposite, fix a sequence of curves $\gamma_n$ withs $\length\gamma_n\to 0$ as $n\to\infty$ such that 
 each $\gamma_n$ cuts sphere into open regions $A_n$ and $B_n$ of diameter at least $\varepsilon$. 
-By compactness of $\mathbb{S}^2$
-we can pass to a subequence of $\gamma_n$  which converges to a point, say $p$. 
+By compactness of $\Sigma$ there is a subsequence of $\gamma_n$ which converges to a point, say $p$. 
+We can pass to the subsequence and not that we can assume that all of $\gamma_n$ pass though $p$, by adding a short arcs to each of the curve.
 
-Since the diameters of $A_n$ and $B_n$ are at least $\eps$, we can choose the points $a_n\in A_n$ and $b_n\in B_n$ on the distance at least $\tfrac\eps{10}$ from $p$.
-Pass to a subsequence of $\gamma_n$ so that $a_n$ and $b_n$ converge,
-denote by $a$ and $b$ their limits.
+If length of $\gamma_n$ less than $\varepsilon/3$, each region contains a disk with centers $a_n$ and $b_n$ and radius $\varepsilon/3$ (if not, than any two points in the region can be connected by a path of length $\varepsilon$ consisting from paths from them to $\gamma_n$ and a arc of $\gamma_n$).
 
-Note that for all large $n$ the point $a$ can be connected to $a_n$ in $A_n$ 
-and analogously the point $b$ can be connected to $b_n$ in $B_n$.
-It follows that any curve from $a$ to $b$ must intesect all $\gamma_n$ for all large $n$.
-Since $\gamma_n$ converges to $p$, any curve from $a$ to $b$ passes thru $p$.
-That is, $a$ and $b$ lie in the different connected components of $\mathbb{S}^2\backslash\{p\}$, a contradiction.
+Pass to a subsequence of $\gamma_n$ so that $a_n$ and $b_n$ converge, denote by $a$ and $b$ their limits.
+Note that for all sufficiently big $n$ the domains $A_n$ and $B_n$ should contain the disks of radius $\varepsilon/4$ with centers at $a$ and $b$ correspondingly.
+Since $a$ and $b$ are differ from $p$, there is a path $\gamma_{ab}$ from $a$ to $b$ avoiding $p$, on the other hand this path should intersects all $\gamma_{n}$ for sufficiently big $n$, because $a$ and $b$ lie in different regions formed by $\gamma_{n}$.
+But it is not possible when length of the curves $\gamma_{n}$ became less than distance from $p$ to the path~$\gamma_{ab}$.	
 \qeds
 
 
@@ -335,15 +331,27 @@ Using the same construction for $p$ and $q$ in the disc $D$,
 and for the other disc,
 we get four lunes in $\Sigma$ each of diameter at most $\eps$ and each with curvature at least $\pi-\eps$.
 
-By Gauss--Bonnet formula, the total curvature of $\Sigma$ is $4\cdot\pi$.
-Since $\eps>0$ is arbitrary, we get that there are four singular points in $\Sigma$, each with curvature $\pi$
-and the remaining part of $\Sigma$ is flat.
+Let us go to the limit and show that there are four distinct singular points of curvature $\pi/2$ each.
+Choose a sequence of quadruples $\{L_n^1, L_n^2, L_n^3, L_n^4\}$ of loons constructed by above descirbed way, which diameters tend to zero, and points $a_n^i\in L_n^i$. 
+By compactness of $\Sigma$ there is a subsequence of quadruples that $a^i_n \to a^i$, for $i=1,..,4$.
+
+First, note that $a^1$ has curvature at least $\pi/2$. Indeed, any open neighborhood contains $L_n^1$ for sufficiently big $n$, therefore curvature of any open sets containing $a^1$ is at least $\pi/2$.
+On the other hand for sufficiently big $n$ there is a neighborhood of $a^1$ not containing $L_n^i$, $i=2,3,4$.
+Indeed, if it not the case, then curvature at point $a^1$ will be at least $\pi$, which is not possible for convex bodies.
+We also note that for sufficiently large $n$ (when $\varepsilon<\pi/4$) the point $a^1$ should belongs to some of the lune $L_n^i$, because in other case the total curvature of $\Sigma$ will be greater than $4\pi$, which contradicts the Gauss--Bonnet theorem.
+Therefore it could belong only to $L_n^1$.
+The same arguments work for points $a^i$, $i=2,3,4$, and these points are different because they belong to a different $L_n^i$.
+
+
+
+% Since $\eps>0$ is arbitrary, we get that there are four singular points in $\Sigma$, each with curvature $\pi$
+% and the remaining part of $\Sigma$ is flat.
 
 \section{Isosceles tetrahedron}
 
 \begin{thm}{Lemma} 
 Assume that the closed convex surface $\Sigma$ in $\RR^3$
-has 4 singular points with curvature $\pi$.
+has $4$ singular points with curvature $\pi$.
 Then it bounds an isosceles tetrahedron.
 \end{thm}
 
