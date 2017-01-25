@@ -48,18 +48,19 @@ In \cite{protasov}, Vladimir Protasov proved this result for the surfaces of con
 \section{An overview of the theory}
 
 The intrinsic metric on convex surfaces has certain comparison property, which we about to discuss.
-A very short but comprehensive introduction to the subject was written by Alexander Alexandrov in \cite{alexandrov1941}.
+A short but comprehensive introduction to the subject was written by Alexander Alexandrov in \cite{alexandrov1941}.
 
-By \emph{surface} we will understand a compact two-dimensional surface, possibly with boundary, which is equipped with geodesic metric.
-That is, a metric space $\Sigma$ is a surface if it is homeomorphic to a two-dimesinoanl manifold 
-and any two points $p,q\in \Sigma$ can be joined by a curve with length $|p-q|_\Sigma$;
+By \emph{surface} we will understand a compact 2-dimensional manifold equipped with \emph{geodesic} metric, 
+possibly with non-empty boundary.
+A metric is called geodesic if any two points $p,q\in \Sigma$ can be joined by a curve with length $|p-q|_\Sigma$;
 we denote by $|p-q|_\Sigma$ the distance from $p$ to $q$ in $\Sigma$.
-This curve will be denoted as $[pq]$ and called \emph{minimizing geodesic} from $p$ to $q$.
+This curve will be denoted as $[pq]$ and called a \emph{minimizing geodesic} from $p$ to $q$.
 
-For a triple of points $x,y,z\in\Sigma$, a choice of a triple of geodesics $([x y], [y z], [z x])$ will be called a \index{triangle}\emph{triangle} 
+For a triple of points $x,y,z\in\Sigma$, together with a choice of a three minimizing geodesics $[x y], [y z], [z x]$ will be called a \index{triangle}\emph{triangle} 
 and denoted as 
 $[x y z]$.
-Given a triple $x,y,z\in \Sigma$ there may be many different triangles with these vertices may exist, any of which can be denoted by $[x y z]$.
+Given a triple $x,y,z\in \Sigma$ many different triangles with these vertices may exist, 
+any of which can be denoted by $[x y z]$.
 
 A triangle $[\~x\~y\~z]$ in the plane $\EE^2$
 with the same side lengths as $[x y z]$ 
@@ -70,7 +71,8 @@ The angle $\mangle\hinge{\~x}{\~y}{\~z}$ of the model triangle $[\~x\~y\~z]$ is 
 %???+PIC
 
 Two geodesics $[xy]$ and $[xz]$ with common end $x$ is called \emph{hinge} and denoted as $\hinge{x}{y}{z}$.
-The angle $\mangle\hinge{x}{y}{z}$ of the hinge is defined as the limit of model angles for small triangle sling along the sides of hinge to its vertex. Namely,
+The angle $\mangle\hinge{x}{y}{z}$ of the hinge is defined as the limit of model angles for small triangle sling along the sides of hinge to its vertex. 
+That is,
 \[\mangle\hinge{x}{y}{z}=\lim_{\bar y,\bar z\to x}\set{\angk{x}{\bar y}{\bar z}}{ \bar y\in \left]xy\right], \bar z\in \left]xz\right]},\]
 where $\left]xy\right]=[xy]\backslash\{x\}$.
 
@@ -83,19 +85,33 @@ $\mangle\hinge{x}{y}{z}$ is defined and
 \[\mangle \hinge{x}{y}{z} \ge \angk{x}{x}{y}{}{}.\]
 \end{thm}
 
-\begin{thm}{Supplementary angles property}\label{Supplementary angles property}
-Assume $\Sigma$ is a surface where comparison property holds for any hinge.
-Then for any triple of points $x,y,z\in \Sigma$ and $p\in \left]xy\right[$ we have
-\[\mangle\hinge{p}{x}{z}+\mangle\hinge{p}{y}{z}=\pi,\]
-here we assume that the two hinges $\hinge{p}{x}{z}$ and $\hinge{p}{y}{z}$ have a common side $[pz]$
+\begin{wrapfigure}{r}{27 mm}
+\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/suplimentary(1)}
+\lbl[t]{24,2.6;$x$}
+\lbl[t]{1,13.5;$y$}
+\lbl[t]{5,-.5;$z$}
+\lbl[bl]{15,13;$p$}
+\end{lpic}
+\end{wrapfigure}
+
+Two hinges $\hinge{p}{x}{z}$ and $\mangle\hinge{p}{y}{z}$ will be called \emph{supplementary},
+if they share side $[pz]$ and $p\in \left]xy\right[$.
+
+\begin{thm}{Supplementary property}\label{Supplementary property}
+We say that \emph{suplementary property} holds for two supplementary hinges $\hinge{p}{x}{z}$ and $\mangle\hinge{p}{y}{z}$ if the angles $\mangle\hinge{p}{x}{z}$ and $\mangle\hinge{p}{y}{z}$ are defined and
+\[\mangle\hinge{p}{x}{z}+\mangle\hinge{p}{y}{z}=\pi.\]
+
 \end{thm}
 
+
 If in the surface $\Sigma$, the angles of all hinges are defined and satisfy 
-the comparison and supplementary angles property, then we say that $\Sigma$
-has \emph{nonnegative curvature in the sense of Alexandrov}.
+the comparison and supplementary property, then we say that $\Sigma$
+has \emph{nonnegative curvature in the sense of Alexandrov}.%
+\footnote{It is not known if well defined angles together with comparison property imply supplementary property.}
+
 
 The geometry of such surfaces is very particular. 
-For example, according to the comparison property, if a hinge has vanishing angle then one of its sides lies in the other.
+For example, by the comparison property, if a hinge has vanishing angle then one of its sides lies in the other.
 In other words, if $\Sigma$ has nonnegative curvature in the sense of Alexandrov, then geodesics in $\Sigma$ can not bifurcate.
 
 Further, assume $\gamma$ is a geodesic in $\Sigma$, 
@@ -114,11 +130,12 @@ In particular $f$ is differentiable almost everywhere.
 
 Assume $\phi_\pm(t)$ are the angles between the positive and negative directions of $\gamma$ and a geodesic $[\gamma(t)p]$.
 Then from the definition of angle it follows that 
-$$\pm f'(t)\le -\cos[\phi_\pm(t)]$$ at any $t$ where the the derivative is defined.
-If $\Sigma$ has nonnegative curvature in the sense of Alexandrov, then applying the supplementary angles property we get that $\phi_-+\phi_+=\pi$, hence $\cos\phi_+ +\cos\phi_-=0$.
-Therefore two inequalities imply two identities
-\[\mp f'(t)=-\cos[\phi_\mp(t)]\]
-at any point where the derivative $f'(t)$ is defined.
+$$\pm f'(t)\le -\cos[\phi_\pm(t)]$$ 
+at any $t$ where the the derivative $f'(t)$ is defined.
+If $\Sigma$ has nonnegative curvature in the sense of Alexandrov, then applying the supplementary property we get that $\phi_-+\phi_+=\pi$, hence $\cos\phi_+ +\cos\phi_-=0$.
+Therefore the two inequalities above imply two identities
+\[\pm f'(t)=-\cos[\phi_\pm(t)]\]
+for any $t$, where the derivative $f'(t)$ is defined.
 This statement is regarded as \emph{first variation formula}.
 
 
@@ -127,19 +144,20 @@ They admit generalizations to higher dimensions, but we need it only for surface
 
 \begin{thm}{Globalization theorem}\label{Globalization theorem}
 Assume that any point the surface $\Sigma$ admits a neighborhood $U$ such that the angles of all hinges in $U$ are defined and satisfy 
-the comparison and supplementary angles property.
-Then $\Sigma$ has non-negative curvature in the sense of Alexandrov.
+the comparison and supplementary properties.
+Then these properties hold for all hinges;
+that is $\Sigma$ has non-negative curvature in the sense of Alexandrov.
 \end{thm}
 
 \begin{thm}{Comparison theorem}\label{Comparison theorem}
 Any surface of convex body in $\EE^3$,
 if equipped with the induced intrinsic metric, 
-is a surface with non-negative curvature in the sense of Alexandrov.
+is a sphere with non-negatively curved metric in the sense of Alexandrov.
 \end{thm}
 
-In fact, the converse of this theorem also holds
-if one extends the definition of \emph{surface} 
-to the convex bodies which degenerate to 2-dimensional sets.
+In fact, as it was prove by Alexandrov in \cite{alexandrov1950},
+the converse of this theorem also holds
+if one consider convex plane figure as a convex body.
 The surface of flat convex figure has to be defined as its doubling;
 that is, two copies 
 of the figure glued along the boundary --- you can imagine that you can walk on both sides of the figure but can not pass through it.
@@ -153,8 +171,8 @@ which possibly degenerate to a flat figure.
 It turns out that $\Sigma$ defines $K$ up to congruence.
 This a hard theorem was proved by Pogorelov, see \cite{pogorelov}.
 We will use the following weaker statement
-it was proved earlier by Alexandrov in \cite{alexandrov1950}.
-The proof goes essentially the same way as the Cauchy's rigidity theorem.
+it was proved earlier by Alexandrov also in \cite{alexandrov1950}.
+The proof is qute simple, it goes essentially the same way as the Cauchy's rigidity theorem.
 
 \begin{thm}{Rigidity theorem}\label{Rigidity theorem}
 Convex polyhedrons in $\EE^3$ with isometric surfaces are congruent. 
@@ -169,15 +187,21 @@ that is,
 \[\kappa(\Delta)=\angk x y z+\angk  y z x+\angk z x y-\pi.\]
 It extends to non-negative measure, so called \index{curvature measure}\emph{curvature measure} in the unique way, defined on all Borel subsets in the interior of $\Sigma$.
 
+\begin{wrapfigure}{r}{23 mm}
+\begin{lpic}[t(-7 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/geodesic(1)}
+%\lbl[r]{0,8;$p$}
+\end{lpic}
+\end{wrapfigure}
+
+It turns out that in $\Sigma$, any geodesic without its end-points has vanishing curvature.
+This can be proved by covering interior of geodesic by two thin triangles with small excess as shown on the picture.
+(This requires some work, but simple.)
+
 \begin{wrapfigure}{l}{20 mm}
 \begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/mercedes(1)}
 %\lbl[r]{0,8;$p$}
 \end{lpic}
 \end{wrapfigure}
-
-It turns out that in $\Sigma$, any geodesic without its end-points has vanishing curvature;
-this can be proved by covering interior of geodesic by triangles with small excess.
-(This requires some work.)
 
 Further the curvature of an interior point in $\Sigma$ can be thought as $\pi$ minus total angle around it.
 The later can be seen from the picture ---
@@ -196,8 +220,8 @@ in particular, if $\Sigma$ is a surface with non-negative curvature in the sence
 
 %???+PIC
 
-We also will use the following comparison,
-it follows easily from the comparison.
+We also will use the following area comparison,
+it follows easily from the comparison property.
 
 \begin{thm}{Area comparison}\label{Area comparison}
 Assume $\Sigma$ is a surface with non-negative curvature in the sense of Alexandrov
@@ -271,11 +295,12 @@ By comparison property (\ref{Comparison property})
 	\measuredangle[x\,^p_q]\ge \tfrac\pi3.\tag{${*}$}
 \end{equation}
 
+The points $p$ and $q$ divide $\partial D$ into two arcs,
+say $\gamma_1$ and $\gamma_2$;
+let us parametrize them by arclength from $p$ to $q$. 
 
-
-
-\begin{wrapfigure}{l}{28 mm}
-\begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/long-geodesic-diam(1)}
+\begin{wrapfigure}[7]{r}{31mm}
+\begin{lpic}[t(2 mm),b(-0 mm),r(0 mm),l(1 mm)]{pics/long-geodesic-diam(1)}
 \lbl[r]{0,8;$p$}
 \lbl[l]{28,8;$q$}
 \lbl[b]{10,16;$\gamma_1(t)$}
@@ -283,16 +308,13 @@ By comparison property (\ref{Comparison property})
 \end{lpic}
 \end{wrapfigure}
 
-The points $p$ and $q$ divide $\partial D$ into two arcs,
-say $\gamma_1$ and $\gamma_2$;
-let us parametrize them by arclength from $p$ to $q$. 
 By the first variation formula, for almost all $t$ we have
 \[\tfrac{d}{dt}|p-\gamma_i(t)|_D=-\cos \phi,\] 
 where $\phi$ is the angle between the direction of $\gamma_i$ at $x=\gamma_i(t)$ and the geodesic $[xp]$.
 The same way 
 \[\tfrac{d}{dt}|q-\gamma_i(t)|_D=-\cos \psi,\] 
 where $\psi$ is the angle between the direction of $\gamma_i$ at $x=\gamma_i(t)$ and the geodesic $[xq]$.
-By \eqref{eq:pxq>pi/3} and the supplementary angles property (\ref{Supplementary angles property}) we have $\phi-\psi\ge \tfrac\pi3$.
+By \eqref{eq:pxq>pi/3} and the supplementary property (\ref{Supplementary property}) we have $\phi-\psi\ge \tfrac\pi3$.
 Therefore 
 \begin{equation}
 \tfrac{d}{dt}\left(|p-\gamma_i(t)|_D-|q-\gamma_i(t)|_D\right)
@@ -329,7 +351,16 @@ It follows that
 \end{aligned}
 \tag{${*}{*}{*}$}
 \end{equation}
-Therefore, if $D$ has sufficiently large perimeter then $|x-y|_D <\delta$.
+Therefore, if $D$ has large perimeter then $|x-y|_D <\delta$.
+
+
+
+Cut from $D$ along a minimizing geodesic $[xy]$
+and consider part (a lune) $L_p$ with the point $p$ in it.
+Note that the curvature of $L_p$ is $\alpha+\beta$, where $\alpha$ and $\beta$ the angles as on the diagram.
+By comparison $\alpha\ge \tilde\measuredangle(x\,^p_y)$ 
+and $\beta\ge \tilde\measuredangle(y\,^p_x)$.
+Therefore curvature of $L_p$ is at least $\pi-\tilde\measuredangle(p\,^x_y)>\pi-\varepsilon$.
 
 \begin{center}
 \begin{lpic}[t(3 mm),b(3 mm),r(0 mm),l(0 mm)]{pics/long-geodesic-D(1)}
@@ -345,14 +376,6 @@ Therefore, if $D$ has sufficiently large perimeter then $|x-y|_D <\delta$.
 \lbl[br]{12.5,4.5;{\small $\beta$}}
 \end{lpic}
 \end{center}
-
-Cut from $D$ along a minimizing geodesic $[xy]$
-and consider part (a lune) $L_p$ with the point $p$ in it.
-Note that the curvature of $L_p$ is $\alpha+\beta$, where $\alpha$ and $\beta$ the angles as on the diagram.
-By comparison $\alpha\ge \tilde\measuredangle(x\,^p_y)$ 
-and $\beta\ge \tilde\measuredangle(y\,^p_x)$.
-Therefore curvature of $L_p$ is at least $\pi-\tilde\measuredangle(p\,^x_y)>\pi-\varepsilon$.
-% In particular, if $|x-y|_D$ much less then $|p-x|_D+|p-y|_D$ then the curvature of $L_p$ is almost $\pi$.
 
 
 Fix $\varepsilon>0$.
@@ -395,7 +418,7 @@ Then it bounds an isosceles tetrahedron.
 {
 
 \begin{wrapfigure}{o}{21 mm}
-\begin{lpic}[t(-4 mm),b(-3 mm),r(0 mm),l(0 mm)]{pics/akopyan(1)}
+\begin{lpic}[t(-6 mm),b(-3 mm),r(0 mm),l(0 mm)]{pics/akopyan(1)}
 \end{lpic}
 \end{wrapfigure}
 
