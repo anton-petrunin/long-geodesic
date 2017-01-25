@@ -1,7 +1,7 @@
 \documentclass[oneside,a4paper, 12pt]{article}
 \usepackage{anysize}
 %\marginsize{left}{right}{top}{bottom}
-%\marginsize{2cm}{2cm}{2cm}{2cm}
+\marginsize{2cm}{2cm}{1cm}{2cm}
 \usepackage{long-geodesic}
 \hypersetup{pdftitle={Long geodesics on convex surfaces},
 pdfauthor={Arseniy Akopyan and Anton Petrunin}}
@@ -22,8 +22,9 @@ if the surface of convex body $K$ contains arbitrary long closed simple geodesic
 
 \section{Introduction}
 
-The goal of this note is to introduce the reader to the theory of intrinsic geometry of convex surfaces and prove a theorem.
-This theorem is given as an illustration to the theory, not the other way around.
+The goal of this note is to introduce the reader to the theory of intrinsic geometry of convex surfaces.
+We illustrate the power of the tools by proving the theorem below for all convex surfaces including smooth surfaces, polyhedra and surfaces less convenient for working with standard methods.
+% This theorem is given as an illustration to the theory, not the other way around.
 
 \begin{wrapfigure}{r}{21 mm}
 \begin{lpic}[t(-4 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/long-geodesic(1)}
@@ -46,7 +47,7 @@ In \cite{protasov}, Vladimir Protasov proved this result for the surfaces of con
  
 
 \section{An overview of the theory}
-
+\subsection*{Angles in path metric spaces}
 The intrinsic metric on convex surfaces has certain comparison property, which we about to discuss.
 A short but comprehensive introduction to the subject was written by Alexander Alexandrov in \cite{alexandrov1941}.
 
@@ -75,14 +76,15 @@ The angle $\mangle\hinge{x}{y}{z}$ of the hinge is defined as the limit of model
 That is,
 \[\mangle\hinge{x}{y}{z}=\lim_{\bar y,\bar z\to x}\set{\angk{x}{\bar y}{\bar z}}{ \bar y\in \left]xy\right], \bar z\in \left]xz\right]},\]
 where $\left]xy\right]=[xy]\backslash\{x\}$.
+It turns out, for the metrics considered in this paper this limits exists, see \textbf{[Good reference]}.
 
 Note that if $p\in \left]xy\right[=[xy]\backslash\{x,y\}$ then $\mangle\hinge{p}{x}{y}=\pi$.
 
 \begin{thm}{Comparison property}\label{Comparison property}
 We say that hinge $\hinge x y z$ 
-satisfies \emph{comparison} if the angle
+satisfies the \emph{comparison property} if the angle
 $\mangle\hinge{x}{y}{z}$ is defined and 
-\[\mangle \hinge{x}{y}{z} \ge \angk{x}{x}{y}{}{}.\]
+\[\mangle \hinge{x}{y}{z} \ge \angk{x}{y}{z}{}{}.\]
 \end{thm}
 
 \begin{wrapfigure}{r}{27 mm}
@@ -106,13 +108,13 @@ We say that \emph{suplementary property} holds for two supplementary hinges $\hi
 
 If in the surface $\Sigma$, the angles of all hinges are defined and satisfy 
 the comparison and supplementary property, then we say that $\Sigma$
-has \emph{nonnegative curvature in the sense of Alexandrov}.%
+has \emph{non-negative curvature in the sense of Alexandrov}.%
 \footnote{It is not known if well defined angles together with comparison property imply supplementary property.}
 
 
 The geometry of such surfaces is very particular. 
 For example, by the comparison property, if a hinge has vanishing angle then one of its sides lies in the other.
-In other words, if $\Sigma$ has nonnegative curvature in the sense of Alexandrov, then geodesics in $\Sigma$ can not bifurcate.
+In other words, if $\Sigma$ has non-negative curvature in the sense of Alexandrov, then geodesics in $\Sigma$ can not bifurcate.
 
 Further, assume $\gamma$ is a geodesic in $\Sigma$, 
 and $p$ is arbitrary point on $\Sigma$.
@@ -129,16 +131,26 @@ In particular $f$ is differentiable almost everywhere.
 \end{wrapfigure}
 
 Assume $\phi_\pm(t)$ are the angles between the positive and negative directions of $\gamma$ and a geodesic $[\gamma(t)p]$.
-Then from the definition of angle it follows that 
-$$\pm f'(t)\le -\cos[\phi_\pm(t)]$$ 
+It is easy to show that from the comparison property it follows
+\[\pm f'(t)\le -\cos[\phi_\pm(t)]\]
 at any $t$ where the the derivative $f'(t)$ is defined.
-If $\Sigma$ has nonnegative curvature in the sense of Alexandrov, then applying the supplementary property we get that $\phi_-+\phi_+=\pi$, hence $\cos\phi_+ +\cos\phi_-=0$.
+
+\begin{thm}{Exercise}
+Prove that this inequality holds for any surfaces were angles are well defined.
+\end{thm}
+
+%
+Applying the supplementary property we get that $\phi_-+\phi_+=\pi$, hence $\cos\phi_+ +\cos\phi_-=0$.
 Therefore the two inequalities above imply two identities
-\[\pm f'(t)=-\cos[\phi_\pm(t)]\]
+\begin{equation}
+	\label{eq:first variation}
+\pm f'(t)=-\cos[\phi_\pm(t)]
+	\tag{${*}$}
+\end{equation}
 for any $t$, where the derivative $f'(t)$ is defined.
 This statement is regarded as \emph{first variation formula}.
 
-
+\subsection*{Convex surfaces}
 The following two theorems play central role in the theory.
 They admit generalizations to higher dimensions, but we need it only for surfaces.
 
@@ -157,6 +169,7 @@ is a sphere with non-negatively curved metric in the sense of Alexandrov.
 
 In fact, as it was prove by Alexandrov in \cite{alexandrov1950},
 the converse of this theorem also holds
+\textbf{Wrong ref!}
 if one consider convex plane figure as a convex body.
 The surface of flat convex figure has to be defined as its doubling;
 that is, two copies 
@@ -178,6 +191,8 @@ The proof is qute simple, it goes essentially the same way as the Cauchy's rigid
 Convex polyhedrons in $\EE^3$ with isometric surfaces are congruent. 
 \end{thm}
 
+\subsection*{Curvature and area}
+
 Let $\Sigma$ be a surface with non-negative curvature in the sense of Alexandrov.
 Assume a triangle $[xyz]$ bounds in $\Sigma$ an open set $\Delta$ homeomorphic to a disc which is convex.
 That is any minimizing geodesic with ends in $\Delta$
@@ -185,7 +200,8 @@ lie completely in $\Delta$.
 In this case we define the \emph{curvature} of $\Delta$ as the angle excess of $[xyz]$;
 that is,
 \[\kappa(\Delta)=\angk x y z+\angk  y z x+\angk z x y-\pi.\]
-It extends to non-negative measure, so called \index{curvature measure}\emph{curvature measure} in the unique way, defined on all Borel subsets in the interior of $\Sigma$.
+It extends to non-negative measure, so called the \index{curvature measure}\emph{curvature measure} in the unique way, defined on all Borel subsets in the interior of $\Sigma$.
+If think about $\Sigma$ as about the boundary of convex body in $\mathbb{R}^3$ then the curvature measure of an set $U \in \Sigma$ is the Lebesgues measure of the image of $U$ under the Gaussian map.
 
 \begin{wrapfigure}{r}{23 mm}
 \begin{lpic}[t(-7 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/geodesic(1)}
@@ -220,8 +236,7 @@ in particular, if $\Sigma$ is a surface with non-negative curvature in the sence
 
 %???+PIC
 
-We also will use the following area comparison,
-it follows easily from the comparison property.
+We also will use the following area comparison, it follows easily from the comparison property.
 
 \begin{thm}{Area comparison}\label{Area comparison}
 Assume $\Sigma$ is a surface with non-negative curvature in the sense of Alexandrov
@@ -236,6 +251,7 @@ Then
 The following lemma is the key to the proof of Theorem~\ref{Long geodesic}.
 
 \begin{thm}{Lemma} 
+	\label{lem:4 singular points}
 Assume that the surface $\Sigma$ of a convex body $B$ in $\mathbb{R}^3$
 admits an arbitrary long simple closed geodesic.
 Then the surface of $B$ contains $4$ singular points with curvature $\pi$ and the rest of it is flat.
@@ -262,7 +278,7 @@ Arguing by contradiction, suppose there is a sequence of curves $\gamma_n$ which
 By compactness of $\Sigma$,
 we can pass to a subsequence of $\gamma_n$ which converges to a point, say to $p$. 
 
-Note that for large $n$, each region contains a disk with centers $a_n$ and $b_n$ and radius $\tfrac\varepsilon3$ from $p$. 
+Note that for large $n$, each region contains a disk with centers $a_n$ and $b_n$ and radius $\tfrac\varepsilon3$. 
 Indeed, if $n$ is large, then $\gamma_n$ lies in $\tfrac\eps3$ neighborhood of $p$.
 Since the diameter of regions is at least $\eps$, points in the regions maximizing the distance to $p$ will do the trick.
 
@@ -274,7 +290,7 @@ The later does not hold since $\Sigma$ is homeomorphic to the sphere, a contradi
 \qeds
 
 
-\parit{Proof.}
+\parit{Proof of Lemma~\ref{lem:4 singular points}}
 Cut the surface $\Sigma$ along a sufficiently long closed simple geodesic,
 we get two discs.
 Choose one of the discs, say $D$;
@@ -292,7 +308,8 @@ for any other point $x\in\partial D$.
 By comparison property (\ref{Comparison property}) 
 \begin{equation}
 	\label{eq:pxq>pi/3}
-	\measuredangle[x\,^p_q]\ge \tfrac\pi3.\tag{${*}$}
+	\measuredangle[x\,^p_q]\ge \tfrac\pi3.
+	\tag{${**}$}
 \end{equation}
 
 The points $p$ and $q$ divide $\partial D$ into two arcs,
@@ -308,7 +325,7 @@ let us parametrize them by arclength from $p$ to $q$.
 \end{lpic}
 \end{wrapfigure}
 
-By the first variation formula, for almost all $t$ we have
+By the first variation formula \eqref{eq:first variation}, for almost all $t$ we have
 \[\tfrac{d}{dt}|p-\gamma_i(t)|_D=-\cos \phi,\] 
 where $\phi$ is the angle between the direction of $\gamma_i$ at $x=\gamma_i(t)$ and the geodesic $[xp]$.
 The same way 
@@ -316,13 +333,13 @@ The same way
 where $\psi$ is the angle between the direction of $\gamma_i$ at $x=\gamma_i(t)$ and the geodesic $[xq]$.
 By \eqref{eq:pxq>pi/3} and the supplementary property (\ref{Supplementary property}) we have $\phi-\psi\ge \tfrac\pi3$.
 Therefore 
-\begin{equation}
+\begin{equation*}
 \tfrac{d}{dt}\left(|p-\gamma_i(t)|_D-|q-\gamma_i(t)|_D\right)
 = \cos \psi-\cos\phi
 \ge
 \tfrac12.
-\tag{${*}{*}$}
-\end{equation}
+% \tag{${*}{*}$}
+\end{equation*}
 
 In particular
 \[|p-q|_D\ge \tfrac18{\cdot}\length[\partial D].\]
@@ -342,15 +359,15 @@ Note that now $|q-x|_D=|q-y|_D\ge|p-q|_D-\varepsilon$.
 By the area comparison (\ref{Area comparison})
 \[\area \tilde \triangle qxy\le \area \triangle qxy\le \area \Sigma.\]
 It follows that 
-\begin{equation}
+\begin{equation*}
 \label{eq:|x-y|}
 \begin{aligned}
 |x-y|_D&\le2\cdot\frac{ \area[\tilde\triangle(xyq)]}{|q-x|_D}
 \le 
 100\cdot\frac{ \area\Sigma}{\length[\partial D]}.
 \end{aligned}
-\tag{${*}{*}{*}$}
-\end{equation}
+% \tag{${*}{*}{*}$}
+\end{equation*}
 Therefore, if $D$ has large perimeter then $|x-y|_D <\delta$.
 
 
