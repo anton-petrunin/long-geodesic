@@ -42,17 +42,17 @@ admits an arbitrary long simple closed geodesic.
 Then $B$ is an isosceles tetrahedron.
 \end{thm}
 
-In \cite{protasov}, Vladimir Protasov proved this result for the surfaces of convex polyhedrons.
+In \cite{protasov2008onthenumber}, Vladimir Protasov proved this result for the surfaces of convex polyhedrons.
  
 
 \section{An overview of the theory}
 \subsection*{Angles}
 The intrinsic metric on convex surfaces has certain comparison property, which we about to discuss.
-A short introduction to the subject was written by Alexander Alexandrov in \cite{alexandrov1941}. 
-Later he wrote a comprehensive book on the subject \cite{alexandrov1948} which we recommend to anyone who can read Russian or German,
-otherwise read the book of Herbert Busemann \cite{busemann}.
+A short introduction to the subject was written by Alexander Alexandrov in \cite{alexandroff1941theinner}. 
+Later he wrote a comprehensive book on the subject \cite{aleksandrov1948vnutrennnyaya, alexandrow1955dieinnere} which we recommend to anyone who can read Russian or German,
+otherwise read the book of Herbert Busemann \cite{busemann1958convex}.
 
-By \emph{surface} we will understand a compact 2-dimensional manifold equipped with \emph{geodesic} metric, 
+By \emph{surface} we will understand a compact $2$-dimensional manifold equipped with \emph{geodesic} metric, 
 possibly with non-empty boundary.
 A metric on the surface $\Sigma$ is called geodesic if any two points $p,q\in \Sigma$ can be joined by a curve with length $|p-q|_\Sigma$;
 we denote by $|p-q|_\Sigma$ the distance from $p$ to $q$ in $\Sigma$.
@@ -144,7 +144,7 @@ In particular $f$ is differentiable almost everywhere.
 
 Assume $\phi_\pm(t)$ are the angles between the positive and negative directions of $\gamma$ and a geodesic $[\gamma(t)p]$.
 Applying the definition of angle and triangle inequality,
-one gets the following inequality
+one gets the following
 \[\pm f'(t)\le -\cos[\phi_\pm(t)]\]
 at any $t$ such that the derivative $f'(t)$ is defined.
 
@@ -166,9 +166,8 @@ This statement is regarded as \emph{first variation formula}.
 Further, for any surface $\Sigma$ with non-negative curvature in the sense of Alexandrov,
 the Kirszbraun extension theorem holds.
 That is, any distance non-expanding map from a subset of surface to the Euclidean plane can be extended to a distance non-expanding map defined on whole $\Sigma$;
-see \cite{LS,AKP}.
+see \cite{lang1997kirszbraun,alexander2011alexandrov}.
 (In fact, the statement in Kiszbraun could be used as the definition of spaces with non-negative curvature in the sense of Alexandrov.)
-
 Applying Kiszbraun theorem for three-point sets,
 one gets the following area comparison which will be important to us.
 
@@ -177,6 +176,8 @@ Assume $\Sigma$ is a surface with non-negative curvature in the sense of Alexand
 and a triangle $[xyz]$ in $\Sigma$ bounds a open set $\Delta$ homeomorphic to a disc.
 Then 
 \[\area\Delta\ge \area\~\triangle(xyz).\]
+
+Another proof of this theorem by dissection on small triangles can be found in \cite[Chapter X \S 1]{ aleksandrov1948vnutrennnyaya, alexandrow1955dieinnere}.
 
 \end{thm}
 
@@ -191,7 +192,7 @@ Then these properties hold for all hinges;
 that is $\Sigma$ has non-negative curvature in the sense of Alexandrov.
 \end{thm}
 
-An amusing proof of the theorem above is given by Urs Lang and Viktor Schroeder in \cite{LS-globalization}.
+An amusing proof of the theorem above is given by Urs Lang and Viktor Schroeder in \cite{lang2012toponogov}.
 
 Recall that the intrinsic distance between points $x$ and $y$ on a surface $\Sigma$ in $\EE^3$, is defined as the least upper bound for the lengths of curves connecting $x$ to $y$ in $\Sigma$.
 
@@ -201,7 +202,7 @@ if equipped with the induced intrinsic metric,
 is a sphere with a non-negatively curved metric in the sense of Alexandrov.
 \end{thm}
 
-In fact, as it was prove by Alexandrov in \cite{alexandrov1948},
+In fact, as it was prove by Alexandrov in \cite[Chapter III \S 3]{aleksandrov1948vnutrennnyaya, alexandrow1955dieinnere},
 the converse of this theorem also holds
 if one considers convex plane figure as a convex body.
 The surface of flat convex figure has to be defined as its doubling;
@@ -215,10 +216,8 @@ which possibly degenerate to a flat figure.
 \end{thm}
 
 It turns out that $\Sigma$ defines the convex body up to congruence.
-This is a hard theorem; 
-it was proved by Pogorelov, see \cite{pogorelov}.
-We will use the following weaker statement proved by Alexandrov in \cite{alexandrov1950}.
-The proof goes essentially the same way as the Cauchy's rigidity theorem.
+This hard theorem for polyhedral metrics was proved by Alexandrov \cite[Chapter VI]{aleksandrov1948vnutrennnyaya, alexandrow1955dieinnere} for polyhedral metrics and by Pogorelov in full generality \cite{pogorelov1952odnoznacnaya}.
+We will use the following weaker statement, which goes essentially the same way as the Cauchy's rigidity theorem.
 
 \begin{thm}{Rigidity theorem}\label{Rigidity theorem}
 Convex polyhedrons in $\EE^3$ with isometric surfaces are congruent. 
@@ -492,49 +491,10 @@ Assume that a convex body $K$ is bounded by a closed flat surface with finite nu
 Show that $K$ is a polyhedron.
 \end{thm}
 
-\begin{thebibliography}{52}
 
-\bibitem{AKP} Alexander, S.; Kapovitch, V.; Petrunin, A. \emph{Alexandrov meets Kirszbraun.} Proceedings of the G\"okova Geometry-Topology Conference 2010, 88--109, Int. Press, Somerville, MA, 2011.
 
-\bibitem{alexandrov1941} 
-Alexandroff, A. 
-\emph{The inner geometry of an arbitrary convex surface.}
-C. R. (Doklady) Acad. Sci. URSS (N.S.) 
-32, 
-(1941). 
-467--470
-
-\bibitem{alexandrov1948} 
-\begin{otherlanguage}{russian}
-Александров, А. Д. 
-\emph{Внутренняя геометрия выпуклых поверхностей.} 
-(1948);
-\end{otherlanguage}
-\begin{otherlanguage}{german}
-Alexandrow, A. D. \emph{Die innere Geometrie der konvexen Fl\"achen.} (1955).
-\end{otherlanguage}
-
-\bibitem{alexandrov1950} 
-Alexandrov, A. D.,
-\emph{Convex polyhedra.} (2005).
-
-\bibitem{busemann} Busemann, H.
-\emph{Convex surfaces.} (1958).
-
-\bibitem{LS} Lang, U.; Schroeder, V. \emph{Kirszbraun's theorem and metric spaces of bounded curvature.} Geom. Funct. Anal. 7 (1997), no. 3, 535--560.
-
-\bibitem{LS-globalization} Lang, U.; Schroeder, V. \emph{On Toponogov's comparison theorem for Alexandrov spaces.} \texttt{arXiv:1207.3668 [math.MG]}.
-
-\bibitem{pogorelov} 
-\begin{otherlanguage}{russian}
-Погорелов, А. В.,
-\emph{Однозначаная определённость общих выпукых поверхностей}
-Киев, 1952.
-\end{otherlanguage}
-
-\bibitem{protasov} Protasov, V. Yu.,
-\emph{On the number of closed geodesics on a polyhedron.}  Russian Math. Surveys 63 (2008), no. 5, 978--980
-\end{thebibliography}
+ \bibliographystyle{abbrv}
+\bibliography{long-geodesic.bib}{}
 
 
 \end{document}
