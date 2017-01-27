@@ -3,6 +3,7 @@
 %\marginsize{left}{right}{top}{bottom}
 \marginsize{2cm}{2cm}{1cm}{2cm}
 \usepackage{long-geodesic}
+
 \hypersetup{pdftitle={Long geodesics on convex surfaces},
 pdfauthor={Arseniy Akopyan and Anton Petrunin}}
 
@@ -21,7 +22,6 @@ if the surface of convex body $K$ contains arbitrary long closed simple geodesic
 \end{abstract}
 
 \section{Introduction}
-
 The goal of this note is to introduce the reader to the theory of intrinsic geometry of convex surfaces.
 We illustrate the power of the tools by proving the theorem below.
 
@@ -32,7 +32,6 @@ We illustrate the power of the tools by proving the theorem below.
 
 Recall that a curve in a convex surface is called \emph{geodesic} if every sufficiently short arc of the curve is length minimizing;
 if it has no self intersections, we call it \emph{simple geodesic}.
-
 A tetrahedron with equal opposite edges is called \emph{isosceles}.
 
 \begin{thm}{Theorem}
@@ -72,11 +71,11 @@ The angle $\mangle\hinge{\~x}{\~y}{\~z}$ of the model triangle $[\~x\~y\~z]$ is 
 
 \begin{wrapfigure}{r}{19 mm}
 \begin{lpic}[t(-5 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/hinge(1)}
-\lbl[t]{17,2;$x$}
-\lbl[t]{8,0;$\bar x$}
+\lbl[t]{17,2;$z$}
+\lbl[t]{8,0;$\bar z$}
 \lbl[r]{5,17;$y$}
 \lbl[r]{1.5,8;$\bar y$}
-\lbl[rt]{1,0;$p$}
+\lbl[rt]{1,0;$x$}
 \end{lpic}
 \end{wrapfigure}
 
@@ -114,7 +113,7 @@ Two hinges $\hinge{p}{x}{z}$ and $\mangle\hinge{p}{y}{z}$ will be called \emph{s
 if they share side $[pz]$ and $p\in \left]xy\right[$.
 
 \begin{thm}{Supplementary property}\label{Supplementary property}
-We say that \emph{suplementary property} holds for two supplementary hinges $\hinge{p}{x}{z}$ and $\mangle\hinge{p}{y}{z}$ if the angles $\mangle\hinge{p}{x}{z}$ and $\mangle\hinge{p}{y}{z}$ are defined and
+We say that \emph{suplementary property} holds for two supplementary hinges $\hinge{p}{x}{z}$ and $\mangle\hinge{p}{y}{z}$ if the angles $\hinge{p}{x}{z}$ and $\mangle\hinge{p}{y}{z}$ are defined and
 \[\mangle\hinge{p}{x}{z}+\mangle\hinge{p}{y}{z}=\pi.\]
 
 \end{thm}
@@ -126,12 +125,12 @@ If in the surface $\Sigma$, the angles of all hinges are defined and satisfy the
 
 The geometry of such surfaces is very particular. 
 For example, by the comparison property, if a hinge has vanishing angle then one of its sides lies in the other.
-In particular,  geodesics in $\Sigma$ can not bifurcate.
+Especially, geodesics in $\Sigma$ can not bifurcate.
 
 Further, assume $\gamma$ is a geodesic in $\Sigma$, 
 and $p$ is arbitrary point on $\Sigma$.
-Note that the function $f(t)=|p-\gamma(t)|_\Sigma$ is  1-Lipschitz. 
-In particular $f$ is differentiable almost everywhere.
+Note that the function $f(t)=|p-\gamma(t)|_\Sigma$ is  $1$-Lipschitz. 
+Specifically, $f$ is differentiable almost everywhere.
 
 \begin{wrapfigure}{r}{25 mm}
 \begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/first-variation(1)}
@@ -146,7 +145,7 @@ Assume $\phi_\pm(t)$ are the angles between the positive and negative directions
 Applying the definition of angle and triangle inequality,
 one gets the following
 \[\pm f'(t)\le -\cos[\phi_\pm(t)]\]
-at any $t$ such that the derivative $f'(t)$ is defined (see  \cite[Chapter XI \S 2, Equation (7)]{ aleksandrov1948vnutrennnyaya, alexandrow1955dieinnere}.). 
+at any $t$ such that the derivative $f'(t)$ is defined (see  \cite[Chapter XI \S 2, Equation (7)]{ aleksandrov1948vnutrennnyaya, alexandrow1955dieinnere}). 
 
 
 %
@@ -166,24 +165,22 @@ That is, any distance non-expanding map from a subset of surface to the Euclidea
 see \cite{lang1997kirszbraun,alexander2011alexandrov}.
 (In fact, the statement in Kiszbraun could be used as the definition of spaces with non-negative curvature in the sense of Alexandrov.)
 Applying Kiszbraun theorem for three-point sets,
-one gets the following area comparison which will be important to us.
+one gets the following area comparison property which will be important to us.
 
 \begin{thm}{Area comparison}\label{Area comparison}
 Assume $\Sigma$ is a surface with non-negative curvature in the sense of Alexandrov
 and a triangle $[xyz]$ in $\Sigma$ bounds a open set $\Delta$ homeomorphic to a disc.
 Then 
 \[\area\Delta\ge \area\~\triangle(xyz).\]
-
-Another proof of this theorem by dissection on small triangles can be found in \cite[Chapter X \S 1]{ aleksandrov1948vnutrennnyaya, alexandrow1955dieinnere}.
-
 \end{thm}
+Another proof of this theorem by dissection on small triangles can be found in \cite[Chapter X \S 1]{ aleksandrov1948vnutrennnyaya, alexandrow1955dieinnere}.
 
 \subsection*{Convex surfaces}
 The following two theorems play central role in the theory.
 They admit generalizations to higher dimensions, but we need it only for surfaces.
 
 \begin{thm}{Globalization theorem}\label{Globalization theorem}
-Assume that any point the surface $\Sigma$ admits a neighborhood $U$ such that the angles of all hinges in $U$ are defined and satisfy 
+Assume that any point of the surface $\Sigma$ admits a neighborhood $U$ such that the angles of all hinges in $U$ are defined and satisfy 
 the comparison and supplementary properties.
 Then these properties hold for all hinges;
 that is $\Sigma$ has non-negative curvature in the sense of Alexandrov.
@@ -249,7 +246,7 @@ This can be proved by covering interior of geodesic by two thin triangles with s
 \end{lpic}
 \end{wrapfigure}
 
-Further the curvature of an interior point in $\Sigma$ can be thought as $\pi$ minus total angle around it.
+Further, the curvature of an interior point in $\Sigma$ can be thought as $\pi$ minus total angle around it.
 The later can be seen from the picture ---
 to find the curvature of the central vertex one has to subtract excesses of three small triangles from the excess of the big one.
 (The existence of such configuration also requires some work.)
@@ -267,7 +264,6 @@ in particular, if $\Sigma$ is a surface with non-negative curvature in the sence
 \section{Four singular points}
 
 The following lemma is the key to the proof of Theorem~\ref{Long geodesic}.
-
 A point in a surface is called \emph{flat} if it admits a flat neighborhood;
 that is a neighborhood isometric to an open subset of the plane.
 
@@ -286,7 +282,6 @@ By cutting the surface $\Sigma$ along a sufficiently long closed simple geodesic
 we get two discs.
 The key step is to show that each of these discs is long and thin.
 Then we show that their ``corners'' form four required sets with big curvature.
-
 To be more precise the founded four sets will have small perimeter.
 The following claim implies that these conditions are equivalent.
 In fact, this claim holds for any metric on the sphere, not necessary closed convex surface.
@@ -317,10 +312,8 @@ Cut the surface $\Sigma$ along a sufficiently long closed simple geodesic,
 we get two discs.
 Choose one of the discs, say $D$;
 equip it with the intrinsic metric further denoted by $|{*}-{*}|_D$.
-
-
 According to the comparison theorem (\ref{Comparison theorem}) the surface $\Sigma$ has non-negative curvature in the sense of Alexandrov.
-By globalization theorem (\ref{Globalization theorem})
+By the globalization theorem (\ref{Globalization theorem})
 the same holds for $D$.
 
 Choose a pair of points $p,q\in\partial D$ which maximize the distance $|p-q|_D$.
@@ -333,11 +326,6 @@ By comparison property (\ref{Comparison property})
 	\measuredangle[x\,^p_q]\ge \tfrac\pi3.
 	\tag{${**}$}
 \end{equation}
-
-The points $p$ and $q$ divide $\partial D$ into two arcs,
-say $\gamma_1$ and $\gamma_2$;
-let us parametrize them by arclength from $p$ to $q$. 
-
 \begin{wrapfigure}[6]{r}{31mm}
 \begin{lpic}[t(2 mm),b(-0 mm),r(0 mm),l(1 mm)]{pics/long-geodesic-diam(1)}
 \lbl[r]{0,8;$p$}
@@ -347,6 +335,9 @@ let us parametrize them by arclength from $p$ to $q$.
 \end{lpic}
 \end{wrapfigure}
 
+The points $p$ and $q$ divide $\partial D$ into two arcs,
+say $\gamma_1$ and $\gamma_2$;
+let us parametrize them by arclength from $p$ to $q$. 
 By the first variation formula \eqref{eq:first variation}, for almost all $t$ we have
 \[\tfrac{d}{dt}|p-\gamma_i(t)|_D=-\cos \phi,\] 
 where $\phi$ is the angle between the direction of $\gamma_i$ at $x=\gamma_i(t)$ and the geodesic $[xp]$.
@@ -362,15 +353,14 @@ Therefore
 \tfrac12.
 % \tag{${*}{*}$}
 \end{equation*}
-
-In particular
+In particular,
 \[|p-q|_D\ge \tfrac18{\cdot}\length[\partial D].\]
 That is, if the geodesic was long 
 then $D$ has large diameter.
 
 Fix a positive $\delta$ which is small with respect to $\varepsilon$. 
 (The value $\delta=\varepsilon\cdot\sin \varepsilon$ will do.
-It means that in any euclidean triangle with one side $\varepsilon$ and another $\delta$ has the angle opposite $\delta$ less than $\varepsilon$).
+It means that in any euclidean triangle with one side $\varepsilon$ and another $\delta$ has the angle opposite $\delta$ less than~$\varepsilon$).
 
 Let $x$ and $y$ be the first points along $\gamma_1$ and $\gamma_2$ at distance $\varepsilon$ from $p$.
 If $|q-x|_D>|q-y|_D$, move the point $y$ along $\gamma_2$ toward $p$ until $|q-x|_D=|q-y|_D$; 
@@ -396,7 +386,7 @@ Therefore, if $D$ has large perimeter then $|x-y|_D <\delta$.
 Cut $D$ by $[xy]$
 and consider the part (a lune) $L_p$ with the point $p$ in it.
 Note that the curvature of $L_p$ is $\alpha+\beta$, where $\alpha$ and $\beta$ the angles as on the diagram.
-By comparison $\alpha\ge \tilde\measuredangle(x\,^p_y)$ 
+By the comparison $\alpha\ge \tilde\measuredangle(x\,^p_y)$ 
 and $\beta\ge \tilde\measuredangle(y\,^p_x)$.
 Therefore curvature of $L_p$ is at least $\pi-\tilde\measuredangle(p\,^x_y)>\pi-\varepsilon$.
 
