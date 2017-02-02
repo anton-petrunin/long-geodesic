@@ -127,10 +127,24 @@ The geometry of such surfaces is very particular.
 For example, by the comparison property, if a hinge has vanishing angle then one of its sides lies in the other.
 In particular, geodesics in $\Sigma$ can not bifurcate.
 
-Further, assume $\gamma$ is a geodesic in $\Sigma$, 
-and $p$ is arbitrary point on $\Sigma$.
+The following two theorem plays the central role in the theory.
+
+\begin{thm}{Globalization theorem}\label{Globalization theorem}
+Assume that any point of the surface $\Sigma$ admits a neighborhood $U$ such that the angles of all hinges in $U$ are defined and satisfy 
+the comparison and supplementary properties.
+Then these properties hold for all hinges;
+that is $\Sigma$ has non-negative curvature in the sense of Alexandrov.
+\end{thm}
+
+It was proved by Alexandrov himself \cite{alexandrov:devel} 
+and generalized since then many times;
+an amusing proof was given recently by Urs Lang and Viktor Schroeder in \cite{LS-globalization}.
+
+Further, assume $\Sigma$ has non-negative curvature in the sense of Alexandrov,
+$\gamma$ is a geodesic in $\Sigma$, 
+and $p$ is arbitrary point in $\Sigma$.
 Note that the function $f(t)=|p-\gamma(t)|_\Sigma$ is  $1$-Lipschitz. 
-In particular, $f$ is differentiable almost everywhere.
+In particular, the function $f$ is differentiable almost everywhere.
 
 \begin{wrapfigure}{r}{25 mm}
 \begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/first-variation(1)}
@@ -150,14 +164,13 @@ at any $t$ such that the derivative $f'(t)$ is defined (see  \cite[XI \S 2 (7)]{
 
 By the supplementary property $\phi_-\z+\phi_+=\pi$;
 hence $\cos\phi_+ +\cos\phi_-=0$.
-Therefore the two inequalities above imply the identity
+Therefore the two inequalities above imply so called \emph{first variation formula}; that is,
 \begin{equation}
 	\label{eq:first variation}
 f'(t)=-\cos[\phi_+(t)]
 	\tag{${*}$}
 \end{equation}
-for any $t$, where the derivative $f'(t)$ is defined.
-This statement is regarded as \emph{first variation formula}.
+for any $t$, where the derivative $f'(t)$ is defined..
 
 Further, for any surface $\Sigma$ with non-negative curvature in the sense of Alexandrov,
 the Kirszbraun extension theorem holds.
@@ -177,18 +190,6 @@ Then
 Another proof of this theorem by dissection on small triangles can be found in \cite[X \S 1]{ aleksandrov1948vnutrennnyaya}.
 
 \subsection*{Convex surfaces}
-The following two theorems play central role in the theory.
-They admit generalizations to higher dimensions, but we need it only for surfaces.
-
-\begin{thm}{Globalization theorem}\label{Globalization theorem}
-Assume that any point of the surface $\Sigma$ admits a neighborhood $U$ such that the angles of all hinges in $U$ are defined and satisfy 
-the comparison and supplementary properties.
-Then these properties hold for all hinges;
-that is $\Sigma$ has non-negative curvature in the sense of Alexandrov.
-\end{thm}
-
-An amusing proof of this theorem was given recently by Urs Lang and Viktor Schroeder in \cite{LS-globalization}; 
-but the statement was discovered long before.
 
 Recall that the intrinsic distance between points $x$ and $y$ on a surface $\Sigma$ in $\EE^3$, is defined as the least upper bound for the lengths of curves connecting $x$ to $y$ in $\Sigma$.
 
@@ -505,6 +506,9 @@ Alexandrow, A. D. \emph{Die innere Geometrie der konvexen Fl\"achen.} 1955.
 \bibitem{alexandrov1950} 
 Alexandrov, A. D.,
 \emph{Convex polyhedra.} 2005.
+
+\bibitem{alexandrov:devel} Alexandrow, A. D.,  \textit{\"Uber eine Verallgemeinerung der Riemannschen Geometrie,}
+Schriftenreihe Inst. Math. 1 (1957), p.33--84.
 
 \bibitem{busemann} Busemann, H.
 \emph{Convex surfaces.} 1958.
