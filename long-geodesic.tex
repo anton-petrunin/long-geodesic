@@ -31,25 +31,27 @@ We illustrate the power of the tools by proving the theorem below.
 \end{wrapfigure}
 
 Recall that a curve in a convex surface is called \emph{geodesic} if every sufficiently short arc of the curve is length minimizing;
-if it has no self intersections, we call it \emph{simple geodesic}.
-A tetrahedron with equal opposite edges is called \emph{isosceles}.
+if in addition it has no self intersections, we call it \emph{simple geodesic}.
+A tetrahedron with equal opposite edges will be called \emph{isosceles}.
 
 \begin{thm}{Theorem}
 	\label{Long geodesic}
-Assume that the surface $\Sigma$ of a convex body $B$ in the Euclidean space $\EE^3$
+Assume that the surface $\Sigma$ of a convex body $K$ in the Euclidean space $\EE^3$
 admits an arbitrary long simple closed geodesic.
-Then $B$ is an isosceles tetrahedron.
+Then $K$ is an isosceles tetrahedron.
 \end{thm}
 
 In \cite{protasov2008onthenumber}, Vladimir Protasov proved this result for the surfaces of convex polyhedrons.
  
 
 \section{An overview of the theory}
-\subsection*{Angles}
+
 The intrinsic metric on convex surfaces has certain comparison property, which we about to discuss.
-A short introduction to the subject was written by Alexander Alexandrov in \cite{alexandroff1941theinner}. 
-Later he wrote a comprehensive book on the subject \cite{aleksandrov1948vnutrennnyaya, alexandrow1955dieinnere} which we recommend to anyone who can read Russian or German,
-otherwise read the book of Herbert Busemann \cite{busemann1958convex}.
+
+As the main reference, we will use the classical  book of Alexandrov \cite{aleksandrov1948vnutrennnyaya}; it is available in Russian and German.
+The books \cite{busemann} or \cite{pogorelov-extrinsic} of  Busemann and Pogorelov should work as well and available in English.
+
+\subsection*{Angles}
 
 By \emph{surface} we will understand a compact $2$-dimensional manifold equipped with \emph{geodesic} metric, 
 possibly with non-empty boundary.
@@ -57,7 +59,7 @@ A metric on the surface $\Sigma$ is called geodesic if any two points $p,q\in \S
 we denote by $|p-q|_\Sigma$ the distance from $p$ to $q$ in $\Sigma$.
 This curve will be denoted as $[pq]$ and called a \emph{minimizing geodesic} from $p$ to $q$.
 
-For a triple of points $x,y,z\in\Sigma$, together with a choice of a three minimizing geodesics $[x y], [y z], [z x]$ will be called a \index{triangle}\emph{triangle} 
+A triple of points $x,y,z\in\Sigma$, together with a choice of three minimizing geodesics $[x y], [y z], [z x]$ will be called a \index{triangle}\emph{triangle} 
 and denoted as 
 $[x y z]$.
 Many different triangles with vertices $x$, $y$ and $z$ may exist, 
@@ -67,7 +69,7 @@ A triangle $[\~x\~y\~z]$ in the plane $\EE^2$
 with the same side lengths as $[x y z]$ 
 is called \emph{model triangle} of $[x y z]$;
 this relation will be written as $[\~x\~y\~z]=\~\triangle(x y z)$.
-The angle $\mangle\hinge{\~x}{\~y}{\~z}$ of the model triangle $[\~x\~y\~z]$ is called \emph{model angles} $[x y z]$ at $x$ and denoted as $\angk x y z$.
+The angle $\mangle\hinge{\~x}{\~y}{\~z}$ of the model triangle $[\~x\~y\~z]$ is called \emph{model angle} of the triangle $[x y z]$ at $x$ and denoted by $\angk x y z$.
 
 \begin{wrapfigure}{r}{19 mm}
 \begin{lpic}[t(-5 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/hinge(1)}
@@ -79,17 +81,15 @@ The angle $\mangle\hinge{\~x}{\~y}{\~z}$ of the model triangle $[\~x\~y\~z]$ is 
 \end{lpic}
 \end{wrapfigure}
 
-
-
 Two geodesics $[xy]$ and $[xz]$ with common end $x$ is called \emph{hinge} and denoted as $\hinge{x}{y}{z}$.
-The angle $\mangle\hinge{x}{y}{z}$ of the hinge is defined as the limit of model angles for triangles sling along the sides of hinge to its vertex. 
+The angle $\mangle\hinge{x}{y}{z}$ of the hinge is defined as the limit of model angles for triangles sliding along the sides of hinge to its vertex. 
 That is,
 \[\mangle\hinge{x}{y}{z}=\lim_{\bar y,\bar z\to x}\set{\angk{x}{\bar y}{\bar z}}{ \bar y\in \left]xy\right], \bar z\in \left]xz\right]},\]
 where $\left]xy\right]=[xy]\backslash\{x\}$.
 
 Note that if $p\in \left]xy\right[=[xy]\backslash\{x,y\}$ then $\mangle\hinge{p}{x}{y}=\pi$.
 
-In general, the angle of hinge maybe undefined, but as you will see it will be defined all the time we need it.
+In general, the angle of hinge maybe undefined, but as you will see it will be defined every time we need it.
 
 \subsection*{Comparison}
 
@@ -125,12 +125,12 @@ If in the surface $\Sigma$, the angles of all hinges are defined and satisfy the
 
 The geometry of such surfaces is very particular. 
 For example, by the comparison property, if a hinge has vanishing angle then one of its sides lies in the other.
-Especially, geodesics in $\Sigma$ can not bifurcate.
+In particular, geodesics in $\Sigma$ can not bifurcate.
 
 Further, assume $\gamma$ is a geodesic in $\Sigma$, 
 and $p$ is arbitrary point on $\Sigma$.
 Note that the function $f(t)=|p-\gamma(t)|_\Sigma$ is  $1$-Lipschitz. 
-Specifically, $f$ is differentiable almost everywhere.
+In particular, $f$ is differentiable almost everywhere.
 
 \begin{wrapfigure}{r}{25 mm}
 \begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/first-variation(1)}
@@ -145,11 +145,11 @@ Assume $\phi_\pm(t)$ are the angles between the positive and negative directions
 Applying the definition of angle and triangle inequality,
 one gets the following
 \[\pm f'(t)\le -\cos[\phi_\pm(t)]\]
-at any $t$ such that the derivative $f'(t)$ is defined (see  \cite[Chapter XI \S 2, Equation (7)]{ aleksandrov1948vnutrennnyaya, alexandrow1955dieinnere}). 
+at any $t$ such that the derivative $f'(t)$ is defined (see  \cite[XI \S 2 (7)]{ aleksandrov1948vnutrennnyaya}). 
 
 
-%
-Applying the supplementary property we get that $\phi_-+\phi_+=\pi$, hence $\cos\phi_+ +\cos\phi_-=0$.
+By the supplementary property $\phi_-\z+\phi_+=\pi$;
+hence $\cos\phi_+ +\cos\phi_-=0$.
 Therefore the two inequalities above imply the identity
 \begin{equation}
 	\label{eq:first variation}
@@ -162,9 +162,10 @@ This statement is regarded as \emph{first variation formula}.
 Further, for any surface $\Sigma$ with non-negative curvature in the sense of Alexandrov,
 the Kirszbraun extension theorem holds.
 That is, any distance non-expanding map from a subset of surface to the Euclidean plane can be extended to a distance non-expanding map defined on whole $\Sigma$;
-see \cite{lang1997kirszbraun,alexander2011alexandrov}.
+see \cite{LS, AKP}.
 (In fact, the statement in Kiszbraun could be used as the definition of spaces with non-negative curvature in the sense of Alexandrov.)
-Applying Kiszbraun theorem for three-point sets,
+
+Applying the Kiszbraun theorem for three-point sets,
 one gets the following area comparison property which will be important to us.
 
 \begin{thm}{Area comparison}\label{Area comparison}
@@ -173,7 +174,7 @@ and a triangle $[xyz]$ in $\Sigma$ bounds a open set $\Delta$ homeomorphic to a 
 Then 
 \[\area\Delta\ge \area\~\triangle(xyz).\]
 \end{thm}
-Another proof of this theorem by dissection on small triangles can be found in \cite[Chapter X \S 1]{ aleksandrov1948vnutrennnyaya, alexandrow1955dieinnere}.
+Another proof of this theorem by dissection on small triangles can be found in \cite[X \S 1]{ aleksandrov1948vnutrennnyaya}.
 
 \subsection*{Convex surfaces}
 The following two theorems play central role in the theory.
@@ -186,7 +187,8 @@ Then these properties hold for all hinges;
 that is $\Sigma$ has non-negative curvature in the sense of Alexandrov.
 \end{thm}
 
-An amusing proof of the theorem above is given by Urs Lang and Viktor Schroeder in \cite{lang2012toponogov}.
+An amusing proof of this theorem was given recently by Urs Lang and Viktor Schroeder in \cite{LS-globalization}; 
+but the statement was discovered long before.
 
 Recall that the intrinsic distance between points $x$ and $y$ on a surface $\Sigma$ in $\EE^3$, is defined as the least upper bound for the lengths of curves connecting $x$ to $y$ in $\Sigma$.
 
@@ -196,25 +198,26 @@ if equipped with the induced intrinsic metric,
 is a sphere with a non-negatively curved metric in the sense of Alexandrov.
 \end{thm}
 
-In fact, as it was prove by Alexandrov in \cite[Chapter III \S 3]{aleksandrov1948vnutrennnyaya, alexandrow1955dieinnere},
+In fact, as it was prove by Alexandrov in \cite[III \S 3]{aleksandrov1948vnutrennnyaya},
 the converse of this theorem also holds
 if one considers convex plane figure as a convex body.
 The surface of flat convex figure has to be defined as its doubling;
 that is, two copies 
-of the figure glued along the boundary --- that is like a surface if you can walk on both sides of the figure but can not pass through it.
+of the figure glued along the boundary --- it will look like a surface if you can walk on both sides of the figure but can not pass through it.
 
-\begin{thm}{Theorem}\cite[Chapter VI-VII]{aleksandrov1948vnutrennnyaya, alexandrow1955dieinnere}
+\begin{thm}{Theorem}
 Any surface $\Sigma$ with non-negative curvature in the sense of Alexandrov which is homeomorphic to the sphere
 is isometric to the surface of a convex body in $\EE^3$,
 which possibly degenerate to a flat figure.
 \end{thm}
 
 It turns out that $\Sigma$ defines the convex body up to congruence.
-This hard theorem was proved by Pogorelov \cite{pogorelov1952odnoznacnaya}.
-We will use the following weaker statement, which goes essentially the same way as the Cauchy's rigidity theorem.
+This hard theorem was proved by Pogorelov in \cite{pogorelov}.
+We will use the following weaker statement proved by Alexandrov earlier 
+\cite[VI \S 5]{aleksandrov1948vnutrennnyaya};
+its proof goes essentially the same way as the Cauchy's rigidity theorem.
 
-\begin{thm}{Rigidity theorem}\cite[Chapter VI \S 5]{aleksandrov1948vnutrennnyaya, alexandrow1955dieinnere}
-	\label{Rigidity theorem}
+\begin{thm}{Rigidity theorem}\label{Rigidity theorem}
 Convex polyhedrons in $\EE^3$ with isometric surfaces are congruent. 
 \end{thm}
 
@@ -224,11 +227,10 @@ Let $\Sigma$ be a surface with non-negative curvature in the sense of Alexandrov
 Assume a triangle $[xyz]$ bounds in $\Sigma$ an open set $\Delta$ homeomorphic to a disc which is convex.
 That is any minimizing geodesic with ends in $\Delta$
 lie completely in $\Delta$.
-In this case we define the \emph{curvature} of $\Delta$ as the angle excess of $[xyz]$;
+In this case we define the \emph{curvature} of $\Delta$ as the angle excess of the triangle $[xyz]$;
 that is,
 \[\kappa(\Delta)=\mangle \hinge x y z+\mangle \hinge  y z x+\mangle \hinge z x y-\pi.\]
-It extends to non-negative measure, so called the \index{curvature measure}\emph{curvature measure} in the unique way, defined on all Borel subsets in the interior of $\Sigma$.
-%(If $\Sigma$ is a convex surface in $\mathbb{E}^3$, then the curvature measure of a set in $\Sigma$ can be thought as the Lebesgues measure of its spherical image of $U$ under the the map .) Правильно такое сказать тяжело --- поверхность не гладкая, сферическое отображение неоднозначное ...
+The functional $\kappa$ uniquely extends to non-negative measure, so called the \index{curvature measure}\emph{curvature measure}, defined on all Borel subsets in the interior of $\Sigma$.
 
 \begin{wrapfigure}{r}{23 mm}
 \begin{lpic}[t(-7 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/geodesic(1)}
@@ -246,7 +248,7 @@ This can be proved by covering interior of geodesic by two thin triangles with s
 \end{lpic}
 \end{wrapfigure}
 
-Further, the curvature of an interior point in $\Sigma$ can be thought as $\pi$ minus total angle around it.
+Further, the curvature of an interior point in $\Sigma$ can be thought as $2{\cdot}\pi$ minus total angle around it.
 The later can be seen from the picture ---
 to find the curvature of the central vertex one has to subtract excesses of three small triangles from the excess of the big one.
 (The existence of such configuration also requires some work.)
@@ -269,14 +271,15 @@ that is a neighborhood isometric to an open subset of the plane.
 
 \begin{thm}{Lemma} 
 	\label{lem:4 singular points}
-Assume that the surface $\Sigma$ of a convex body $B$ in $\mathbb{R}^3$
+Assume that the surface $\Sigma$ of a convex body $K$ in $\mathbb{R}^3$
 admits an arbitrary long simple closed geodesic.
-Then the surface of $B$ contains $4$ singular points with curvature $\pi$ and the rest of it is flat.
+Then the surface of $K$ contains $4$ singular points with curvature $\pi$ and the rest of it is flat.
 \end{thm}
 
-For the proof we will show that for any $\varepsilon>0$, 
-it is possible to found four non-intersecting open sets of diameter $\varepsilon$, such that each of them having curvature at least $\pi - \varepsilon$.
-Going to the limit we will get the statement of the Lemma.
+In the proof we will show that 
+it is possible to find four non-intersecting open sets of arbitrary small diameter, 
+such that each of them having curvature arbitrary close to $\pi$.
+Passing to the limit we will get the statement of the lemma.
 
 By cutting the surface $\Sigma$ along a sufficiently long closed simple geodesic,
 we get two discs.
@@ -321,12 +324,10 @@ Clearly,
 \[|x-p|_D,|x-q|_D\le |p-q|_D\] 
 for any other point $x\in\partial D$.
 By comparison property (\ref{Comparison property}) 
-\begin{equation}
-	\label{eq:pxq>pi/3}
-	\measuredangle[x\,^p_q]\ge \tfrac\pi3.
-	\tag{${**}$}
-\end{equation}
-\begin{wrapfigure}[6]{r}{31mm}
+
+{
+
+\begin{wrapfigure}[3]{l}{31mm}
 \begin{lpic}[t(2 mm),b(-0 mm),r(0 mm),l(1 mm)]{pics/long-geodesic-diam(1)}
 \lbl[r]{0,8;$p$}
 \lbl[l]{28,8;$q$}
@@ -334,6 +335,12 @@ By comparison property (\ref{Comparison property})
 \lbl[l]{12,9,-60;$\ge\tfrac\pi3$}
 \end{lpic}
 \end{wrapfigure}
+
+\begin{equation}
+	\label{eq:pxq>pi/3}
+	\measuredangle[x\,^p_q]\ge \tfrac\pi3.
+	\tag{${**}$}
+\end{equation}
 
 The points $p$ and $q$ divide $\partial D$ into two arcs,
 say $\gamma_1$ and $\gamma_2$;
@@ -357,6 +364,8 @@ In particular,
 \[|p-q|_D\ge \tfrac18{\cdot}\length[\partial D].\]
 That is, if the geodesic was long 
 then $D$ has large diameter.
+
+}
 
 Fix a positive $\delta$ which is small with respect to $\varepsilon$. 
 (The value $\delta=\varepsilon\cdot\sin \varepsilon$ will do.
@@ -418,10 +427,10 @@ each of diameter at most $\eps'$,
 and each with curvature at least $\pi-\eps$.
 By Gauss--Bonnet formula, the remaining curvature is at most $4\cdot\eps$.
 
-Since $\eps>0$ is arbitrary, it follows that support of curvature measure can be covered by four sets with arbitrary small diameter.
-The support of the measure is a $4$-point set;
-clearly each of these points has curvature $\pi$.
-The remaining part of $\Sigma$ has vanishing curvature and therefore flat.
+Since $\eps>0$ is arbitrary, it follows that support of curvature measure can be covered by four sets with arbitrary small diameter;
+that is, support of $\kappa$ is a $4$-point set.
+Clearly each of these points has curvature $\pi$,
+the remaining part of $\Sigma$ has vanishing curvature and therefore flat.
 \qeds
 
 
@@ -479,10 +488,43 @@ Assume that a convex body $K$ is bounded by a closed flat surface with finite nu
 Show that $K$ is a polyhedron.
 \end{thm}
 
+\begin{thebibliography}{52}
 
+\bibitem{AKP} Alexander, S.; Kapovitch, V.; Petrunin, A. \emph{Alexandrov meets Kirszbraun.} Proceedings of the G\"okova Geometry-Topology Conference 2010, 88--109, Int. Press, Somerville, MA, 2011.
 
- \bibliographystyle{abbrv}
-\bibliography{long-geodesic.bib}{}
+\bibitem{aleksandrov1948vnutrennnyaya} 
+\begin{otherlanguage}{russian}
+Александров, А. Д. 
+\emph{Внутренняя геометрия выпуклых поверхностей.} 
+1948;
+\end{otherlanguage}
+\begin{otherlanguage}{german}
+Alexandrow, A. D. \emph{Die innere Geometrie der konvexen Fl\"achen.} 1955.
+\end{otherlanguage}
 
+\bibitem{alexandrov1950} 
+Alexandrov, A. D.,
+\emph{Convex polyhedra.} 2005.
+
+\bibitem{busemann} Busemann, H.
+\emph{Convex surfaces.} 1958.
+
+\bibitem{LS} Lang, U.; Schroeder, V. \emph{Kirszbraun's theorem and metric spaces of bounded curvature.} Geom. Funct. Anal. 7 (1997), no. 3, 535--560.
+
+\bibitem{LS-globalization} Lang, U.; Schroeder, V. \emph{On Toponogov's comparison theorem for Alexandrov spaces.} \texttt{arXiv:1207.3668 [math.MG]}.
+
+\bibitem{pogorelov} 
+\begin{otherlanguage}{russian}
+Погорелов, А. В.,
+\emph{Однозначаная определённость общих выпукых поверхностей},
+1952.
+\end{otherlanguage}
+
+\bibitem{pogorelov-extrinsic}
+Pogorelov, A. \emph{Extrinsic geometry of convex surfaces.} Vol. 35. American Mathematical Soc., 1973.
+
+\bibitem{protasov2008onthenumber} Protasov, V. Yu.,
+\emph{On the number of closed geodesics on a polyhedron.}  Russian Math. Surveys 63 (2008), no. 5, 978--980
+\end{thebibliography}
 
 \end{document}
