@@ -25,6 +25,7 @@ if the surface of convex body $K$ contains arbitrary long closed simple geodesic
 The goal of this note is to introduce the reader to the theory of intrinsic geometry of convex surfaces.
 We illustrate the power of the tools by proving the theorem below.
 
+
 \begin{wrapfigure}{r}{21 mm}
 \begin{lpic}[t(-4 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/long-geodesic(1)}
 \end{lpic}
@@ -33,6 +34,8 @@ We illustrate the power of the tools by proving the theorem below.
 Recall that a curve in a convex surface is called \emph{geodesic} if every sufficiently short arc of the curve is length minimizing;
 if in addition it has no self intersections, we call it \emph{simple geodesic}.
 A tetrahedron with equal opposite edges will be called \emph{isosceles}.
+
+
 
 \begin{thm}{Theorem}
 	\label{Long geodesic}
@@ -46,10 +49,27 @@ In \cite{protasov2008onthenumber}, Vladimir Protasov proved this result for the 
 
 \section{An overview of the theory}
 
-The intrinsic metric on convex surfaces has certain comparison property, which we about to discuss.
+The intrinsic metric on convex surfaces has certain comparison property, which is called \emph{nonnegative curvature in the sense of Alexandrov}.
+The idea is to present a generalization of Euclidean plane geometry,
+where instead of equality in the cosine rule we write the following inequality
+
+{
+
+\begin{wrapfigure}[2]{r}{21 mm}
+\begin{lpic}[t(-6 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/cosine-rule(1)}
+\lbl[t]{10,1;$a$}
+\lbl[br]{5,10;$b$}
+\lbl[bl]{15,10;$c$}
+\lbl[bl]{7,4;$\gamma$}
+\end{lpic}
+\end{wrapfigure}
+
+\[c^2\le a^2+b^2-2\cdot a \cdot b\cdot \cos\gamma.\]
 
 As the main reference, we will use the classical  book of Alexandrov \cite{aleksandrov1948vnutrennnyaya}; it is available in Russian and German.
 The books \cite{busemann} or \cite{pogorelov-extrinsic} of  Busemann and Pogorelov should work as well and available in English.
+
+}
 
 \subsection*{Angles}
 
@@ -65,12 +85,6 @@ $[x y z]$.
 Many different triangles with vertices $x$, $y$ and $z$ may exist, 
 any of which can be denoted by $[x y z]$.
 
-A triangle $[\~x\~y\~z]$ in the plane $\EE^2$
-with the same side lengths as $[x y z]$ 
-is called \emph{model triangle} of $[x y z]$;
-this relation will be written as $[\~x\~y\~z]=\~\triangle(x y z)$.
-The angle $\mangle\hinge{\~x}{\~y}{\~z}$ of the model triangle $[\~x\~y\~z]$ is called \emph{model angle} of the triangle $[x y z]$ at $x$ and denoted by $\angk x y z$.
-
 \begin{wrapfigure}{r}{19 mm}
 \begin{lpic}[t(-5 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/hinge(1)}
 \lbl[t]{17,2;$z$}
@@ -80,6 +94,12 @@ The angle $\mangle\hinge{\~x}{\~y}{\~z}$ of the model triangle $[\~x\~y\~z]$ is 
 \lbl[rt]{1,0;$x$}
 \end{lpic}
 \end{wrapfigure}
+
+A triangle $[\~x\~y\~z]$ in the plane $\EE^2$
+with the same side lengths as $[x y z]$ 
+is called \emph{model triangle} of $[x y z]$;
+this relation will be written as $[\~x\~y\~z]=\~\triangle(x y z)$.
+The angle $\mangle\hinge{\~x}{\~y}{\~z}$ of the model triangle $[\~x\~y\~z]$ is called \emph{model angle} of the triangle $[x y z]$ at $x$ and denoted by $\angk x y z$.
 
 Two geodesics $[xy]$ and $[xz]$ with common end $x$ is called \emph{hinge} and denoted as $\hinge{x}{y}{z}$.
 The angle $\mangle\hinge{x}{y}{z}$ of the hinge is defined as the limit of model angles for triangles sliding along the sides of hinge to its vertex. 
@@ -100,6 +120,9 @@ $\mangle\hinge{x}{y}{z}$ is defined and
 \[\mangle \hinge{x}{y}{z} \ge \angk{x}{y}{z}{}{}.\]
 \end{thm}
 
+Two hinges $\hinge{p}{x}{z}$ and $\mangle\hinge{p}{y}{z}$ will be called \emph{supplementary},
+if they share side $[pz]$ and $p\in \left]xy\right[$.
+
 \begin{wrapfigure}{r}{27 mm}
 \begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/suplimentary(1)}
 \lbl[t]{24,2.6;$x$}
@@ -108,9 +131,6 @@ $\mangle\hinge{x}{y}{z}$ is defined and
 \lbl[bl]{15,13;$p$}
 \end{lpic}
 \end{wrapfigure}
-
-Two hinges $\hinge{p}{x}{z}$ and $\mangle\hinge{p}{y}{z}$ will be called \emph{supplementary},
-if they share side $[pz]$ and $p\in \left]xy\right[$.
 
 \begin{thm}{Supplementary property}\label{Supplementary property}
 We say that \emph{suplementary property} holds for two supplementary hinges $\hinge{p}{x}{z}$ and $\mangle\hinge{p}{y}{z}$ if the angles $\hinge{p}{x}{z}$ and $\mangle\hinge{p}{y}{z}$ are defined and
@@ -320,16 +340,10 @@ According to the comparison theorem (\ref{Comparison theorem}) the surface $\Sig
 By the globalization theorem (\ref{Globalization theorem})
 the same holds for $D$.
 
-Choose a pair of points $p,q\in\partial D$ which maximize the distance $|p-q|_D$.
-Clearly,
-\[|x-p|_D,|x-q|_D\le |p-q|_D\] 
-for any other point $x\in\partial D$.
-By comparison property (\ref{Comparison property}) 
-
 {
 
-\begin{wrapfigure}[3]{l}{31mm}
-\begin{lpic}[t(2 mm),b(-0 mm),r(0 mm),l(1 mm)]{pics/long-geodesic-diam(1)}
+\begin{wrapfigure}{r}{31mm}
+\begin{lpic}[t(0 mm),b(-0 mm),r(0 mm),l(1 mm)]{pics/long-geodesic-diam(1)}
 \lbl[r]{0,8;$p$}
 \lbl[l]{28,8;$q$}
 \lbl[b]{10,16;$\gamma_1(t)$}
@@ -337,6 +351,11 @@ By comparison property (\ref{Comparison property})
 \end{lpic}
 \end{wrapfigure}
 
+Choose a pair of points $p,q\in\partial D$ which maximize the distance $|p-q|_D$.
+Clearly,
+\[|x-p|_D,|x-q|_D\le |p-q|_D\] 
+for any other point $x\in\partial D$.
+By comparison property (\ref{Comparison property}) 
 \begin{equation}
 	\label{eq:pxq>pi/3}
 	\measuredangle[x\,^p_q]\ge \tfrac\pi3.
@@ -458,9 +477,9 @@ Then it bounds an isosceles tetrahedron.
 
 \begin{wrapfigure}{o}{21 mm}
 \begin{lpic}[t(-6 mm),b(-3 mm),r(0 mm),l(0 mm)]{pics/akopyan(1)}
-\lbl[tr]{3,10;$x$}
-\lbl[tl]{14,10;$y$}
-\lbl[t]{10.5,0;$z$}
+\lbl[br]{3,8;$x$}
+\lbl[bl]{14,8;$z$}
+\lbl[t]{10,0;$y$}
 \end{lpic}
 \end{wrapfigure}
 
