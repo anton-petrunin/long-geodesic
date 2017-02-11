@@ -18,12 +18,12 @@ pdfauthor={Arseniy Akopyan and Anton Petrunin}}
 
 \begin{abstract}
 We review the theory of intrinsic geometry of convex surfaces in the Euclidean space and prove the following theorem: 
-if the surface of convex body $K$ contains arbitrary long closed simple geodesic, then $K$ is an isosceles tetrahedron.
+if the surface of a convex body $K$ contains arbitrary long closed simple geo\-de\-sics, then $K$ is an isosceles tetrahedron.
 \end{abstract}
 
 \section{Introduction}
 The goal of this note is to introduce the reader to the theory of intrinsic geometry of convex surfaces.
-We illustrate the power of the tools by proving the theorem below.
+We illustrate the power of the tools by proving a theorem.
 
 
 \begin{wrapfigure}{r}{21 mm}
@@ -31,7 +31,7 @@ We illustrate the power of the tools by proving the theorem below.
 \end{lpic}
 \end{wrapfigure}
 
-Recall that a curve in a convex surface is called \emph{geodesic} if every sufficiently short arc of the curve is length minimizing;
+A curve in a surface is called \emph{geodesic} if every sufficiently short arc of the curve is length minimizing;
 if in addition it has no self intersections, we call it \emph{simple geodesic}.
 A tetrahedron with equal opposite edges will be called \emph{isosceles}.
 
@@ -44,14 +44,15 @@ admits an arbitrary long simple closed geodesic.
 Then $K$ is an isosceles tetrahedron.
 \end{thm}
 
-In \cite{protasov2008onthenumber}, Vladimir Protasov proved this result for the surfaces of convex polyhedrons.
+In \cite{protasov2008onthenumber}, Vladimir Protasov proved a partial case of this theorem;
+he considered only the surfaces of convex polyhedrons.
  
 
 \section{An overview of the theory}
 
 The geometry of intrinsic metric on convex surfaces
 can be considered as generalization of Euclidean plane geometry,
-where instead of equality in the cosine rule we write the following inequality
+where instead of equality in the cosine rule we have the following inequality
 
 {
 
@@ -73,8 +74,8 @@ The books \cite{busemann} or \cite{pogorelov-extrinsic} of  Busemann and Pogorel
 
 \subsection*{Angles}
 
-By \emph{surface} we will understand a compact $2$-dimensional manifold equipped with \emph{geodesic} metric, 
-possibly with non-empty boundary.
+By a \emph{surface} we mean a compact $2$-dimensional manifold,
+(possibly with non-empty boundary) which is equipped with \emph{geodesic} metric.
 A metric on the surface $\Sigma$ is called geodesic if any two points $p,q\in \Sigma$ can be joined by a curve with length $|p-q|_\Sigma$;
 we denote by $|p-q|_\Sigma$ the distance from $p$ to $q$ in $\Sigma$.
 This curve will be denoted as $[pq]$ and called a \emph{minimizing geodesic} from $p$ to $q$.
@@ -101,27 +102,27 @@ is called \emph{model triangle} of $[x y z]$;
 this relation will be written as $[\~x\~y\~z]=\~\triangle(x y z)$.
 The angle $\mangle\hinge{\~x}{\~y}{\~z}$ of the model triangle $[\~x\~y\~z]$ is called \emph{model angle} of the triangle $[x y z]$ at $x$ and denoted by $\angk x y z$.
 
-Two geodesics $[xy]$ and $[xz]$ with common end $x$ is called \emph{hinge} and denoted as $\hinge{x}{y}{z}$.
-The angle $\mangle\hinge{x}{y}{z}$ of the hinge is defined as the limit of model angles for triangles sliding along the sides of hinge to its vertex. 
+A pair of geodesics $[xy]$ and $[xz]$ with common endpoint $x$ is called a \emph{hinge} and is denoted as $\hinge{x}{y}{z}$.
+The angle measure $\mangle\hinge{x}{y}{z}$ of the hinge is defined as the limit of model angles for triangles sliding along the sides of hinge to its vertex. 
 That is,
 \[\mangle\hinge{x}{y}{z}=\lim_{\bar y,\bar z\to x}\set{\angk{x}{\bar y}{\bar z}}{ \bar y\in \left]xy\right], \bar z\in \left]xz\right]},\]
 where $\left]xy\right]=[xy]\backslash\{x\}$.
 
-Note that if $p\in \left]xy\right[=[xy]\backslash\{x,y\}$ then $\mangle\hinge{p}{x}{y}=\pi$.
-
 In general, the angle of hinge maybe undefined, but as you will see it will be defined every time we need it.
+
+Note that if $p\in \left]xy\right[=[xy]\backslash\{x,y\}$ then $\mangle\hinge{p}{x}{y}=\pi$.
 
 \subsection*{Comparison}
 
 \begin{thm}{Comparison property}\label{Comparison property}
-We say that hinge $\hinge x y z$ 
+We say that a hinge $\hinge x y z$ 
 satisfies the \emph{comparison property} if the angle
 $\mangle\hinge{x}{y}{z}$ is defined and 
 \[\mangle \hinge{x}{y}{z} \ge \angk{x}{y}{z}{}{}.\]
 \end{thm}
 
 Two hinges $\hinge{p}{x}{z}$ and $\mangle\hinge{p}{y}{z}$ will be called \emph{supplementary},
-if they share side $[pz]$ and $p\in \left]xy\right[$.
+if they share a side $[pz]$ and $p\in \left]xy\right[$.
 
 \begin{wrapfigure}{r}{27 mm}
 \begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/suplimentary(1)}
@@ -133,36 +134,35 @@ if they share side $[pz]$ and $p\in \left]xy\right[$.
 \end{wrapfigure}
 
 \begin{thm}{Supplementary property}\label{Supplementary property}
-We say that \emph{suplementary property} holds for two supplementary hinges $\hinge{p}{x}{z}$ and $\mangle\hinge{p}{y}{z}$ if the angles $\hinge{p}{x}{z}$ and $\mangle\hinge{p}{y}{z}$ are defined and
+We say that the \emph{suplementary property} holds for two supplementary hinges $\hinge{p}{x}{z}$ and $\mangle\hinge{p}{y}{z}$ if the angles $\hinge{p}{x}{z}$ and $\mangle\hinge{p}{y}{z}$ are defined and
 \[\mangle\hinge{p}{x}{z}+\mangle\hinge{p}{y}{z}=\pi.\]
 
 \end{thm}
 
+We will say that a surface $\Sigma$ has \emph{non-negative curvature in the sense of Alexandrov}
+if the angles of all hinges in $\Sigma$ are defined and satisfy the comparison and supplementary properties.%
+\footnote{It is not known if the comparison property for all hinges in $\Sigma$ imply the supplementary property.}
 
-If in the surface $\Sigma$, the angles of all hinges are defined and satisfy the comparison and supplementary properties, then we say that $\Sigma$ has \emph{non-negative curvature in the sense of Alexandrov}.%
-\footnote{It is not known if well defined angles together with comparison property imply supplementary property.}
-
-
-The geometry of such surfaces is very particular. 
+The geometry of such surfaces is very specific. 
 For example, by the comparison property, if a hinge has vanishing angle then one of its sides lies in the other.
 In particular, geodesics in $\Sigma$ can not bifurcate.
 
 The following two theorem plays the central role in the theory.
 
 \begin{thm}{Globalization theorem}\label{Globalization theorem}
-Assume that any point of the surface $\Sigma$ admits a neighborhood $U$ such that the angles of all hinges in $U$ are defined and satisfy 
+Assume that any point of the surface $\Sigma$ has a neighborhood $U$ such that the angles of all hinges in $U$ are defined and satisfy 
 the comparison and supplementary properties.
 Then these properties hold for all hinges;
 that is $\Sigma$ has non-negative curvature in the sense of Alexandrov.
 \end{thm}
 
-It was proved by Alexandrov himself \cite{alexandrov:devel} 
+This theorem was proved by Alexandrov \cite{alexandrov:devel} 
 and generalized since then many times;
 an amusing proof was given recently by Urs Lang and Viktor Schroeder in \cite{LS-globalization}.
 
-Further, assume $\Sigma$ has non-negative curvature in the sense of Alexandrov,
-$\gamma$ is a geodesic in $\Sigma$, 
-and $p$ is arbitrary point in $\Sigma$.
+Further, assume that the surface $\Sigma$ has non-negative curvature in the sense of Alexandrov,
+$\gamma$ is a geodesic in $\Sigma$ parametrized by length, 
+and let $p$ be arbitrary point on $\Sigma$.
 Note that the function $f(t)=|p-\gamma(t)|_\Sigma$ is  $1$-Lipschitz. 
 In particular, the function $f$ is differentiable almost everywhere.
 
@@ -175,28 +175,29 @@ In particular, the function $f$ is differentiable almost everywhere.
 \end{lpic}
 \end{wrapfigure}
 
-Assume $\phi_\pm(t)$ are the angles between the positive and negative directions of $\gamma$ and a geodesic $[\gamma(t)p]$.
-Applying the definition of angle and triangle inequality,
+Let us denote by $\phi_\pm(t)$ the angles between the positive and negative directions of $\gamma$ and a geodesic $[\gamma(t)\,p]$; 
+see the diagram.
+From the definition of angle, via the triangle inequality,
 one gets the following
 \[\pm f'(t)\le -\cos[\phi_\pm(t)]\]
-at any $t$ such that the derivative $f'(t)$ is defined (see  \cite[XI \S 2 (7)]{ aleksandrov1948vnutrennnyaya}). 
+at any $t$ for which the derivative $f'(t)$ is defined (see  \cite[XI \S 2 (7)]{ aleksandrov1948vnutrennnyaya}). 
 
 
 By the supplementary property $\phi_-\z+\phi_+=\pi$;
 hence $\cos\phi_+ +\cos\phi_-=0$.
-Therefore the two inequalities above imply so called \emph{first variation formula}; that is,
+Therefore the two inequalities above imply so called \emph{first variation formula}
 \begin{equation}
 	\label{eq:first variation}
 f'(t)=-\cos[\phi_+(t)]
 	\tag{${*}$}
 \end{equation}
-for any $t$, where the derivative $f'(t)$ is defined..
+for any $t$, where the derivative $f'(t)$ is defined.
 
 Further, for any surface $\Sigma$ with non-negative curvature in the sense of Alexandrov,
 the Kirszbraun extension theorem holds.
 That is, any distance non-expanding map from a subset of surface to the Euclidean plane can be extended to a distance non-expanding map defined on whole $\Sigma$;
 see \cite{LS, AKP}.
-(In fact, the statement in Kiszbraun could be used as the definition of spaces with non-negative curvature in the sense of Alexandrov.)
+(In fact, this statement could be used to define the spaces with non-negative curvature in the sense of Alexandrov.)
 
 Applying the Kiszbraun theorem for three-point sets,
 one gets the following area comparison property which will be important to us.
@@ -207,7 +208,7 @@ and a triangle $[xyz]$ in $\Sigma$ bounds a open set $\Delta$ homeomorphic to a 
 Then 
 \[\area\Delta\ge \area\~\triangle(xyz).\]
 \end{thm}
-Another proof of this theorem by dissection on small triangles can be found in \cite[X \S 1]{ aleksandrov1948vnutrennnyaya}.
+An earlier proof of this theorem by slicing $\Delta$ into small triangles is given in \cite[X \S 1]{ aleksandrov1948vnutrennnyaya}.
 
 \subsection*{Convex surfaces}
 
@@ -219,10 +220,9 @@ if equipped with the induced intrinsic metric,
 is a sphere with a non-negatively curved metric in the sense of Alexandrov.
 \end{thm}
 
-In fact, as it was prove by Alexandrov in \cite[III \S 3]{aleksandrov1948vnutrennnyaya},
-the converse of this theorem also holds
-if one considers convex plane figure as a convex body.
-The surface of flat convex figure has to be defined as its doubling;
+The converse of this theorem also holds
+if one considers convex plane figure as a degenerate convex body \cite[III \S 3]{aleksandrov1948vnutrennnyaya}.
+The surface of a flat convex figure has to be defined as its doubling;
 that is, two copies 
 of the figure glued along the boundary --- it will look like a surface if you can walk on both sides of the figure but can not pass through it.
 
@@ -233,10 +233,11 @@ which possibly degenerate to a flat figure.
 \end{thm}
 
 It turns out that $\Sigma$ defines the convex body up to congruence.
-This hard theorem was proved by Pogorelov in \cite{pogorelov}.
+This is a very hard theorem;
+it was first proved by Pogorelov in \cite{pogorelov}.
 We will use the following weaker statement proved by Alexandrov earlier 
 \cite[VI \S 5]{aleksandrov1948vnutrennnyaya};
-its proof goes essentially the same way as the Cauchy's rigidity theorem.
+its proof goes essentially the same way as Cauchy's rigidity theorem.
 
 \begin{thm}{Rigidity theorem}\label{Rigidity theorem}
 Convex polyhedrons in $\EE^3$ with isometric surfaces are congruent. 
@@ -245,9 +246,8 @@ Convex polyhedrons in $\EE^3$ with isometric surfaces are congruent.
 \subsection*{Curvature measure}
 
 Let $\Sigma$ be a surface with non-negative curvature in the sense of Alexandrov.
-Assume a triangle $[xyz]$ bounds in $\Sigma$ an open set $\Delta$ homeomorphic to a disc which is convex.
-That is any minimizing geodesic with ends in $\Delta$
-lie completely in $\Delta$.
+Assume a triangle $[xyz]$ bounds an open set $\Delta$ in $\Sigma$ which is convex and homeomorphic to a disc.
+By convex we mean that any minimizing geodesic with endpoints in $\Delta$ lie completely in $\Delta$.
 In this case we define the \emph{curvature} of $\Delta$ as the angle excess of the triangle $[xyz]$;
 that is,
 \[\kappa(\Delta)=\mangle \hinge x y z+\mangle \hinge  y z x+\mangle \hinge z x y-\pi.\]
@@ -289,6 +289,7 @@ in particular, if $\Sigma$ is a surface with non-negative curvature in the sence
 The following lemma is the key to the proof of Theorem~\ref{Long geodesic}.
 A point in a surface is called \emph{flat} if it admits a flat neighborhood;
 that is a neighborhood isometric to an open subset of the plane.
+Equivalently, the curvature measure is vanishing in a neighborhood of this point.
 
 \begin{thm}{Lemma} 
 	\label{lem:4 singular points}
@@ -475,7 +476,7 @@ Then it bounds an isosceles tetrahedron.
 {
 
 \begin{wrapfigure}{o}{21 mm}
-\begin{lpic}[t(-0 mm),b(-3 mm),r(0 mm),l(0 mm)]{pics/akopyan(1)}
+\begin{lpic}[t(-6 mm),b(-3 mm),r(0 mm),l(0 mm)]{pics/akopyan(1)}
 \lbl[br]{3,8;$x$}
 \lbl[bl]{14,8;$z$}
 \lbl[t]{10,0;$y$}
