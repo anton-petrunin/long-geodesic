@@ -12,7 +12,23 @@ pdfauthor={Arseniy Akopyan and Anton Petrunin}}
 \begin{document}
 
 \title{Long geodesics on convex surfaces}
-\author{Arseniy Akopyan and Anton Petrunin}
+\author{Arseniy Akopyan
+\and 
+Anton Petrunin}
+\newcommand{\Addresses}{{\bigskip\footnotesize
+
+Arseniy Akopyan, 
+\par\nopagebreak\textsc{Institute of Science and Technology Austria
+(IST Austria), Am Campus 1, 3400 Klosterneuburg, Austria.}
+  \par\nopagebreak
+  \textit{Email}: \texttt{akopjan@gmail.com}
+
+\medskip
+
+  Anton Petrunin, \par\nopagebreak\textsc{Math. Dept. PSU, University Park, PA 16802, USA}
+  \par\nopagebreak
+  \textit{Email}: \texttt{petrunin@math.psu.edu}
+}}
 \date{}
 \maketitle
 
@@ -21,25 +37,29 @@ We review the theory of intrinsic geometry of convex surfaces in the Euclidean s
 if the surface of a convex body $K$ contains arbitrary long closed simple geo\-de\-sics, then $K$ is an isosceles tetrahedron.
 \end{abstract}
 
+% \begin{figure}
+% {r}{21 mm}
+% \begin{lpic}[t(-4 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/long-geodesic(1)}
+% \end{lpic}
+% \end{figure}
+
 \section{Introduction}
 The goal of this note is to introduce the reader to the theory of intrinsic geometry of convex surfaces.
 We illustrate the power of the tools by proving a theorem.
+
+Let us remind that a curve in a surface is called \emph{geodesic} if every sufficiently short arc of the curve is length minimizing; if in addition it has no self intersections, we call it \emph{simple geodesic}.
+A tetrahedron with equal opposite edges will be called \emph{isosceles}.
 
 %\begin{wrapfigure}{r}{21 mm}
 %\begin{lpic}[t(-4 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/long-geodesic(1)}
 %\end{wrapfigure}
 
-A curve in a surface is called \emph{geodesic} if every sufficiently short arc of the curve is length minimizing;
-if in addition it has no self intersections, we call it \emph{simple geodesic}.
-A tetrahedron with equal opposite edges will be called \emph{isosceles}.
-
 \begin{center}
 %\begin{wrapfigure}{r}{54 mm}
-\begin{lpic}[t(-1 mm),b(-1 mm),r(0 mm),l(0 mm)]{pics/tetrapov/snow(.5)}
+\begin{lpic}[t(-1 mm),b(-1 mm),r(0 mm),l(0 mm)]{pics/snow(.5)}
 \end{lpic}
 %\end{wrapfigure}
 \end{center}
-
 
 \begin{thm}{Theorem}\label{Long geodesic}
 Assume that the surface $\Sigma$ of a convex body $K$ in the Euclidean space $\EE^3$
@@ -47,15 +67,11 @@ admits an arbitrary long simple closed geodesic.
 Then $K$ is an isosceles tetrahedron.
 \end{thm}
 
-In \cite{protasov2008onthenumber}, Vladimir Protasov proved a partial case of this theorem;
-he considered only the surfaces of convex polyhedrons.
-
-We want to thank Kristof Huszar for valuable comments
-on the preliminary version of this note. 
+This theorem is extension of result of Vladimir Protasov~\cite{protasov2008onthenumber}, 
+who proved it in assumption that $\Sigma$ is the surfaces of a convex polyhedron.
+The advantage of the axiomatic method of Alexandrov geometry is that it allows us to work with metrics of convex surfaces even they are not polyhedra, smooth manifolds or not equipped with any other convenient structure.
 
 \section{An overview of the theory}
-
-{
 
 \begin{wrapfigure}[4]{r}{21 mm}
 \begin{lpic}[t(-6 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/cosine-rule(1)}
@@ -72,11 +88,9 @@ where instead of equality in the cosine rule we have the following inequality
 \[c^2\le a^2+b^2-2\cdot a \cdot b\cdot \cos\gamma.\]
 This approach provides a uniform way to work with smooth and singular surfaces.
 
-
 As the main reference, we will use the classical  book of Alexandrov \cite{aleksandrov1948vnutrennnyaya}; it is available in Russian and German.
-The books \cite{busemann} or \cite{pogorelov-extrinsic} of  Busemann and Pogorelov should work as well and available in English.
+The books \cite{busemann1958convex} or \cite{pogorelov1973extrinsic} of Busemann and Pogorelov should work as well and available in English.
 
-}
 
 \subsection*{Angles}
 
@@ -162,9 +176,9 @@ Then these properties hold for all hinges;
 that is $\Sigma$ has non-negative curvature in the sense of Alexandrov.
 \end{thm}
 
-This theorem was proved by Alexandrov \cite{alexandrov:devel} 
+This theorem was proved by Alexandrov \cite{alexandrow1957ubereine} 
 and generalized since then many times;
-an amusing proof was given recently by Urs Lang and Viktor Schroeder in \cite{LS-globalization}.
+an amusing proof was given recently by Urs Lang and Viktor Schroeder in \cite{lang2012toponogov}.
 
 Further, assume that the surface $\Sigma$ has non-negative curvature in the sense of Alexandrov,
 $\gamma$ is a geodesic in $\Sigma$ parametrized by length, 
@@ -202,7 +216,7 @@ for any $t$, where the derivative $f'(t)$ is defined.
 Further, for any surface $\Sigma$ with non-negative curvature in the sense of Alexandrov,
 the Kirszbraun extension theorem holds.
 That is, any distance non-expanding map from a subset of surface to the Euclidean plane can be extended to a distance non-expanding map defined on whole $\Sigma$;
-see \cite{LS, AKP}.
+see \cite{lang1997kirszbraun, alexander2011alexandrov}.
 (In fact, this statement could be used to define the spaces with non-negative curvature in the sense of Alexandrov.)
 
 Applying the Kiszbraun theorem for three-point sets,
@@ -240,7 +254,7 @@ which possibly degenerate to a flat figure.
 
 It turns out that $\Sigma$ defines the convex body up to congruence.
 This is a very hard theorem;
-it was first proved by Pogorelov in \cite{pogorelov}.
+it was first proved by Pogorelov in \cite{pogorelov1952odnoznacnaya}.
 We will use the following weaker statement proved by Alexandrov earlier 
 \cite[VI \S 5]{aleksandrov1948vnutrennnyaya};
 its proof goes essentially the same way as Cauchy's rigidity theorem.
@@ -401,12 +415,20 @@ It means that in any Euclidean triangle with one side $\varepsilon$ and another 
 Let $x$ and $y$ be the first points along $\gamma_1$ and $\gamma_2$ respectively at distance $\varepsilon$ from $p$.
 If $|q-x|_D>|q-y|_D$, move the point $y$ along $\gamma_2$ toward $p$ until $|q-x|_D=|q-y|_D$; 
 since $|p-q|_D$ is maximal, this distance will be achieved. 
+<<<<<<< HEAD
 In case $|q-x|_D<|q-y|_D$ do the same for the point $x$. 
 Now we have
 $$|q-x|_D=|q-y|_D\ge|p-q|_D-\varepsilon.$$
+=======
+In case $|q-x|_D<|q-y|_D$ do the same with the point $x$. 
+Now we have that
+\[
+|q-x|_D=|q-y|_D\ge|p-q|_D-\varepsilon.
+\]
+>>>>>>> 1c6a96e5aa0eaf41b0f7077b5bc37f3004273d4d
 
 By the area comparison (\ref{Area comparison})
-\[\area \tilde \triangle qxy\le \area \triangle qxy\le \area \Sigma.\]
+\[\area [\tilde \triangle qxy] \le \area [\triangle qxy] \le \area \Sigma.\]
 It follows that 
 \begin{equation*}
 \label{eq:|x-y|}
@@ -515,46 +537,72 @@ Assume that a convex body $K$ is bounded by a closed flat surface with finite nu
 Show that $K$ is a polyhedron.
 \end{thm}
 
+
+\bigskip
+\textbf{Acknowledgment.}
+We want to thank Kristof Huszar for valuable comments on the preliminary version of this note. 
+
+
+
+
 \begin{thebibliography}{52}
 
-\bibitem{AKP} Alexander, S.; Kapovitch, V.; Petrunin, A. \emph{Alexandrov meets Kirszbraun.} Proceedings of the G\"okova Geometry-Topology Conference 2010, 88--109, Int. Press, Somerville, MA, 2011.
+\bibitem{alexander2011alexandrov}
+S.~Alexander, V.~Kapovitch, and A.~Petrunin.
+\newblock Alexandrov meets {K}irszbraun.
+\newblock In {\em Proceedings of the {G}\"okova {G}eometry-{T}opology
+  {C}onference 2010}, pages 88--109. Int. Press, Somerville, MA, 2011.
 
 \bibitem{aleksandrov1948vnutrennnyaya} 
 \begin{otherlanguage}{russian}
 Александров, А. Д. 
 \emph{Внутренняя геометрия выпуклых поверхностей.} 
-1948;
-\end{otherlanguage}
+Гостехиздат, 1948;
+\end{otherlanguage}\\
 \begin{otherlanguage}{german}
-Alexandrow, A. D. \emph{Die innere Geometrie der konvexen Fl\"achen.} 1955.
+Alexandrow, A. D. \emph{Die innere Geometrie der konvexen Fl\"achen.} 
+Akademie-Verlag, Berlin, 1955.
 \end{otherlanguage}
 
-\bibitem{alexandrov1950} 
-Alexandrov, A. D.,
-\emph{Convex polyhedra.} 2005.
+\bibitem{alexandrow1957ubereine}
+Alexandrow, A. D., 
+\"Uber eine Verallgemeinerung der Riemannschen Geometrie.
+\emph{Schr. Forschungsinst. Math.},
+1:33--84, 1957.
 
-\bibitem{alexandrov:devel} Alexandrow, A. D.,  \textit{\"Uber eine Verallgemeinerung der Riemannschen Geometrie,}
-Schriftenreihe Inst. Math. 1 (1957), p.33--84.
+\bibitem{busemann1958convex}
+H.~Busemann.
+\newblock {\em Convex surfaces}.
+\newblock Interscience Tracts in Pure and Applied Mathematics, no. 6.
+  Interscience Publishers, Inc., New York; Interscience Publishers Ltd.,
+  London, 1958.
 
-\bibitem{busemann} Busemann, H.
-\emph{Convex surfaces.} 1958.
+\bibitem{lang1997kirszbraun}
+U.~Lang and V.~Schroeder.
+\newblock Kirszbraun's theorem and metric spaces of bounded curvature.
+\newblock {\em Geom. Funct. Anal.}, 7(3):535--560, 1997.
 
-\bibitem{LS} Lang, U.; Schroeder, V. \emph{Kirszbraun's theorem and metric spaces of bounded curvature.} Geom. Funct. Anal. 7 (1997), no. 3, 535--560.
+\bibitem{lang2012toponogov}
+U.~Lang and V.~Schroeder.
+\newblock On {T}oponogov's comparison theorem for {A}lexandrov spaces.
+\newblock {\em Enseign. Math.}, 59(3-4):325--336, 2013.
 
-\bibitem{LS-globalization} Lang, U.; Schroeder, V. \emph{On Toponogov's comparison theorem for Alexandrov spaces.} Enseign. Math. 59 (2013), no. 3-4, 325--336.
-
-\bibitem{pogorelov} 
+\bibitem{pogorelov1952odnoznacnaya} 
 \begin{otherlanguage}{russian}
 Погорелов, А. В.,
 \emph{Однозначаная определённость общих выпукых поверхностей},
-1952.
+Изд. АН УСССР, Киев, 1952.
 \end{otherlanguage}
 
-\bibitem{pogorelov-extrinsic}
-Pogorelov, A. \emph{Extrinsic geometry of convex surfaces.} Vol. 35. American Mathematical Soc., 1973.
+\bibitem{pogorelov1973extrinsic}
+A.~V.~Pogorelov, \emph{Extrinsic geometry of convex surfaces.} Vol. 35. American Mathematical Soc., Providence, R.I., 1973.
 
-\bibitem{protasov2008onthenumber} Protasov, V. Yu.,
-\emph{On the number of closed geodesics on a polyhedron.}  Russian Math. Surveys 63 (2008), no. 5, 978--980
+\bibitem{protasov2008onthenumber}
+V.~Y. Protasov.
+\newblock On the number of closed geodesics on a polyhedron.
+\newblock {\em Uspekhi Mat. Nauk}, 63(5(383)):197--198, 2008.
+
 \end{thebibliography}
+\Addresses
 
 \end{document}
