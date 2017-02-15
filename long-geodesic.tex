@@ -25,20 +25,23 @@ if the surface of a convex body $K$ contains arbitrary long closed simple geo\-d
 The goal of this note is to introduce the reader to the theory of intrinsic geometry of convex surfaces.
 We illustrate the power of the tools by proving a theorem.
 
-
-\begin{wrapfigure}{r}{21 mm}
-\begin{lpic}[t(-4 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/long-geodesic(1)}
-\end{lpic}
-\end{wrapfigure}
+%\begin{wrapfigure}{r}{21 mm}
+%\begin{lpic}[t(-4 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/long-geodesic(1)}
+%\end{wrapfigure}
 
 A curve in a surface is called \emph{geodesic} if every sufficiently short arc of the curve is length minimizing;
 if in addition it has no self intersections, we call it \emph{simple geodesic}.
 A tetrahedron with equal opposite edges will be called \emph{isosceles}.
 
+\begin{center}
+%\begin{wrapfigure}{r}{54 mm}
+\begin{lpic}[t(-1 mm),b(-1 mm),r(0 mm),l(0 mm)]{pics/tetrapov/snow(.5)}
+\end{lpic}
+%\end{wrapfigure}
+\end{center}
 
 
-\begin{thm}{Theorem}
-	\label{Long geodesic}
+\begin{thm}{Theorem}\label{Long geodesic}
 Assume that the surface $\Sigma$ of a convex body $K$ in the Euclidean space $\EE^3$
 admits an arbitrary long simple closed geodesic.
 Then $K$ is an isosceles tetrahedron.
@@ -170,7 +173,7 @@ Note that the function $f(t)=|p-\gamma(t)|_\Sigma$ is  $1$-Lipschitz.
 In particular, the function $f$ is differentiable almost everywhere.
 
 \begin{wrapfigure}{r}{25 mm}
-\begin{lpic}[t(-0 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/first-variation(1)}
+\begin{lpic}[t(-4 mm),b(0 mm),r(0 mm),l(0 mm)]{pics/first-variation(1)}
 \lbl[t]{5,0;$p$}
 \lbl[bl]{15,13;$\gamma(t)$}
 \lbl[rt]{10,12;$\phi_{+}$}
@@ -257,7 +260,7 @@ that is,
 The functional $\kappa$ uniquely extends to non-negative measure, so called the \index{curvature measure}\emph{curvature measure}, defined on all Borel subsets in the interior of $\Sigma$.
 
 \begin{wrapfigure}{r}{23 mm}
-\begin{lpic}[t(-7 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/geodesic(1)}
+\begin{lpic}[t(-0 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/geodesic(1)}
 %\lbl[r]{0,8;$p$}
 \end{lpic}
 \end{wrapfigure}
@@ -304,18 +307,18 @@ Then the surface of $K$ contains $4$ singular points with curvature $\pi$ and th
 In the proof we will show that 
 it is possible to find four non-intersecting open sets of arbitrary small diameter, 
 such that each of them having curvature arbitrary close to $\pi$.
-Passing to the limit we will get the statement of the lemma.
+Passing to the limit we get the statement of the lemma.
 
 By cutting the surface $\Sigma$ along a sufficiently long closed simple geodesic,
 we get two discs.
-The key step is to show that each of these discs is long and thin.
+The key step is to show that each of these discs is ``long'' and ``thin''.
 Then we show that their ``corners'' form four required sets with big curvature.
-To be more precise the founded four sets will have small perimeter.
-The following claim implies that these conditions are equivalent.
+To be more precise, the four corners will have small perimeter,
+but according to the following claim, it implies small diameter as well.
 In fact, this claim holds for any metric on the sphere, not necessary closed convex surface.
 
 \begin{thm}{Claim}\label{Lemma:diameter-perimeter}
-For any $\varepsilon>0$ there is a $\delta>0$, that any simple curve in $\Sigma$ of length smaller than $\delta$ bounds a region of diameter at most $\varepsilon$.
+For any $\varepsilon>0$ there is a $\delta>0$, such that any simple curve in $\Sigma$ of length smaller than $\delta$ bounds a region of diameter at most $\varepsilon$.
 \end{thm}
 
 \parit{Proof.}
@@ -323,15 +326,16 @@ Arguing by contradiction, suppose there is a sequence of curves $\gamma_n$ which
 By compactness of $\Sigma$,
 we can pass to a subsequence of $\gamma_n$ which converges to a point, denote it by $p$. 
 
-Note that for large $n$, each region contains a disk with centers $a_n$ and $b_n$ and radius $\tfrac\varepsilon3$. 
+Note that for large $n$, each of the regions $A_n$ and $B_n$ contains a disk of radius $\tfrac\varepsilon3$;
+label their centers by $a_n$ and $b_n$ respectively. 
 Indeed, if $n$ is large, then $\gamma_n$ lies in $\tfrac\eps3$ neighborhood of $p$.
-Since the diameter of regions is at least $\eps$, points in the regions maximizing the distance to $p$ will do the trick.
+Since the diameters of the regions is at least $\eps$, points in the regions maximizing the distance to $p$ will do the trick.
 
 Pass to a subsequence of $\gamma_n$ so that $a_n$ and $b_n$ converge, denote by $a$ and $b$ their limits.
 Note that for large $n$ the domains $A_n$ and $B_n$ contain the disks of radius $\tfrac\varepsilon4$ centered at $a$ and $b$ correspondingly.
 In particular, for all large $n$, any path from $a$ to $b$ have to pass through $\gamma_n$.
 Since $\gamma_n$ converges to $p$, any path from $a$ to $b$ pass through $p$.
-The later does not hold since $\Sigma$ is homeomorphic to the sphere, a contradiction.	
+The latter does not hold since $\Sigma$ is homeomorphic to the sphere, a contradiction.	
 \qeds
 
 
@@ -358,7 +362,7 @@ Choose a pair of points $p,q\in\partial D$ which maximize the distance $|p-q|_D$
 Clearly,
 \[|x-p|_D,|x-q|_D\le |p-q|_D\] 
 for any other point $x\in\partial D$.
-By comparison property (\ref{Comparison property}) 
+By the comparison property (\ref{Comparison property}) 
 \begin{equation}
 	\label{eq:pxq>pi/3}
 	\measuredangle[x\,^p_q]\ge \tfrac\pi3.
@@ -367,7 +371,7 @@ By comparison property (\ref{Comparison property})
 
 The points $p$ and $q$ divide $\partial D$ into two arcs,
 say $\gamma_1$ and $\gamma_2$;
-let us parametrize them by arclength from $p$ to $q$. 
+let us parametrize them by arc length from $p$ to $q$. 
 By the first variation formula \eqref{eq:first variation}, for almost all $t$ we have
 \[\tfrac{d}{dt}|p-\gamma_i(t)|_D=-\cos \phi,\] 
 where $\phi$ is the angle between the direction of $\gamma_i$ at $x=\gamma_i(t)$ and the geodesic $[xp]$.
@@ -392,13 +396,13 @@ then $D$ has large diameter.
 
 Fix a positive $\delta$ which is small with respect to $\varepsilon$. 
 (The value $\delta=\varepsilon\cdot\sin \varepsilon$ will do.
-It means that in any euclidean triangle with one side $\varepsilon$ and another $\delta$ has the angle opposite $\delta$ less than~$\varepsilon$).
+It means that in any Euclidean triangle with one side $\varepsilon$ and another $\delta$ the angle opposite to the side of length $\delta$ is less than~$\varepsilon$).
 
-Let $x$ and $y$ be the first points along $\gamma_1$ and $\gamma_2$ at distance $\varepsilon$ from $p$.
+Let $x$ and $y$ be the first points along $\gamma_1$ and $\gamma_2$ respectively at distance $\varepsilon$ from $p$.
 If $|q-x|_D>|q-y|_D$, move the point $y$ along $\gamma_2$ toward $p$ until $|q-x|_D=|q-y|_D$; 
 since $|p-q|_D$ is maximal, this distance will be achieved. 
-In case $|q-x|_D<|q-y|_D$ do the same with the point $x$. 
-Now we have that
+In case $|q-x|_D<|q-y|_D$ do the same for the point $x$. 
+Now we have
 $$|q-x|_D=|q-y|_D\ge|p-q|_D-\varepsilon.$$
 
 By the area comparison (\ref{Area comparison})
@@ -418,9 +422,9 @@ Therefore, if $D$ has large perimeter then $|x-y|_D <\delta$.
 Cut $D$ by $[xy]$
 and consider the part (a lune) $L_p$ with the point $p$ in it.
 Note that the curvature of $L_p$ is $\alpha+\beta$, where $\alpha$ and $\beta$ the angles as on the diagram.
-By the comparison $\alpha\ge \tilde\measuredangle(x\,^p_y)$ 
+By the comparison property $\alpha\ge \tilde\measuredangle(x\,^p_y)$ 
 and $\beta\ge \tilde\measuredangle(y\,^p_x)$.
-Therefore curvature of $L_p$ is at least $\pi-\tilde\measuredangle(p\,^x_y)>\pi-\varepsilon$.
+Therefore the curvature of $L_p$ is at least $\pi-\tilde\measuredangle(p\,^x_y)>\pi-\varepsilon$.
 
 \begin{center}
 \begin{lpic}[t(3 mm),b(3 mm),r(0 mm),l(0 mm)]{pics/long-geodesic-D(1)}
