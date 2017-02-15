@@ -1,0 +1,3 @@
+rm ropedata2.dat
+povray +Q9 Output_Alpha=True +W2000 +H2000 Start_Column=0.178 End_Column=0.818 Start_Row=0.277 End_Row=0.643 isotet.pov
+convert isotet.png -crop 64%x36.6%+356+554 -units PixelsPerInch -density 300 snow.png
