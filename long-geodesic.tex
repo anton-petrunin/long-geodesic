@@ -45,8 +45,7 @@ if the surface of a convex body $K$ contains arbitrary long closed simple geo\-d
 
 \section{Introduction}
 The goal of this note is to introduce the reader to the theory of intrinsic geometry of convex surfaces.
-We illustrate the power of the tools by proving a theorem.
-
+We illustrate the power of the tools by proving a theorem on convex surfaces containing an arbitrary long closed simple geodesic. 
 Let us remind that a curve in a surface is called \emph{geodesic} if every sufficiently short arc of the curve is length minimizing; if in addition it has no self intersections, we call it \emph{simple geodesic}.
 A tetrahedron with equal opposite edges will be called \emph{isosceles}.
 
@@ -94,15 +93,14 @@ The books \cite{busemann1958convex} or \cite{pogorelov1973extrinsic} of Busemann
 
 \subsection*{Angles}
 
-By a \emph{surface} we mean a compact $2$-dimensional manifold,
-(possibly with non-empty boundary) which is equipped with \emph{geodesic} metric.
+By a \emph{surface} we mean a compact $2$-dimensional manifold
+(possibly with non-empty boundary), which is equipped with \emph{geodesic} metric.
 A metric on the surface $\Sigma$ is called geodesic if any two points $p,q\in \Sigma$ can be joined by a curve with length $|p-q|_\Sigma$;
 we denote by $|p-q|_\Sigma$ the distance from $p$ to $q$ in $\Sigma$.
-This curve will be denoted as $[pq]$ and called a \emph{minimizing geodesic} from $p$ to $q$.
+This curve will be denoted by $[pq]$ and called a \emph{minimizing geodesic} from $p$ to~$q$.
 
 A triple of points $x,y,z\in\Sigma$, together with a choice of three minimizing geodesics $[x y], [y z], [z x]$ will be called a \index{triangle}\emph{triangle} 
-and denoted as 
-$[x y z]$.
+and denoted by $[x y z]$.
 Many different triangles with vertices $x$, $y$ and $z$ may exist, 
 any of which can be denoted by $[x y z]$.
 
@@ -118,18 +116,16 @@ any of which can be denoted by $[x y z]$.
 
 A triangle $[\~x\~y\~z]$ in the euclidean plane $\EE^2$
 with the same side lengths as $[x y z]$ 
-is called \emph{model triangle} of $[x y z]$;
+is called a \emph{model triangle} of $[x y z]$;
 this relation will be written as $[\~x\~y\~z]=\~\triangle(x y z)$.
 The angle $\mangle\hinge{\~x}{\~y}{\~z}$ of the model triangle $[\~x\~y\~z]$ is called \emph{model angle} of the triangle $[x y z]$ at $x$ and denoted by $\angk x y z$.
 
-A pair of geodesics $[xy]$ and $[xz]$ with common endpoint $x$ is called a \emph{hinge} and is denoted as $\hinge{x}{y}{z}$.
+A pair of geodesics $[xy]$ and $[xz]$ with common endpoint $x$ is called a \emph{hinge} and is denoted by $\hinge{x}{y}{z}$.
 The angle measure $\mangle\hinge{x}{y}{z}$ of the hinge is defined as the limit of model angles for triangles sliding along the sides of hinge to its vertex. 
 That is,
 \[\mangle\hinge{x}{y}{z}=\lim_{\bar y,\bar z\to x}\set{\angk{x}{\bar y}{\bar z}}{ \bar y\in \left]xy\right], \bar z\in \left]xz\right]},\]
 where $\left]xy\right]=[xy]\backslash\{x\}$.
-
 In general, the angle of hinge maybe undefined, but as you will see it will be defined every time we need it.
-
 Note that if $p\in \left]xy\right[=[xy]\backslash\{x,y\}$ then $\mangle\hinge{p}{x}{y}=\pi$.
 
 \subsection*{Comparison}
@@ -161,13 +157,11 @@ We say that the \emph{suplementary property} holds for two supplementary hinges 
 
 We will say that a surface $\Sigma$ has \emph{non-negative curvature in the sense of Alexandrov}
 if the angles of all hinges in $\Sigma$ are defined and satisfy the comparison and supplementary properties.%
-\footnote{It is not known if the comparison property for all hinges in $\Sigma$ imply the supplementary property.}
+\footnote{It is not known, if the comparison property for all hinges in $\Sigma$ imply the supplementary property.}
 
 The geometry of such surfaces is very specific. 
 For example, by the comparison property, if a hinge has vanishing angle then one of its sides lies in the other.
-In particular, geodesics in $\Sigma$ can not bifurcate.
-
-The following two theorem plays the central role in the theory.
+In particular, geodesics in $\Sigma$ can not bifurcate. The following theorem plays the central role in the theory.
 
 \begin{thm}{Globalization theorem}\label{Globalization theorem}
 Assume that any point of the surface $\Sigma$ has a neighborhood $U$ such that the angles of all hinges in $U$ are defined and satisfy 
@@ -182,7 +176,7 @@ an amusing proof was given recently by Urs Lang and Viktor Schroeder in \cite{la
 
 Further, assume that the surface $\Sigma$ has non-negative curvature in the sense of Alexandrov,
 $\gamma$ is a geodesic in $\Sigma$ parametrized by length, 
-and let $p$ be arbitrary point on $\Sigma$.
+and let $p$ be an arbitrary point on $\Sigma$.
 Note that the function $f(t)=|p-\gamma(t)|_\Sigma$ is  $1$-Lipschitz. 
 In particular, the function $f$ is differentiable almost everywhere.
 
@@ -289,18 +283,18 @@ This can be proved by covering interior of geodesic by two thin triangles with s
 \end{lpic}
 \end{wrapfigure}
 
-Further, the curvature of an interior point in $\Sigma$ can be thought as $2{\cdot}\pi$ minus total angle around it.
+Further, the curvature of an interior point in $\Sigma$ can be thought as $2\pi$ minus total angle around it.
 The later can be seen from the picture ---
-to find the curvature of the central vertex one has to subtract excesses of three small triangles from the excess of the big one.
-(The existence of such configuration also requires some work.)
+to find the curvature of the central vertex one has to subtract excesses of three small triangles from the excess of the big one. (The existence of such configuration also requires some work.)
+A point of non-zero curvature is called \emph{singular}.
 
-For curvature measure, an analog of Gauss--Bonnet formula holds;
+For curvature measure, an analogue of the  Gauss--Bonnet formula holds;
 in particular, if $\Sigma$ is a surface with non-negative curvature in the sence of Alexandrov then
 \begin{itemize}
 \item If $\Sigma$ is homeomorphic to the sphere then 
-\[\kappa(\Sigma)=4\cdot\pi\]
+\[\kappa(\Sigma)=4\pi\]
 \item If a closed geodesic cuts from $\Sigma$ a disc $\Delta$ then 
-\[\kappa(\Delta)=2\cdot\pi.\]
+\[\kappa(\Delta)=2\pi.\]
 \end{itemize}
 
 
@@ -547,17 +541,17 @@ S.~Alexander, V.~Kapovitch, and A.~Petrunin.
 
 \bibitem{aleksandrov1948vnutrennnyaya} 
 \begin{otherlanguage}{russian}
-Александров, А. Д. 
+А.~Д.~Александров,
 \emph{Внутренняя геометрия выпуклых поверхностей.} 
 Гостехиздат, 1948;
 \end{otherlanguage}\\
 \begin{otherlanguage}{german}
-Alexandrow, A. D. \emph{Die innere Geometrie der konvexen Fl\"achen.} 
+A.~D.~Alexandrow, \emph{Die innere Geometrie der konvexen Fl\"achen.} 
 Akademie-Verlag, Berlin, 1955.
 \end{otherlanguage}
 
 \bibitem{alexandrow1957ubereine}
-Alexandrow, A. D., 
+A.~D.~Alexandrow,
 \"Uber eine Verallgemeinerung der Riemannschen Geometrie.
 \emph{Schr. Forschungsinst. Math.},
 1:33--84, 1957.
@@ -581,7 +575,7 @@ U.~Lang and V.~Schroeder.
 
 \bibitem{pogorelov1952odnoznacnaya} 
 \begin{otherlanguage}{russian}
-Погорелов, А. В.,
+А.~В.~Погорелов,
 \emph{Однозначаная определённость общих выпукых поверхностей},
 Изд. АН УСССР, Киев, 1952.
 \end{otherlanguage}
