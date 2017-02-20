@@ -17,7 +17,7 @@
         [ 0.00       color Clear ] [ 0.5-frac1   color Clear ]
         [ 0.5-frac   color White ] [ 0.5+frac    color White ]
         [ 0.5+frac1  color Clear ] [ 1.00        color Clear ]}
-      turbulence 1  octaves 6  omega 8 }
+      turbulence 4  octaves 9  omega 8 }
       finish { Luminous }
 }
 
@@ -35,7 +35,7 @@ texture{
 
 background { color White}
 
-#declare r=0.01;
+#declare r=0.005;
 
 #declare K=1.4;
 
@@ -50,9 +50,6 @@ background { color White}
 
 #declare an1=atan(l*sin(an)/(2*h));
 
-#warning concat("AB ", vstr(3, A-B, ",", 0, 6))
-#warning concat("AC ", vstr(3, A-C, ",", 0, 6))
-#warning concat("AD ", vstr(3, A-D, ",", 0, 6))
 
 #declare ABC=object{
 	box{<0, -10, -10><-10, 10, 10>}  
@@ -77,8 +74,10 @@ background { color White}
 	rotate <an*180/3.14159265359, 0, 0>
 	}
 
+#declare K2=0.98;
 
-	union{
+
+union{
 //	sphere {A, 4*r}
 //	sphere {B, 4*r}
 //	sphere {C, 4*r}
@@ -91,9 +90,11 @@ background { color White}
 	cylinder{C, D, r}
 	no_shadow
 	no_reflection
-	}
+	scale K2
+}
 
-	intersection{
+
+intersection{
 		object {ABC}
 		object {ABD}
 		object {ACD}
@@ -101,9 +102,11 @@ background { color White}
 //	texture{Glass}
 	texture { falling_snow scale 2	}	
 		interior{ior 1
-		fade_distance 100 fade_power .05+.15 caustics 2
+		fade_distance 200 fade_power .05+.15 caustics 2
 		}
+	scale K2
 	}
+
 
 #declare x1=0.9*A+0.1*C;
 
@@ -215,5 +218,5 @@ orthographic
   sky   <0,-sin(an1),cos(an1)>
 }
 
-light_source {<7, -1, 5>*4 color White}
+light_source {<1, -5, 4>*4 color White}
 	
