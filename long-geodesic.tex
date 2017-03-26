@@ -72,7 +72,7 @@ Then $K$ is an isosceles tetrahedron.
 This gives an affirmative answer to the question asked by Vladimir Protasov in \cite{protasov2012};
 in~\cite{protasov2008onthenumber}
 he proved the statement in assumption that $\Sigma$ is the surfaces of a convex polyhedron.
-The advantage of the axiomatic method of Alexandrov geometry is that it allows us to work with metrics of convex surfaces even they are not polyhedra, smooth manifolds or not equipped with any other convenient structure.
+The advantage of the axiomatic method of Alexandrov geometry is that it allows us to work with metrics of convex surfaces directly, without approximating it first by smooth or polyhedral metric.
 \newpage
 
 \section{An overview of the theory}
@@ -93,7 +93,7 @@ where instead of equality in the cosine rule we have the following inequality
 This approach provides a uniform way to work with smooth and singular surfaces.
 
 As the main reference, we will use the classical  book of Alexandrov \cite{aleksandrov1948vnutrennnyaya}; it is available in Russian and German.
-The books \cite{busemann1958convex} or \cite{pogorelov1973extrinsic} of Busemann and Pogorelov should work as well and available in English.
+The books \cite{busemann1958convex} or \cite{pogorelov1973extrinsic} of Busemann and Pogorelov should work as well and they are available in English.
 
 
 \subsection*{Angles}
@@ -119,7 +119,7 @@ any of which can be denoted by $[x y z]$.
 \end{lpic}
 \end{wrapfigure}
 
-A triangle $[\~x\~y\~z]$ in the euclidean plane $\EE^2$
+A triangle $[\~x\~y\~z]$ in the Euclidean plane $\EE^2$
 with the same side lengths as $[x y z]$ 
 is called a \emph{model triangle} of $[x y z]$;
 this relation will be written as $[\~x\~y\~z]=\~\triangle(x y z)$.
@@ -142,7 +142,7 @@ $\mangle\hinge{x}{y}{z}$ is defined and
 \[\mangle \hinge{x}{y}{z} \ge \angk{x}{y}{z}{}{}.\]
 \end{thm}
 
-Two hinges $\hinge{p}{x}{z}$ and $\mangle\hinge{p}{y}{z}$ will be called \emph{supplementary},
+Two hinges $\hinge{p}{x}{z}$ and $\hinge{p}{y}{z}$ will be called \emph{supplementary},
 if they share a side $[pz]$ and $p\in \left]xy\right[$.
 
 \begin{wrapfigure}{r}{27 mm}
@@ -155,7 +155,7 @@ if they share a side $[pz]$ and $p\in \left]xy\right[$.
 \end{wrapfigure}
 
 \begin{thm}{Supplementary property}\label{Supplementary property}
-We say that the \emph{suplementary property} holds for two supplementary hinges $\hinge{p}{x}{z}$ and $\mangle\hinge{p}{y}{z}$ if the angles $\hinge{p}{x}{z}$ and $\mangle\hinge{p}{y}{z}$ are defined and
+We say that the \emph{suplementary property} holds for two supplementary hinges $\hinge{p}{x}{z}$ and $\hinge{p}{y}{z}$ if the angles $\mangle\hinge{p}{x}{z}$ and $\mangle\hinge{p}{y}{z}$ are defined and
 \[\mangle\hinge{p}{x}{z}+\mangle\hinge{p}{y}{z}=\pi.\]
 
 \end{thm}
@@ -231,7 +231,7 @@ An earlier proof of this theorem by slicing $\Delta$ into small triangles is giv
 
 \subsection*{Convex surfaces}
 
-Recall that the intrinsic distance between points $x$ and $y$ on a surface $\Sigma$ in $\EE^3$, is defined as the least upper bound for the lengths of curves connecting $x$ to $y$ in $\Sigma$.
+Recall that the intrinsic distance between points $x$ and $y$ on a surface $\Sigma$ in $\EE^3$, is defined as the  greatest lower bound for the lengths of curves connecting $x$ to $y$ in $\Sigma$.
 
 \begin{thm}{Comparison theorem}\label{Comparison theorem}
 Any surface of convex body in $\EE^3$,
@@ -243,7 +243,7 @@ The converse of this theorem also holds
 if one considers convex plane figure as a degenerate convex body \cite[III \S 3]{aleksandrov1948vnutrennnyaya}.
 The surface of a flat convex figure has to be defined as its doubling;
 that is, two copies 
-of the figure glued along the boundary --- it will look like a surface if you can walk on both sides of the figure but can not pass through it.
+of the figure glued along the boundary --- it will look like a surface if you can walk on both sides of the figure but can not pass thru it.
 
 \begin{thm}{Theorem}
 Any surface $\Sigma$ with non-negative curvature in the sense of Alexandrov which is homeomorphic to the sphere
@@ -288,7 +288,7 @@ This can be proved by covering interior of geodesic by two thin triangles with s
 \end{lpic}
 \end{wrapfigure}
 
-Further, the curvature of an interior point in $\Sigma$ can be thought as $2{\cdot}\pi$ minus total angle around it.
+Further, the curvature of an interior point in $\Sigma$ is $2{\cdot}\pi$ minus total angle around it.
 The later can be seen from the picture ---
 to find the curvature of the central vertex one has to subtract excesses of three small triangles from the excess of the big one. (The existence of such configuration also requires some work.)
 A point of non-zero curvature is called \emph{singular}.
@@ -300,6 +300,9 @@ in particular, if $\Sigma$ is a surface with non-negative curvature in the sence
 \[\kappa(\Sigma)=4{\cdot}\pi\]
 \item If a closed geodesic cuts from $\Sigma$ a disc $\Delta$ then 
 \[\kappa(\Delta)=2{\cdot}\pi.\]
+\item If a closed broken geodesic cuts from $\Sigma$ a disc $\Delta$ then 
+\[\kappa(\Delta)=2{\cdot}\pi +(\theta_1-\pi)+\dots+(\theta_n-\pi),\]
+where $\theta_1,\dots,\theta_n$ are the inner angles at the corners of $\Delta$.
 \end{itemize}
 
 
@@ -319,7 +322,7 @@ Then the surface of $K$ contains $4$ singular points with curvature $\pi$ and th
 
 In the proof we will show that 
 it is possible to find four non-intersecting open sets of arbitrary small diameter, 
-such that each of them having curvature arbitrary close to $\pi$.
+such that each of them has curvature arbitrary close to $\pi$.
 Passing to the limit we get the statement of the lemma.
 
 By cutting the surface $\Sigma$ along a sufficiently long closed simple geodesic,
@@ -342,13 +345,13 @@ we can pass to a subsequence of $\gamma_n$ which converges to a point, denote it
 Note that for large $n$, each of the regions $A_n$ and $B_n$ contains a disk of radius $\tfrac\varepsilon3$;
 label their centers by $a_n$ and $b_n$ respectively. 
 Indeed, if $n$ is large, then $\gamma_n$ lies in $\tfrac\eps3$ neighborhood of $p$.
-Since the diameters of the regions is at least $\eps$, points in the regions maximizing the distance to $p$ will do the trick.
+Since the diameters of the regions is at least $\eps$, we can take $a_n$ and $b_n$ to be points in the regions maximizing the distance to $p$.
 
 Pass to a subsequence of $\gamma_n$ so that $a_n$ and $b_n$ converge, denote by $a$ and $b$ their limits.
 Note that for large $n$ the domains $A_n$ and $B_n$ contain the disks of radius $\tfrac\varepsilon4$ centered at $a$ and $b$ correspondingly.
-In particular, for all large $n$, any path from $a$ to $b$ have to pass through $\gamma_n$.
-Since $\gamma_n$ converges to $p$, any path from $a$ to $b$ pass through $p$.
-The latter does not hold since $\Sigma$ is homeomorphic to the sphere, a contradiction.	
+In particular, for all large $n$, any path from $a$ to $b$ has to pass thru $\gamma_n$.
+Since $\gamma_n$ converges to $p$, any path from $a$ to $b$ passes thru $p$.
+That is $p$ is a cut point of the sphere $\Sigma$, a contradiction.	
 \qeds
 
 
@@ -373,7 +376,7 @@ By the globalization theorem (\ref{Globalization theorem}) the same holds for $D
 
 Choose a pair of points $p,q\in\partial D$ which maximize the distance $|p-q|_D$.
 Clearly,
-\[|x-p|_D,|x-q|_D\le |p-q|_D\] 
+\[|x-p|_D\le |p-q|_D,\quad |x-q|_D\le |p-q|_D\] 
 for any other point $x\in\partial D$.
 By the comparison property (\ref{Comparison property}) 
 \begin{equation}
@@ -398,18 +401,20 @@ Therefore
 = \cos \psi-\cos\phi
 \ge
 \tfrac12.
-% \tag{${*}{*}$}
 \end{equation*}
-In particular,
-\[|p-q|_D\ge \tfrac18{\cdot}\length[\partial D].\]
+The function $t\mapsto|p-\gamma_i(t)|_D-|q-\gamma_i(t)|_D$ ranges from $-|p-q|_D$ to $|p-q|_D$.
+Therefore
+\[|p-q|_D\ge \tfrac14{\cdot}\length\gamma_i\]
+and therefore
+\[|p-q|_D\ge \tfrac18{\cdot}\length[\partial D].\tag{$\asterism$}\]
 That is, if the geodesic was long 
 then $D$ has large diameter.
 
 }
 
-Fix a positive $\delta$ which is small with respect to $\varepsilon$. 
+Fix small $\eps>0$ and a positive $\delta\ll \eps$. 
 (The value $\delta=\varepsilon\cdot\sin \varepsilon$ will do.
-It means that in any Euclidean triangle with one side $\varepsilon$ and another $\delta$ the angle opposite to the side of length $\delta$ is less than~$\varepsilon$).
+It means that in any Euclidean triangle with one side $\varepsilon$ and another $\delta$ the angle opposite to the side of length $\delta$ is less than~$\varepsilon$.)
 
 Let $x$ and $y$ be the first points along $\gamma_1$ and $\gamma_2$ respectively at distance $\varepsilon$ from $p$.
 If $|q-x|_D>|q-y|_D$, move the point $y$ along $\gamma_2$ toward $p$ until $|q-x|_D=|q-y|_D$; 
@@ -420,24 +425,25 @@ $$|q-x|_D=|q-y|_D\ge|p-q|_D-\varepsilon.$$
 
 By the area comparison (\ref{Area comparison})
 \[\area [\tilde \triangle qxy] \le \area [\triangle qxy] \le \area \Sigma.\]
-It follows that 
+Since $\tilde \triangle qxy$ is isosceles, its area is larger than $\tfrac1{10}\cdot|x-y|_D\cdot|x-q|_D$;
+this holds since $\eps$ is small.
+Applying $(\asterism)$, we get
 \begin{equation*}
 \label{eq:|x-y|}
 \begin{aligned}
-|x-y|_D&\le2\cdot\frac{ \area[\tilde\triangle(xyq)]}{|q-x|_D}
-\le 
+|x-y|_D&\le
 100\cdot\frac{ \area\Sigma}{\length[\partial D]}.
 \end{aligned}
 % \tag{${*}{*}{*}$}
 \end{equation*}
-Therefore, if $D$ has large perimeter then $|x-y|_D <\delta$.
+Therefore, if $D$ has large perimeter then we can assume that $|x-y|_D <\delta$.
 
 Cut $D$ by $[xy]$
 and consider the part (a lune) $L_p$ with the point $p$ in it.
 Note that the curvature of $L_p$ is $\alpha+\beta$, where $\alpha$ and $\beta$ the angles as on the diagram.
 By the comparison property $\alpha\ge \tilde\measuredangle(x\,^p_y)$ 
 and $\beta\ge \tilde\measuredangle(y\,^p_x)$.
-Therefore the curvature of $L_p$ is at least $\pi-\tilde\measuredangle(p\,^x_y)>\pi-\varepsilon$.
+By Gauss--Bonnet formula, the curvature of $L_p$ is at least $\pi-\tilde\measuredangle(p\,^x_y)>\pi-\varepsilon$.
 
 \begin{center}
 \begin{lpic}[t(3 mm),b(3 mm),r(0 mm),l(0 mm)]{pics/long-geodesic-D(1)}
@@ -454,9 +460,7 @@ Therefore the curvature of $L_p$ is at least $\pi-\tilde\measuredangle(p\,^x_y)>
 \end{lpic}
 \end{center}
 
-
-Fix $\varepsilon>0$.
-Assuming $\length[\partial D]$ is long enough, we can find a lune $L_p$ with perimeter at most $2\cdot\eps + \delta$,
+Assuming $\partial D$ is long, we can find a lune $L_p$ with perimeter at most $2\cdot\eps + \delta$,
 such that curvature $L_p$ is at least $\pi-\eps$.
 If $\eps$ is small, by Lemma \ref{Lemma:diameter-perimeter}, $L_p$ has small diameter, say $\eps'=\eps'(\eps)$.
 
@@ -484,7 +488,7 @@ Then it bounds an isosceles tetrahedron.
 {
 
 \begin{wrapfigure}{o}{21 mm}
-\begin{lpic}[t(-6 mm),b(-3 mm),r(0 mm),l(0 mm)]{pics/akopyan(1)}
+\begin{lpic}[t(-0 mm),b(-3 mm),r(0 mm),l(0 mm)]{pics/akopyan(1)}
 \lbl[br]{3,8;$x$}
 \lbl[bl]{14,8;$z$}
 \lbl[t]{10,0;$y$}
@@ -587,8 +591,8 @@ Vol. 35. American Mathematical Soc., Providence, R.I., 1973.
 
 \bibitem{protasov2008onthenumber}
 V.~Y.~Protasov.
-\newblock On the number of closed geodesics on a polyhedron.}
-\newblock \emph{Russian Mathematical Surveys,} 63.5 (2008) 978--980
+\newblock \emph{On the number of closed geodesics on a polyhedron.}
+\newblock Russian Mathematical Surveys, 63.5 (2008) 978--980
 
 \end{thebibliography}
 \Addresses
