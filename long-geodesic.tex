@@ -77,7 +77,7 @@ Such approximations destroy the closed geodesics on the surface; therefore
 it is it hard (if at all possible) to apply approximations the proof of our theorem.
 On the other hand, a proof in the smooth or polyhedral case usually admits a straightforward \emph{translation} into \emph{Alexandrov's language};
 such translation makes the result more general.
-In fact, our proof is well-near to a translation of the proof given by Protasov.
+% In fact, our proof is well-near to a translation of the proof given by Protasov.
 
 Note that the main theorem implies in particular that smooth convex surface does not have arbitrary long closed geodesics.
 However we do not know a proof of this corollary which is essentially simpler than the one presented below.
@@ -345,20 +345,22 @@ For any $\varepsilon>0$ there is a $\delta>0$, such that any simple curve in $\S
 \end{thm}
 
 \parit{Proof.}
-Arguing by contradiction, suppose there is a sequence of curves $\gamma_n$ which cuts $\Sigma$ into open regions $A_n$ and $B_n$ of diameter at least $\varepsilon$ each and such that $\length\gamma_n\to 0$ as $n\to\infty$. 
+We will come to contradiction by showing that there is a point which cut the surface of $\Sigma$ on connected non-empty parts.
+Suppose there is a sequence of curves $\gamma_n$ which cuts $\Sigma$ into open regions $A_n$ and $B_n$ of diameter at least $\varepsilon$ each and such that $\length\gamma_n\to 0$ as $n\to\infty$. 
 By compactness of $\Sigma$,
-we can pass to a subsequence of $\gamma_n$ which converges to a point, denote it by $p$. 
+we can pass to a subsequence of $\gamma_n$ which converges to a point, denote it by $p$.
 
-Note that for large $n$, each of the regions $A_n$ and $B_n$ contains a disk of radius $\tfrac\varepsilon3$;
+Note that for large $n$, each of the regions $A_n$ and $B_n$ contains a disk of radius $\tfrac{\varepsilon}{3}$;
 label their centers by $a_n$ and $b_n$ respectively. 
-Indeed, if $n$ is large, then $\gamma_n$ lies in $\tfrac\eps3$ neighborhood of $p$.
-Since the diameters of the regions is at least $\eps$, we can take $a_n$ and $b_n$ to be points in the regions maximizing the distance to $p$.
+Indeed, if $n$ is large, then $\gamma_n$ lies in $\tfrac{\varepsilon}{6}$ neighborhood of $p$.
+Take $a_n$ and $b_n$ to be points in the regions maximizing the distance to $p$, note that these distances should be greater than $\tfrac{\varepsilon}{2}$.
+Now, note that if disk of radius $\tfrac{\varepsilon}{3}$ centered at $a_n$ intersects $\gamma_n$, then distance from $a_n$ to $p$ will be less then $\tfrac{\varepsilon}{3}+\tfrac{\varepsilon}{6}=\tfrac{\varepsilon}{2}$.
 
 Pass to a subsequence of $\gamma_n$ so that $a_n$ and $b_n$ converge, denote by $a$ and $b$ their limits.
 Note that for large $n$ the domains $A_n$ and $B_n$ contain the disks of radius $\tfrac\varepsilon4$ centered at $a$ and $b$ correspondingly.
-In particular, for all large $n$, any path from $a$ to $b$ has to pass thru $\gamma_n$.
-Since $\gamma_n$ converges to $p$, any path from $a$ to $b$ passes thru $p$.
-That is $p$ is a cut point of the sphere $\Sigma$, a contradiction.	
+
+Since for all large $n$, any path from $a$ to $b$ has to pass through $\gamma_n$ and the sequence $\gamma_n$ converges to~$p$, we obtain that any path from $a$ to $b$ passes through $p$.
+That is $p$ is a cut point of~$\Sigma$, contradiction.
 \qeds
 
 
