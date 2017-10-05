@@ -70,12 +70,12 @@ Our theorem was announced by Jin-Ichi Itoh and Costin V\^{\i}lcu \cite[remark ab
 
 The axiomatic method of Alexandrov geometry allows to work with metrics of convex surfaces directly, without approximating it first by smooth or polyhedral metric.
 Such approximations destroy the closed geodesics on the surface; therefore
-it is it hard (if at all possible) to apply approximations the proof of our theorem.
+it is hard (if at all possible) to apply approximations in the proof of our theorem.
 On the other hand, a proof in the smooth or polyhedral case usually admits a straightforward \emph{translation} into \emph{Alexandrov's language};
 such translation makes the result more general.
 In fact, our proof resembles a translation of the proof given by Protasov.
 
-Note that the main theorem implies in particular that smooth convex surface does not have arbitrarily long simple closed geodesics.
+Note that the main theorem implies in particular that a smooth convex surface does not have arbitrarily long simple closed geodesics.
 However we do not know a proof of this corollary which is essentially simpler than the one presented below.
 Note also that the theorem helps to understand the shape of smooth convex surfaces with sufficiently long simple closed geodesic.
 
@@ -130,11 +130,11 @@ this relation will be written as $[\~x\~y\~z]=\~\triangle(x y z)$.
 The angle $\mangle\hinge{\~x}{\~y}{\~z}$ of the model triangle $[\~x\~y\~z]$ is called \emph{model angle} of the triangle $[x y z]$ at $x$ and denoted by $\angk x y z$.
 
 A pair of geodesics $[xy]$ and $[xz]$ with common endpoint $x$ is called a \emph{hinge} and is denoted by $\hinge{x}{y}{z}$.
-The angle measure $\mangle\hinge{x}{y}{z}$ of the hinge is defined as the limit of model angles for triangles sliding along the sides of hinge to its vertex. 
+The angle measure $\mangle\hinge{x}{y}{z}$ of the hinge is defined as the limit of model angles for the triangles sliding along the sides of hinge to its vertex. 
 That is,
 \[\mangle\hinge{x}{y}{z}=\lim_{\bar y,\bar z\to x}\set{\angk{x}{\bar y}{\bar z}}{ \bar y\in \left]xy\right], \bar z\in \left]xz\right]},\]
 where $\left]xy\right]=[xy]\backslash\{x\}$.
-In general, the angle of hinge maybe undefined, but as you will see it will be defined every time we need it.
+In general, the angle of a hinge maybe undefined, but as you will see it will be defined every time we need it.
 Note that if $p\in \left]xy\right[=[xy]\backslash\{x,y\}$ then $\mangle\hinge{p}{x}{y}=\pi$.
 
 \subsection*{Comparison}
@@ -238,7 +238,7 @@ An earlier proof of this theorem by slicing $\Delta$ into small triangles is giv
 Recall that the intrinsic distance between points $x$ and $y$ on a surface $\Sigma$ in $\EE^3$, is defined as the  greatest lower bound for the lengths of curves connecting $x$ to $y$ in $\Sigma$.
 
 \begin{thm}{Comparison theorem}\label{Comparison theorem}
-Any surface of convex body in $\EE^3$,
+The surface of any convex body in $\EE^3$,
 if equipped with the induced intrinsic metric, 
 is a sphere with a non-negatively curved metric in the sense of Alexandrov.
 \end{thm}
@@ -247,7 +247,9 @@ The converse of this theorem also holds
 if one considers convex plane figure as a degenerate convex body \cite[III \S 3]{aleksandrov1948vnutrennnyaya}.
 The surface of a flat convex figure has to be defined as its doubling;
 that is, two copies 
-of the figure glued along the boundary --- it will look like a surface if you can walk on both sides of the figure but can not pass thru it.
+of the figure glued along the boundary --- 
+it will look like a surface if you can walk on both sides of the figure but can not pass directly to the other side.
+%it will look like a surface if you can walk on both sides of the figure but can not go pass thru it.
 
 \begin{thm}{Theorem}
 Any surface $\Sigma$ with non-negative curvature in the sense of Alexandrov which is homeomorphic to the sphere
@@ -274,7 +276,7 @@ By convex we mean that any minimizing geodesic with endpoints in $\Delta$ lie co
 In this case we define the \emph{curvature} of $\Delta$ as the angle excess of the triangle $[xyz]$;
 that is,
 \[\kappa(\Delta)=\mangle \hinge x y z+\mangle \hinge  y z x+\mangle \hinge z x y-\pi.\]
-The functional $\kappa$ uniquely extends to non-negative measure, so called the \index{curvature measure}\emph{curvature measure}, defined on all Borel subsets in the interior of $\Sigma$.
+The functional $\kappa$ uniquely extends to non-negative measure, the so called the \index{curvature measure}\emph{curvature measure}, defined on all Borel subsets in the interior of $\Sigma$.
 
 \begin{wrapfigure}{r}{23 mm}
 \begin{lpic}[t(-4 mm),b(-0 mm),r(0 mm),l(0 mm)]{pics/geodesic(1)}
@@ -342,7 +344,7 @@ For any $\varepsilon>0$ there is a $\delta>0$, such that any simple curve in $\S
 \end{thm}
 
 \parit{Proof.}
-We will come to contradiction by showing that there is a point which cut the surface of $\Sigma$ on connected non-empty parts.
+We will come to contradiction by showing that there is a point which cuts the surface of $\Sigma$ into connected non-empty parts.
 Suppose there is a sequence of curves $\gamma_n$ which cuts $\Sigma$ into open regions $A_n$ and $B_n$ of diameter at least $\varepsilon$ each and such that $\length\gamma_n\to 0$ as $n\to\infty$. 
 By compactness of $\Sigma$,
 we can pass to a subsequence of $\gamma_n$ which converges to a point, denote it by $p$.
@@ -356,7 +358,8 @@ Now, note that if disk of radius $\tfrac{\varepsilon}{3}$ centered at $a_n$ inte
 Pass to a subsequence of $\gamma_n$ so that $a_n$ and $b_n$ converge, denote by $a$ and $b$ their limits.
 Note that for large $n$ the domains $A_n$ and $B_n$ contain the disks of radius $\tfrac\varepsilon4$ centered at $a$ and $b$ correspondingly.
 
-Since for all large $n$, any path from $a$ to $b$ has to pass through $\gamma_n$ and the sequence $\gamma_n$ converges to~$p$, we obtain that any path from $a$ to $b$ passes through $p$.
+Since for all large $n$, any path from $a$ to $b$ has 
+to cross $\gamma_n$ and the sequence $\gamma_n$ converges to~$p$, we obtain that any path from $a$ to $b$ contains $p$.
 That is $p$ is a cut point of~$\Sigma$, contradiction.
 \qeds
 
@@ -488,7 +491,7 @@ the remaining part of $\Sigma$ has vanishing curvature and therefore flat.
 \section{Isosceles tetrahedron}
 
 \begin{thm}{Lemma} 
-Assume that the closed convex surface $\Sigma$ in $\RR^3$
+Assume that a closed convex surface in $\RR^3$
 has $4$ singular points with curvature $\pi$.
 Then it bounds an isosceles tetrahedron.
 \end{thm}
@@ -504,7 +507,8 @@ Then it bounds an isosceles tetrahedron.
 \end{wrapfigure}
 
 \parit{Proof.}
-Denote the singular points by $p$, $x$, $y$ and $z$.
+Denote the surface by $\Sigma$ and by $p$, $x$, $y$ and $z$ the singular points.
+
 Connect $p$ to the $x$, $y$ and $z$ by three minimizing geodesics $[px]$, $[py]$ and $[pz]$.
 Note that these geodesics intersect only at the common point $p$.
 
@@ -522,7 +526,7 @@ It follows that $\Sigma$ is isometric to the surface of isosceles tetrahedron.
 The statement now follows from the Pogorelov's uniqueness theorem,
 mentioned in the theory overview.
 
-Alternatively one could apply the following exercise and the rigidity theorem (\ref{Rigidity theorem}) which has much simple proof.
+Alternatively one could apply the following exercise and the rigidity theorem (\ref{Rigidity theorem}) which has a much simpler proof.
 \qeds
 
 \begin{thm}{Exercise}
