@@ -36,7 +36,7 @@ Anton Petrunin,
 
 \begin{abstract}
 We review the theory of intrinsic geometry of convex surfaces in the Euclidean space and prove the following theorem: 
-if the surface of a convex body $K$ contains arbitrarily long closed simple geo\-de\-sics, then $K$ is an isosceles tetrahedron.
+if the boundary surface of a convex body $K$ contains arbitrarily long closed simple geo\-de\-sics, then $K$ is an isosceles tetrahedron.
 \end{abstract}
 
 % \begin{figure}
@@ -59,13 +59,13 @@ A tetrahedron with equal opposite edges will be called \emph{isosceles}.
 \end{center}
 
 \begin{thm}{Theorem}\label{Long geodesic}
-Assume that the surface $\Sigma$ of a convex body $K$ in the Euclidean space $\EE^3$
+Assume that the boundary surface $\Sigma$ of a convex body $K$ in the Euclidean space $\EE^3$
 admits an arbitrarily long simple closed geodesic.
 Then $K$ is an isosceles tetrahedron.
 \end{thm}
 
 This gives an affirmative answer to the question asked by Vladimir Protasov;
-he proved the statement in assumption that $\Sigma$ is the surfaces of a convex polyhedron see \cite{protasov2008onthenumber, protasov2012}.
+he proved the statement in assumption that $\Sigma$ is the boundary surface of a convex polyhedron see \cite{protasov2008onthenumber, protasov2012}.
 Our theorem was announced by Jin-Ichi Itoh and Costin V\^{\i}lcu \cite[remark above Cor. 2.2]{itoh-vilcu}, but the proof was not written.
 
 The axiomatic method of Alexandrov geometry allows to work with metrics of convex surfaces directly, without approximating it first by smooth or polyhedral metric.
@@ -241,22 +241,22 @@ An earlier proof of this theorem by slicing $\Delta$ into small triangles is giv
 Recall that the intrinsic distance between points $x$ and $y$ on a surface $\Sigma$ in $\EE^3$, is defined as the  greatest lower bound for the lengths of curves connecting $x$ to $y$ in $\Sigma$.
 
 \begin{thm}{Comparison theorem}\label{Comparison theorem}
-The surface of any convex body in $\EE^3$,
+The boundary surface of any convex body in $\EE^3$,
 if equipped with the induced intrinsic metric, 
 is a sphere with a non-negatively curved metric in the sense of Alexandrov.
 \end{thm}
 
 The converse of this theorem also holds
 if one considers convex plane figure as a degenerate convex body \cite[III \S 3]{aleksandrov1948vnutrennnyaya}.
-The surface of a flat convex figure has to be defined as its doubling;
+The \emph{boundary surface} of a flat convex figure has to be defined as its doubling;
 that is, two copies 
 of the figure glued along the boundary --- 
-it will look like a surface if you can walk on both sides of the figure but can not pass from one side directly to the other side.
+it will look like a surface if you can walk on both sides of the figure but can not pass from one side directly to an other side.
 %it will look like a surface if you can walk on both sides of the figure but can not go pass thru it.
 
 \begin{thm}{Theorem}
 Any surface $\Sigma$ with non-negative curvature in the sense of Alexandrov which is homeomorphic to the sphere
-is isometric to the surface of a convex body in $\EE^3$,
+is isometric to the boundary surface of a convex body in $\EE^3$,
 which possibly degenerate to a flat figure.
 \end{thm}
 
@@ -264,11 +264,11 @@ It turns out that $\Sigma$ defines the convex body up to congruence.
 This is a very hard theorem;
 it was first proved by Pogorelov in \cite{pogorelov1952odnoznacnaya}.
 We will use the following weaker statement proved by Alexandrov earlier 
-\cite[VI \S 5]{aleksandrov1948vnutrennnyaya};
+\cite[VI \S 5]{aleksandrov1948vnutrennnyaya}, \cite[3.3]{aleksandrov2005};
 its proof goes essentially the same way as Cauchy's rigidity theorem.
 
 \begin{thm}{Rigidity theorem}\label{Rigidity theorem}
-Convex polyhedrons in $\EE^3$ with isometric surfaces are congruent. 
+Convex polyhedrons in $\EE^3$ with isometric boundary surfaces are congruent. 
 \end{thm}
 
 \subsection*{Curvature measure}
@@ -321,12 +321,13 @@ The following lemma is the key to the proof of Theorem~\ref{Long geodesic}.
 A point in a surface is called \emph{flat} if it admits a flat neighborhood;
 that is, a neighborhood isometric to an open subset of the plane.
 Equivalently, the curvature measure is vanishing in a neighborhood of this point.
+Note that for a polyhedral surface all points except the vertexes are flat.
 
 \begin{thm}{Lemma} 
 	\label{lem:4 singular points}
-Assume that the surface $\Sigma$ of a convex body $K$ in $\EE^3$
+Assume that the boundary surface $\Sigma$ of a convex body $K$ in $\EE^3$
 admits an arbitrarily long simple closed geodesic.
-Then the surface of $K$ contains $4$ singular points with curvature $\pi$ and the rest of it is flat.
+Then $\Sigma$ contains $4$ singular points with curvature $\pi$ and the rest of it is flat.
 \end{thm}
 
 In the proof we will show that 
@@ -347,7 +348,7 @@ For any $\varepsilon>0$ there is a $\delta>0$, such that any simple curve in $\S
 \end{thm}
 
 \parit{Proof.}
-We will come to contradiction by showing that there is a point which cuts the surface of $\Sigma$ into connected non-empty parts.
+We will come to contradiction by showing that there is a point which cuts $\Sigma$ into connected non-empty parts.
 Suppose there is a sequence of curves $\gamma_n$ which cuts $\Sigma$ into open regions $A_n$ and $B_n$ of diameter at least $\varepsilon$ each and such that $\length\gamma_n\to 0$ as $n\to\infty$. 
 By compactness of $\Sigma$,
 we can pass to a subsequence of $\gamma_n$ which converges to a point, denote it by $p$.
@@ -369,7 +370,7 @@ That is, $p$ is a cut point of~$\Sigma$, contradiction.
 
 \parit{Proof of Lemma~\ref{lem:4 singular points}.}
 According to the comparison theorem (\ref{Comparison theorem}) the surface $\Sigma$ has non-negative curvature in the sense of Alexandrov.
-Cut the surface $\Sigma$ along a sufficiently long closed simple geodesic,
+Cut $\Sigma$ along a sufficiently long closed simple geodesic,
 we get two discs.
 Choose one of the discs, say $D$. 
 Note that $D$ is locally convex in $\Sigma$; that is, sufficiently short minimizing geodesic with the ends in $D$ lies completely in $D$.
@@ -525,7 +526,7 @@ and the point $p$ correspond to the vertices of $\triangle$.
 
 }
 
-It follows that $\Sigma$ is isometric to the surface of isosceles tetrahedron.
+It follows that $\Sigma$ is isometric to the boundary surface of isosceles tetrahedron.
 The statement now follows from the Pogorelov's uniqueness theorem,
 mentioned in the theory overview.
 
@@ -590,6 +591,15 @@ J. Itoh and
 C. V\^{\i}lcu, 
 \newblock On the length of simple closed quasigeodesics on convex surfaces. 
 \newblock \emph{C. R. Math. Acad. Sci. Paris} 343 (2006), no. 4, 259--264. 
+
+%\bibitem{itoh-rouyer-vilcu}
+%J. Itoh,
+%J. Rouyer
+%and
+%C. V\^{\i}lcu,
+%\newblock \emph{Polyhedra with simple dense geodesics.}
+%\newblock 
+%\texttt{arXiv:1704.05011 [math.MG]}
 
 \bibitem{lang1997kirszbraun}
 U.~Lang and V.~Schroeder.
