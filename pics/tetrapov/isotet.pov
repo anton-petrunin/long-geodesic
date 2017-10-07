@@ -7,7 +7,7 @@
 #include "textures.inc"
 
 //a texture for falling snow
-#declare frac = 0.033;       //fraction of texture covered with White
+#declare frac = 0.1;       //fraction of texture covered with White
 #declare frac1= frac+0.001;
 #declare falling_snow =
   texture {
